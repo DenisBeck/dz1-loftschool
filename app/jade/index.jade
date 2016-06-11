@@ -14,6 +14,17 @@ html(lang="en")
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
+		.container
+			.main
+				.autorize-wrap.clearfix
+					.autorize
+						a(href="#").autorize__text Авторизоваться
+				include menu-block.jade
+			footer.footer-wrap
+				.footer 
+					.footer__text.footer__begin &copy; Денис Бекленищев 
+					.footer__text.footer__main создано с любовью в LoftSchool 
+					.footer__text.footer__end 2016
 		script(src="js/libs.min.js")
 		script(src="js/common.js")
 	

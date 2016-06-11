@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jquery": "^3.0.0",
-    "normalize-css": "^4.1.1"
+    "normalize-css": "^4.1.1",
+    "parallax.js": "^1.4.2"
   }
 }
