@@ -1,0 +1,89 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '--save-dev',
+1 verbose cli   'gulp-imagemin',
+1 verbose cli   'imagemin-pngquant' ]
+2 info using npm@3.7.3
+3 info using node@v5.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData gulp-imagemin
+8 silly fetchPackageMetaData imagemin-pngquant
+9 silly fetchNamedPackageData gulp-imagemin
+10 silly mapToRegistry name gulp-imagemin
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/gulp-imagemin
+14 silly fetchNamedPackageData imagemin-pngquant
+15 silly mapToRegistry name imagemin-pngquant
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/imagemin-pngquant
+19 verbose request uri https://registry.npmjs.org/gulp-imagemin
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 14:06:05
+22 verbose request id a6689bf06e96ed92
+23 http request GET https://registry.npmjs.org/gulp-imagemin
+24 verbose request uri https://registry.npmjs.org/imagemin-pngquant
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 14:06:06
+27 http request GET https://registry.npmjs.org/imagemin-pngquant
+28 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+29 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+30 info attempt registry request try #2 at 14:06:28
+31 http request GET https://registry.npmjs.org/gulp-imagemin
+32 info attempt registry request try #2 at 14:06:28
+33 http request GET https://registry.npmjs.org/imagemin-pngquant
+34 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+35 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+36 info attempt registry request try #3 at 14:07:40
+37 http request GET https://registry.npmjs.org/gulp-imagemin
+38 info attempt registry request try #3 at 14:07:40
+39 http request GET https://registry.npmjs.org/imagemin-pngquant
+40 silly fetchPackageMetaData Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+40 silly fetchPackageMetaData     at errnoException (dns.js:26:10)
+40 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
+40 silly fetchPackageMetaData  error for gulp-imagemin { [Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443]
+40 silly fetchPackageMetaData   code: 'ENOTFOUND',
+40 silly fetchPackageMetaData   errno: 'ENOTFOUND',
+40 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+40 silly fetchPackageMetaData   hostname: 'registry.npmjs.org',
+40 silly fetchPackageMetaData   host: 'registry.npmjs.org',
+40 silly fetchPackageMetaData   port: 443 }
+41 silly fetchPackageMetaData Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+41 silly fetchPackageMetaData     at errnoException (dns.js:26:10)
+41 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
+41 silly fetchPackageMetaData  error for imagemin-pngquant { [Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443]
+41 silly fetchPackageMetaData   code: 'ENOTFOUND',
+41 silly fetchPackageMetaData   errno: 'ENOTFOUND',
+41 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+41 silly fetchPackageMetaData   hostname: 'registry.npmjs.org',
+41 silly fetchPackageMetaData   host: 'registry.npmjs.org',
+41 silly fetchPackageMetaData   port: 443 }
+42 silly rollbackFailedOptional Starting
+43 silly rollbackFailedOptional Finishing
+44 silly runTopLevelLifecycles Starting
+45 silly runTopLevelLifecycles Finishing
+46 silly install printInstalled
+47 verbose stack Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+47 verbose stack     at errnoException (dns.js:26:10)
+47 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
+48 verbose cwd C:\newProject\app\jade
+49 error Windows_NT 6.1.7601
+50 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "--save-dev" "gulp-imagemin" "imagemin-pngquant"
+51 error node v5.9.1
+52 error npm  v3.7.3
+53 error code ENOTFOUND
+54 error errno ENOTFOUND
+55 error syscall getaddrinfo
+56 error network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+57 error network This is most likely not a problem with npm itself
+57 error network and is related to network connectivity.
+57 error network In most cases you are behind a proxy or have bad network settings.
+57 error network
+57 error network If you are behind a proxy, please make sure that the
+57 error network 'proxy' config is set properly.  See: 'npm help config'
+58 verbose exit [ 1, true ]

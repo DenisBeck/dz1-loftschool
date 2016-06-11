@@ -1,0 +1,9 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+
+.form-test {
+  background-color: pink;
+  padding: 20px;
+  width: 200px; }

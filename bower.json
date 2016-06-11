@@ -1,0 +1,22 @@
+{
+  "name": "ls-dz",
+  "description": "test",
+  "main": "index.html",
+  "authors": [
+    "DenisBeck <beckass86@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "normalize-css": "^4.1.1"
+  }
+}
