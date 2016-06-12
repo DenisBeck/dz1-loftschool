@@ -1,0 +1,65 @@
+@import "_mixins"
+
+.header 
+	padding: 30px
+	min-height: 650px
+	.welcome-block__soc
+		float: left
+		&-link
+			opacity: 1
+.main-menu
+	float: right
+	&__close
+		width: 40px
+		height: 40px
+		background-image: url('../img/icons/hamburger.svg')
+		background-repeat: no-repeat
+		cursor: pointer
+	&__open
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background-color: #6C9C5A
+		opacity: 0.87	
+		font-size: 0
+	&__list
+		font-size: 35px
+		text-transform: uppercase
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center
+	&__link
+		display: inline-block
+		&:after
+			content: ""
+			display: block 
+			width: 90px
+			height: 3px
+			margin: 22px auto 30px 
+			background-color: transparent
+	&__link:hover
+		&:after
+			background-color: #FFFFFF
+
+.info-block
+	+viewWindow
+	background-color: transparent
+	.welcome-block__head
+		font-size: 35px
+	.welcome-block__descr
+		color: #FFFFFF
+.arrow_down-block
+	margin-top: 90px
+	.arrow_down 
+		width: 35px
+		height: 20px
+		margin: auto
+		background-image: url('../img/icons/arrow_down.svg')
+		background-repeat: no-repeat
+		cursor: pointer
+
+

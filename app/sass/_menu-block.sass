@@ -1,11 +1,8 @@
+.welcome-block-wrap
+	padding: 0 10px
+
 .welcome-block
-	width: 380px
-	margin: auto
-	padding-top: 40px
-	background: rgba(18, 38, 32, .6)
-	text-align: center
-	border-radius: 5px
-	overflow: hidden
+	+viewWindow
 	&__photo-wrap
 		width: 140px
 		height: 140px
@@ -19,7 +16,7 @@
 		margin-bottom: 12px
 	&__descr
 		color: #BBC3BF
-		margin-bottom: 30px
+		margin-bottom: 42px
 		font-size: 16px
 		line-height: 1.5
 	&__soc
@@ -31,7 +28,7 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 25px
-		&:first-of-type
+		&_first
 			margin-left: 0
 	&__soc-link
 		display: block
@@ -41,27 +38,7 @@
 		transition: all 0.3s
 
 
-	&__nav-menu
-		font-size: 0
-	&__nav-menu-list
-		font-size: 16px
-		display: table
-		width: 100%
-	&__nav-menu-item
-		display: table-cell
-		border-left: 2px solid #9FB79C
-		vertical-align: middle
-		height: 45px
-		&:first-of-type
-			border-left: none
-	&__nav-menu-link
-		display: block
-		line-height: 45px
-		background-color: #5F8A51
-		padding: 0 30px
-		transition: all 0.3s
-		&:hover
-			background-color: #457935
++menuButtons(".welcome-block__nav-menu")
 
 .vk
 	width: 35px

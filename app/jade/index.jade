@@ -6,7 +6,9 @@ html(lang="en")
 		title Document
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		
 
+		link(rel="stylesheet", href="fonts/libs.css")
 		link(rel="stylesheet", href="css/libs.min.css")
 		link(rel="stylesheet", href="css/main.css")
 	body
@@ -19,7 +21,8 @@ html(lang="en")
 				.autorize-wrap.clearfix
 					.autorize
 						a(href="#").autorize__text Авторизоваться
-				include menu-block.jade
+				include _menu-block.jade
+				include _autorize-block.jade
 			footer.footer-wrap
 				.footer 
 					.footer__text.footer__begin &copy; Денис Бекленищев 

@@ -1,0 +1,32 @@
+// Стилизация кнопок меню
+=menuButtons ($class)
+	#{$class}
+		font-size: 0
+	#{$class}-list
+		font-size: 16px
+		display: table
+		width: 100%
+	#{$class}-item
+		display: table-cell
+		border-left: 2px solid #9FB79C
+		height: 45px
+		&_first
+			border-left: none
+	#{$class}-link
+		display: block
+		line-height: 45px
+		background-color: #5F8A51
+		padding: 0 30px
+		transition: all 0.3s
+		&:hover
+			background-color: #457935
+
+//Стилизация внешнего вида приветственного окна
+=viewWindow
+	width: 380px
+	margin: auto
+	padding-top: 40px
+	background: rgba(18, 38, 32, .6)
+	text-align: center
+	border-radius: 5px
+	overflow: hidden

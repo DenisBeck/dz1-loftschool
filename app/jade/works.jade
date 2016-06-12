@@ -1,0 +1,62 @@
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		title Document
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		
+
+		link(rel="stylesheet", href="fonts/libs.css")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/works.css")
+
+	body
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		
+		.main
+			header.header
+				.top-menu.clearfix
+					.welcome-block__soc Ищите в социальных сетях
+						ul.welcome-block__soc-list
+							li.welcome-block__soc-item.welcome-block__soc-item_first
+								a(href="#").welcome-block__soc-link.vk Вконтакте
+							li.welcome-block__soc-item
+								a(href="#").welcome-block__soc-link.git ГитХаб
+							li.welcome-block__soc-item
+								a(href="#").welcome-block__soc-link.in Линкедин
+					.main-menu
+						.main-menu__close
+
+						.main-menu__open.hidden Главное меню
+							ul.main-menu__list
+								li.main-menu__item
+									a.main-menu__link(href="works.html") Мои работы
+								li.main-menu__item
+									a.main-menu__link(href="blog.html") Блог
+								li.main-menu__item
+									a.main-menu__link(href="about.html") Обо мне
+								li.main-menu__item
+									a.main-menu__link(href="index.html") Авторизация
+				.info-block
+					.welcome-block__photo-wrap
+						img.welcome-block__photo(src="img/avatar2.png", alt="web developer photo")
+					h2.welcome-block__head Денис Бекленищев
+					.welcome-block__descr
+						span.welcome-block__text Личный сайт веб-разработчика
+				.arrow_down-block
+					.arrow_down 
+
+		footer.footer-wrap
+			.footer 
+				.footer__text.footer__begin &copy; Денис Бекленищев 
+				.footer__text.footer__main создано с любовью в LoftSchool 
+				.footer__text.footer__end 2016
+		script(src="js/libs.min.js")
+		script(src="js/common.js")
+	

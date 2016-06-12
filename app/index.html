@@ -6,6 +6,7 @@
     <title>Document</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="fonts/libs.css"/>
     <link rel="stylesheet" href="css/libs.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
@@ -18,24 +19,60 @@
         <div class="autorize-wrap clearfix">
           <div class="autorize"><a href="#" class="autorize__text">Авторизоваться</a></div>
         </div>
-        <div class="welcome-block">
-          <div class="welcome-block__photo-wrap"><img src="img/avatar2.png" alt="web developer photo" class="welcome-block__photo"/></div>
-          <h2 class="welcome-block__head">Денис Бекленищев</h2>
-          <div class="welcome-block__descr"><span class="welcome-block__text">Личный сайт веб-разработчика</span></div>
-          <div class="welcome-block__soc">Ищите в социальных сетях
-            <ul class="welcome-block__soc-list">
-              <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link vk">Вконтакте</a></li>
-              <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link git">ГитХаб</a></li>
-              <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link in">Линкедин</a></li>
-            </ul>
+        <div class="welcome-block-wrap">
+          <div class="welcome-block">
+            <div class="welcome-block__photo-wrap"><img src="img/avatar2.png" alt="web developer photo" class="welcome-block__photo"/></div>
+            <h2 class="welcome-block__head">Денис Бекленищев</h2>
+            <div class="welcome-block__descr"><span class="welcome-block__text">Личный сайт веб-разработчика</span></div>
+            <div class="welcome-block__soc">Ищите в социальных сетях
+              <ul class="welcome-block__soc-list">
+                <li class="welcome-block__soc-item welcome-block__soc-item_first"><a href="#" class="welcome-block__soc-link vk">Вконтакте</a></li>
+                <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link git">ГитХаб</a></li>
+                <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link in">Линкедин</a></li>
+              </ul>
+            </div>
+            <nav class="welcome-block__nav-menu">Навигация по сайту
+              <ul class="welcome-block__nav-menu-list">
+                <li class="welcome-block__nav-menu-item welcome-block__nav-menu-item_first"><a href="works.html" class="welcome-block__nav-menu-link">Мои работы</a></li>
+                <li class="welcome-block__nav-menu-item"><a href="#" class="welcome-block__nav-menu-link">Обо мне</a></li>
+                <li class="welcome-block__nav-menu-item"><a href="#" class="welcome-block__nav-menu-link">Блог</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav class="welcome-block__nav-menu">Навигация по сайту
-            <ul class="welcome-block__nav-menu-list">
-              <li class="welcome-block__nav-menu-item"><a href="#" class="welcome-block__nav-menu-link">Мои работы</a></li>
-              <li class="welcome-block__nav-menu-item"><a href="#" class="welcome-block__nav-menu-link">Обо мне</a></li>
-              <li class="welcome-block__nav-menu-item"><a href="#" class="welcome-block__nav-menu-link">Блог</a></li>
-            </ul>
-          </nav>
+        </div>
+        <div class="autorize-block-wrap">
+          <div class="autorize-block">
+            <h1 class="autorize-block__head">Авторизуйтесь</h1>
+            <form class="autorize-block__form">
+              <div class="autorize-block__data autorize-block__login">
+                <input type="text" placeholder="Логин" class="autorize-block__input-text"/>
+              </div>
+              <div class="autorize-block__data autorize-block__password">
+                <input type="text" placeholder="Пароль" class="autorize-block__input-text"/>
+              </div>
+              <div class="autorize-block__data autorize-block__check">
+                <input type="checkbox" id="check" class="hidden"/>
+                <label for="check">Я человек</label>
+              </div>
+              <div class="autorize-block__data autorize-block__check-again">
+                <div class="autorize-block__text">Вы точно не робот?</div>
+                <div class="autorize-block__choice1">
+                  <input type="radio" id="answer1" name="yes"/>
+                  <label for="answer1">Да</label>
+                </div>
+                <div class="autorize-block__choice2">
+                  <input type="radio" id="answer2" name="no"/>
+                  <label for="answer2">Не уверен</label>
+                </div>
+              </div>
+            </form>
+            <div class="autorize-block__enter">Вернуться или войти?
+              <ul class="autorize-block__enter-list">
+                <li class="autorize-block__enter-item autorize-block__enter-item_first"><a href="#" class="autorize-block__enter-link">На главную</a></li>
+                <li class="autorize-block__enter-item"><a href="#" class="autorize-block__enter-link">Войти</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer-wrap">
