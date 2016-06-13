@@ -1,12 +1,18 @@
 @import "_mixins"
 
-.header 
+.main-header 
 	padding: 30px
 	min-height: 650px
+	height: 100%
 	.welcome-block__soc
 		float: left
 		&-link
 			opacity: 1
+.header-wrap
+	position: relative
+	height: 100%
+	margin-bottom: -90px
+
 .main-menu
 	float: right
 	&__close
@@ -21,6 +27,7 @@
 		right: 0
 		left: 0
 		bottom: 0
+		z-index: 10
 		background-color: #6C9C5A
 		opacity: 0.87	
 		font-size: 0
@@ -34,18 +41,14 @@
 		text-align: center
 	&__link
 		display: inline-block
-		&:after
-			content: ""
-			display: block 
-			width: 90px
-			height: 3px
-			margin: 22px auto 30px 
-			background-color: transparent
-	&__link:hover
-		&:after
-			background-color: #FFFFFF
+	+underline("&__link", 22px, 30px, 90px, transparent)
+	+underline("&__link:hover", 22px, 30px, 90px, #FFFFFF)
 
 .info-block
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	+viewWindow
 	background-color: transparent
 	.welcome-block__head
@@ -53,13 +56,78 @@
 	.welcome-block__descr
 		color: #FFFFFF
 .arrow_down-block
-	margin-top: 90px
-	.arrow_down 
-		width: 35px
-		height: 20px
+	height: 90px
+	.arrow_down__link
 		margin: auto
+		position: relative
 		background-image: url('../img/icons/arrow_down.svg')
 		background-repeat: no-repeat
-		cursor: pointer
+		display: block
+		width: 26px
+		height: 20px
+		font-size: 0
 
+
+	
+.myWorks
+	margin-top: -8.5%
+	background-image: url('../img/icons/bg.svg')
+	background-size: 101%
+	padding-top: 8.5%
+	background-repeat: no-repeat
+.school-part,
+.works-part
+	width: 50%
+	min-height: 748
+.school-part
+	float: left
+	background-color: #EBEFE2
+	&__wrap
+		position: relative
+		height: 100%
+	&__block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+	&__head
+		font-size: 35px
+		color: #566358
+		text-transform: uppercase
+	+underline("&__head", 30px, 25px, 90px, #566358)
+	&__descr
+		font-size: 16px
+		color: #6C9C5A
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 60px
+	&__visit
+		display: inline-block
+		background-color: #6C9C5A
+		padding: 12px 25px 12px 15px
+		font-size: 16px
+		border-radius: 50px
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 20px
+			height: 20px
+			margin-right: 16px
+			background-image: url('../img/icons/link.svg')
+			background-repeat: no-repeat
+
+
+.works-part
+	float: right
+	background-color: #E1E4D7
+
+.section-header 
+	text-align: center
+	margin-top: 66px
+	font-size: 63px
+	color: #373E42
+	text-transform: uppercase
++underline(".section-header", 35px, 30px, 90px, #373E42)
 

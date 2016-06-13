@@ -30,3 +30,14 @@
 	text-align: center
 	border-radius: 5px
 	overflow: hidden
+
+//Стилизация подстрочной линии
+=underline($elem, $heightUp, $heightDown, $width, $color)
+	#{$elem}:after
+		content: ""
+		display: block
+		margin: $heightUp auto $heightDown
+		width: $width
+		height: 3px
+		background-color: $color
+	

@@ -2,6 +2,10 @@ body, html {
   height: 100%;
   font-family: robotobold; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 ul {
   list-style: none;
   padding: 0; }
@@ -22,14 +26,14 @@ a {
   display: none; }
 
 .container,
-.header {
+.main-header {
   background-image: url("../img/bg-forest.jpg");
   background-size: cover;
   color: #FFFFFF; }
 
 .main {
   min-height: 100%;
-  margin-bottom: -100px; }
+  margin: 0 auto -100px; }
   .main:after {
     content: "";
     display: block;
@@ -155,6 +159,10 @@ a {
     background-image: url("../img/icons/in_hover.svg"); }
 
 .autorize-block-wrap {
+  margin-top: -422px;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
   padding: 0 10px; }
 
 .autorize-block__enter {

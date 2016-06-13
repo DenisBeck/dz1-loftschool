@@ -8,7 +8,6 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
 
-		link(rel="stylesheet", href="fonts/libs.css")
 		link(rel="stylesheet", href="css/libs.min.css")
 		link(rel="stylesheet", href="css/main.css")
 		link(rel="stylesheet", href="css/works.css")
@@ -20,37 +19,54 @@ html(lang="en")
 
 		
 		.main
-			header.header
-				.top-menu.clearfix
-					.welcome-block__soc Ищите в социальных сетях
-						ul.welcome-block__soc-list
-							li.welcome-block__soc-item.welcome-block__soc-item_first
-								a(href="#").welcome-block__soc-link.vk Вконтакте
-							li.welcome-block__soc-item
-								a(href="#").welcome-block__soc-link.git ГитХаб
-							li.welcome-block__soc-item
-								a(href="#").welcome-block__soc-link.in Линкедин
-					.main-menu
-						.main-menu__close
+			header.main-header
+				.header-wrap
+					.top-menu.clearfix
+						.welcome-block__soc Ищите в социальных сетях
+							ul.welcome-block__soc-list
+								li.welcome-block__soc-item.welcome-block__soc-item_first
+									a(href="#").welcome-block__soc-link.vk Вконтакте
+								li.welcome-block__soc-item
+									a(href="#").welcome-block__soc-link.git ГитХаб
+								li.welcome-block__soc-item
+									a(href="#").welcome-block__soc-link.in Линкедин
+						.main-menu
+							.main-menu__close
 
-						.main-menu__open.hidden Главное меню
-							ul.main-menu__list
-								li.main-menu__item
-									a.main-menu__link(href="works.html") Мои работы
-								li.main-menu__item
-									a.main-menu__link(href="blog.html") Блог
-								li.main-menu__item
-									a.main-menu__link(href="about.html") Обо мне
-								li.main-menu__item
-									a.main-menu__link(href="index.html") Авторизация
-				.info-block
-					.welcome-block__photo-wrap
-						img.welcome-block__photo(src="img/avatar2.png", alt="web developer photo")
-					h2.welcome-block__head Денис Бекленищев
-					.welcome-block__descr
-						span.welcome-block__text Личный сайт веб-разработчика
+							.main-menu__open.hidden Главное меню
+								ul.main-menu__list
+									li.main-menu__item
+										a.main-menu__link(href="works.html") Мои работы
+									li.main-menu__item
+										a.main-menu__link(href="blog.html") Блог
+									li.main-menu__item
+										a.main-menu__link(href="about.html") Обо мне
+									li.main-menu__item
+										a.main-menu__link(href="index.html") Авторизация
+					.info-block
+						.welcome-block__photo-wrap
+							img.welcome-block__photo(src="img/avatar2.png", alt="web developer photo")
+						h2.welcome-block__head Денис Бекленищев
+						.welcome-block__descr
+							span.welcome-block__text Личный сайт веб-разработчика
 				.arrow_down-block
-					.arrow_down 
+					a(href="#myWorks").arrow_down__link Перейти к моим работам
+
+			section.myWorks.clearfix
+				header#myWorks.section-header
+					h2.myWorks__head Мои работы
+				.school-part
+					.school-part__wrap
+						.school-part__block
+							h3.school-part__head Сайт школы онлайн образования
+							p.school-part__descr html, css, javascript
+							a.school-part__visit(href="http://www.loftschool.com" target="_blank") Посмотреть сайт 
+				.works-part  
+
+			section.reviews
+				header.section-header
+					h2.reviews__head Что обо мне говорят
+
 
 		footer.footer-wrap
 			.footer 
