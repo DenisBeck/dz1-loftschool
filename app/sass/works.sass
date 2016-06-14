@@ -1,4 +1,10 @@
-@import "_mixins"
+@import "mixins"
+@import "reviews"
+
+.background
+	background-image: url('../img/bg-ground.jpg')
+	background-position: center bottom
+	background-repeat: repeat-x
 
 .main-header 
 	padding: 30px
@@ -45,27 +51,28 @@
 	+underline("&__link:hover", 22px, 30px, 90px, #FFFFFF)
 
 .info-block
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	+centering
 	+viewWindow
 	background-color: transparent
 	.welcome-block__head
 		font-size: 35px
 	.welcome-block__descr
 		color: #FFFFFF
-.arrow_down-block
+
+.arrow__block
 	height: 90px
-	.arrow_down__link
-		margin: auto
+.arrow__link
+	margin: auto
+	background-image: url('../img/icons/arrow_down.svg')
+	background-repeat: no-repeat
+	display: block
+	width: 26px
+	height: 20px
+	font-size: 0
+	&_relative	
 		position: relative
-		background-image: url('../img/icons/arrow_down.svg')
-		background-repeat: no-repeat
-		display: block
-		width: 26px
-		height: 20px
-		font-size: 0
+	&_up
+		transform: rotate(180deg) translateY(15px)
 
 
 	
@@ -75,22 +82,25 @@
 	background-size: 101%
 	padding-top: 8.5%
 	background-repeat: no-repeat
-.school-part,
-.works-part
+.descr-part,
+.vision-part
 	width: 50%
-	min-height: 748
-.school-part
+	height: 748px
+
+.descr-part
 	float: left
 	background-color: #EBEFE2
 	&__wrap
 		position: relative
 		height: 100%
 	&__block
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
+		width: 320px
 		text-align: center
+		+centering
+	&__item
+		display: none
+		&:first-of-type
+			display: block
 	&__head
 		font-size: 35px
 		color: #566358
@@ -119,9 +129,47 @@
 			background-repeat: no-repeat
 
 
-.works-part
+.vision-part
 	float: right
 	background-color: #E1E4D7
+	&__wrap
+		position: relative
+		height: 70%
+	&__container
+		width: 450px
+		text-align: center
+		+centering
+	&__navigation 
+		height: 30%
+	&__navigation-block
+		background-color: #373E42
+		width: 50%
+		position: relative
+		height: 100%
+	&__navigation-wrap
+		+centering
+		width: 270px
+		text-align: center
+	&__prev
+		float: left
+		opacity: 0.4
+		.descr-part__img
+			opacity: 0.5
+	&__next
+		float: right
+		opacity: 0.5
+		.descr-part__img
+			opacity: 0.5
+	&__arrow
+		width: 25px
+		height: 20px
+		background-image: url('../img/icons/arrow_down.svg')
+		background-repeat: no-repeat
+		cursor: pointer
+		+centering
+		&_up
+			transform: rotate(180deg) translateY(15px)
+
 
 .section-header 
 	text-align: center
@@ -130,4 +178,16 @@
 	color: #373E42
 	text-transform: uppercase
 +underline(".section-header", 35px, 30px, 90px, #373E42)
+
++formStyle(".contact-block")
+
+.contact-block-wrap
+	margin-bottom: 70px
+.contact-block
+	background-color: rgba(224, 224, 220, 0.6)
+	color: #566358
++underline(".contact-block__head", 22px, 30px, 90px, #566358)
++menuButtons(".contact-block__enter")
+.contact-block__enter-list
+	table-layout: fixed
 

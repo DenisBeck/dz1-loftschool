@@ -1,4 +1,33 @@
 
+- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+
+- var Dima 		= { photo: "img/photo1.png", text: "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!", name: "Ковальчук Дмитрий", occupation: " - основатель Loftschool" };
+- var Zar 		= { photo: "img/photo2.png", text: "Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!", name: "Зар Захаров", occupation: "главный преподаватель" };
+
+
+- var works 	= [ loftSchool, itLoft, loftBlog ];
+- var reviews 	= [ Dima, Zar ]
+
+mixin myWork-descr(work)
+	li.descr-part__item
+		h3.descr-part__head #{work.header}
+		.descr-part__img.hidden
+			img(src="#{work.imgSrc}", alt="")
+		p.descr-part__descr #{work.descr}
+		a.descr-part__visit(href="#{work.href}" target="_blank") Посмотреть сайт 
+
+mixin review(object)
+	li.reviews__item
+		.reviews__photo
+			img(src="#{object.photo}", alt="")
+		blockquote
+			p.reviews__text #{object.text}
+		p.reviews__name #{object.name}
+		p.reviews__occupation #{object.occupation}
+	
+
 html(lang="en")
 	head
 		meta(charset="UTF-8")
@@ -18,8 +47,8 @@ html(lang="en")
 		<![endif]-->
 
 		
-		.main
-			header.main-header
+		.main.main_works.background
+			header#works-header.main-header
 				.header-wrap
 					.top-menu.clearfix
 						.welcome-block__soc Ищите в социальных сетях
@@ -45,31 +74,90 @@ html(lang="en")
 										a.main-menu__link(href="index.html") Авторизация
 					.info-block
 						.welcome-block__photo-wrap
-							img.welcome-block__photo(src="img/avatar2.png", alt="web developer photo")
+							img.welcome-block__photo(src="img/avatar2.png" alt="web developer photo")
 						h2.welcome-block__head Денис Бекленищев
 						.welcome-block__descr
 							span.welcome-block__text Личный сайт веб-разработчика
-				.arrow_down-block
-					a(href="#myWorks").arrow_down__link Перейти к моим работам
+				.arrow__block
+					a(href="#myWorks").arrow__link.arrow__link_relative Перейти к моим работам
 
 			section.myWorks.clearfix
 				header#myWorks.section-header
 					h2.myWorks__head Мои работы
-				.school-part
-					.school-part__wrap
-						.school-part__block
-							h3.school-part__head Сайт школы онлайн образования
-							p.school-part__descr html, css, javascript
-							a.school-part__visit(href="http://www.loftschool.com" target="_blank") Посмотреть сайт 
-				.works-part  
+				.descr-part
+					.descr-part__wrap
+						.descr-part__block
+							ul.descr-part__list
+								for item in works
+									+myWork-descr(item)
+				.vision-part  
+					.vision-part__wrap
+						.vision-part__container
+					.vision-part__navigation
+						.vision-part__navigation-block.vision-part__prev
+							.vision-part__navigation-wrap
+							.vision-part__arrow
+						.vision-part__navigation-block.vision-part__next
+							.vision-part__navigation-wrap
+							.vision-part__arrow.vision-part__arrow_up
 
 			section.reviews
 				header.section-header
 					h2.reviews__head Что обо мне говорят
+				.reviews__block
+					ul.reviews__list
+						for item in reviews
+							+review(item)
 
+			section.contact
+				.contact-block-wrap
+					.contact-block
+						h1.contact-block__head Связаться со мной
+						form.contact-block__form
+							.contact-block__data.contact-block__login
+								input(type="text" placeholder="Имя").contact-block__input-text
+							.contact-block__data.contact-block__email
+								input(type="email" placeholder="Email").contact-block__input-text
+							.contact-block__data.contact-block__textarea
+								textarea.contact-block__input-text.contact-block__input-text_textarea Ваше сообщение
+						.contact-block__enter Отправить или очистить?
+							ul.contact-block__enter-list
+								li.contact-block__enter-item.contact-block__enter-item_first
+									a(href="#").contact-block__enter-link Отправить
+								li.contact-block__enter-item
+									a(href="#").contact-block__enter-link Очистить
+			
+			.arrow__block
+				a(href="#works-header").arrow__link.arrow__link_up Перейти в начало
+			
 
-		footer.footer-wrap
-			.footer 
+		footer.footer
+			.footer__info
+				.footer__info-block.footer__descr
+					p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+				.footer__info-block.footer__links 
+					ul.footer__list Навигация по сайту
+						li.footer__item.footer__item_first
+							a.footer__link(href="") Мои работы
+						li.footer__item
+							a.footer__link(href="") Обо мне
+						li.footer__item
+							a.footer__link(href="") Блог
+						li.footer__item
+							a.footer__link(href="") Авторизация
+					.footer__soc.welcome-block__soc Ищите в социальных сетях
+						ul.welcome-block__soc-list
+							li.welcome-block__soc-item.welcome-block__soc-item_first
+								a(href="#").welcome-block__soc-link.vk Вконтакте
+							li.welcome-block__soc-item
+								a(href="#").welcome-block__soc-link.git ГитХаб
+							li.welcome-block__soc-item
+								a(href="#").welcome-block__soc-link.in Линкедин
+				.footer__info-block.footer__cite
+					blockquotes
+						p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+					p — Martin Golding
+			.footer__copyright.footer__copyright_works 
 				.footer__text.footer__begin &copy; Денис Бекленищев 
 				.footer__text.footer__main создано с любовью в LoftSchool 
 				.footer__text.footer__end 2016

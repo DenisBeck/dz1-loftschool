@@ -1,91 +1,41 @@
 .autorize-block-wrap
-	margin-top: -422px
-	transform: scaleX(0)
 	padding: 0 10px
 
 +menuButtons(".autorize-block__enter")
 .autorize-block__enter-list
 	table-layout: fixed
 
-.autorize-block
-	+viewWindow
-	&__head
-		font: 35px/41px sansus_webissimoregular
-		&:after
-			content: ""
-			display: block 
-			width: 90px
-			height: 3px
-			margin: 22px auto 30px 
-			background-color: #FFFFFF
-	&__form
-		padding: 0 20px
-	&__data
-		margin-bottom: 20px
-	&__input-text
-		width: 100%
-		border-radius: 50px
-		padding: 15px 0 15px 60px
-		border: none
-		outline: none
-	&__login,
-	&__password
-		position: relative
-		border-radius: 50px
-		overflow: hidden
-		font-family: "FontAwesome"
-		color: #C4CBCD
-		&:before
-			content: ""
-			display: block
-			position: absolute
-			width: 44px
-			height: 55px
-			left: 0
-			top: 0
-			background-color: #F0EFE9 
-	&__login
-		&:after
-			position: absolute
-			content: "\f007"
-			left: 15px
-			top: 15px
-	&__password
-		&:after
-			position: absolute
-			content: "\f084"
-			left: 15px
-			top: 15px
-	&__check
-		display: inline-block
-		cursor: pointer
-		padding: 0 30px
-		font-family: 'FontAwesome'
-		position: relative
-		&:before
-			content: ""
-			position: absolute
-			display: block
-			width: 12px
-			height: 12px
-			background-color: #FFFFFF
-			left: 1px
-			top: 2px
-		&:after
-			color: #5F8A51
-			content: "\f14a"
-			position: absolute
-			left: 0px
-			top: 0
-	&__text
-		margin-bottom: 10px
-	&__choice1,
-	&__choice2 
-		display: inline-block
-		input 
-			outline: none
-	&__choice1
-		margin-right: 40px
+
++formStyle(".autorize-block")
+
+.autorize-block__login,
+.autorize-block__password
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		width: 44px
+		height: 55px
+		left: 0
+		top: 0
+		background-color: #F0EFE9 
+	&:after
+		position: absolute
+		content: ""
+		width: 20px
+		height: 20px
+		left: 15px
+		top: 17px
+		background-repeat: no-repeat
+.autorize-block__login
+	&:after
+		background-image: url('../img/icons/login.svg')
+.autorize-block__password
+	&:after
+		background-image: url('../img/icons/password.svg')
+.autorize-block__input-text
+	padding-left: 60px		
+
 
 
 

@@ -6,7 +6,9 @@ body, html
 
 * 
 	box-sizing: border-box
-
+img
+	width: 100%
+	height: auto
 ul 
 	list-style: none
 	padding: 0
@@ -38,6 +40,15 @@ a
 		display: block
 		height: 100px
 		margin-top: 20px
+	&_works
+		margin: 0 auto -185px
+		&:after
+			content: ""
+			display: block
+			height: 180px
+			margin-top: 20px
+
+
 
 .autorize-wrap 
 	margin-bottom: 34px
@@ -61,17 +72,53 @@ a
 @import "autorize-block"
 
 .footer
-	text-align: center
-	font-weight: bold
-	color: #D5DDD9
-	font-size: 15px
-	min-height: 100px
+	&__info
+		
+	&__copyright
+		text-align: center
+		font-weight: bold
+		color: #D5DDD9
+		font-size: 15px
+		min-height: 100px
+		&_works
+			min-height: 40px
+			background-color: rgba(108, 156, 90, 0.85)
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				height: 40px
 	&__text
 		display: inline-block
 		padding: 0 5px
 		border-left: 1px solid #D5DDD9
 	&__begin 
 		border-left: none
+	&__info
+		min-height: 145px
+		background-color: rgba(55, 62, 66, 0.85)
+		width: 100%
+		display: table
+		table-layout: fixed
+		padding: 25px 0
+		color: #FFFFFF
+	&__info-block
+		display: table-cell
+		border-left: 1px solid #9B9FA1
+		padding: 0 25px
+	&__descr
+		border-left: none
+	&__list
+		font-size: 0
+	&__item
+		font-size: 16px
+		display: inline-block
+		margin-left: 18px
+		&_first
+			margin-left: 0
+	&__soc
+		margin-bottom: 10px 
+		margin-top: 30px
 
 
 

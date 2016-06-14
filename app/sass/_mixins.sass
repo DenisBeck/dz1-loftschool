@@ -41,3 +41,69 @@
 		height: 3px
 		background-color: $color
 	
+//Выравнивание по центру
+=centering
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+//Стилизация формы
+=formStyle($class)
+	#{$class}
+		+viewWindow
+		&__head
+			font: 35px/41px sansus_webissimoregular
+		+underline("&__head", 22px, 30px, 90px, #FFFFFF)
+		&__form
+			padding: 0 20px
+		&__data
+			margin-bottom: 20px
+		&__input-text
+			width: 100%
+			padding: 15px 20px
+			border: none
+			outline: none
+			&_textarea
+				height: 140px
+				border-radius: 20px
+				resize: none
+		&__textarea,
+		&__email,
+		&__login,
+		&__password
+			position: relative
+			border-radius: 50px
+			overflow: hidden
+			color: #C4CBCD
+		&__textarea
+			border-radius: 20px
+		&__check
+			display: inline-block
+			cursor: pointer
+			padding: 0 30px
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				display: block
+				width: 12px
+				height: 12px
+				background-color: #FFFFFF
+				left: 1px
+				top: 2px
+			&:after
+				color: #5F8A51
+				content: "\f14a"
+				position: absolute
+				left: 0px
+				top: 0
+		&__text
+			margin-bottom: 10px
+		&__choice1,
+		&__choice2 
+			display: inline-block
+			input 
+				outline: none
+		&__choice1
+			margin-right: 40px
