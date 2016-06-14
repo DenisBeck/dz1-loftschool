@@ -82,6 +82,22 @@
 	background-size: 101%
 	padding-top: 8.5%
 	background-repeat: no-repeat
+	&__header
+		margin: auto
+		width: 700px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			width: 100%
+			height: 100%
+			top: 0
+			background-image: url('../img/icons/works_header.svg')
+			background-repeat: no-repeat
+			background-position: center 0
+			background-size: cover
+			opacity: 0.2
 .descr-part,
 .vision-part
 	width: 50%
@@ -94,7 +110,7 @@
 		position: relative
 		height: 100%
 	&__block
-		width: 320px
+		width: 80%
 		text-align: center
 		+centering
 	&__item
@@ -173,7 +189,7 @@
 
 .section-header 
 	text-align: center
-	margin-top: 66px
+	padding-top: 66px
 	font-size: 63px
 	color: #373E42
 	text-transform: uppercase
@@ -191,3 +207,5 @@
 .contact-block__enter-list
 	table-layout: fixed
 
+
+@import "media"

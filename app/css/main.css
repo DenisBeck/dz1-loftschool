@@ -353,6 +353,12 @@ a {
 .footer__soc {
   margin-bottom: 10px;
   margin-top: 30px; }
+  .footer__soc .vk:hover {
+    background-image: url("../img/icons/vk_hover_white.svg"); }
+  .footer__soc .git:hover {
+    background-image: url("../img/icons/github_hover_white.svg"); }
+  .footer__soc .in:hover {
+    background-image: url("../img/icons/in_hover_white.svg"); }
 
 @media screen and (max-width: 1200px) {
   .autorize-block,
@@ -360,7 +366,15 @@ a {
     width: 348px; }
     .autorize-block__nav-menu-link,
     .welcome-block__nav-menu-link {
-      padding: 0 25px; } }
+      padding: 0 25px; }
+  .section-header {
+    font-size: 47px; }
+  .descr-part,
+  .vision-part {
+    width: 100%;
+    float: none; }
+  .descr-part__head {
+    font-size: 30px; } }
 
 @media screen and (max-width: 768px) {
   .autorize {

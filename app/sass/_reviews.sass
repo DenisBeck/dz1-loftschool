@@ -1,30 +1,48 @@
 
 .reviews
-	margin: auto
-	width: 775px
-.reviews__item
-	width: 50%
-	vertical-align: top
-	display: inline-block
-	margin-right: -4px
-	margin-bottom: 60px;
-	text-align: center
-	p 
-		font-size: 16px
-.reviews__photo
-	width: 78px
-	height: 78px
-	border-radius: 50%
-	margin: auto
-	overflow: hidden
-.reviews__text
-	line-height: 26px
-	text-align: left
-	&:before
-		content: "\201c"
-	&:after
-		content: "\201d"
-.reviews__name
-	color: #4E8839
+	
+	&__header
+		width: 800px
+		margin: auto
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			width: 100%
+			height: 100%
+			top: 0
+			background-image: url('../img/icons/about_header.svg')
+			background-repeat: no-repeat
+			background-position: center 0
+			background-size: contain
+			opacity: 0.2
+	&__block
+		margin: auto
+		width: 775px
+	&__item
+		width: 50%
+		vertical-align: top
+		display: inline-block
+		margin-right: -4px
+		margin-bottom: 60px;
+		text-align: center
+		p 
+			font-size: 16px
+	&__photo
+		width: 78px
+		height: 78px
+		border-radius: 50%
+		margin: auto
+		overflow: hidden
+	&__text
+		line-height: 26px
+		text-align: left
+		&:before
+			content: "\201c"
+		&:after
+			content: "\201d"
+	&__name
+		color: #4E8839
 
 
