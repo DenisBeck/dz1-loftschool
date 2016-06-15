@@ -1,7 +1,7 @@
 
-- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
 
 - var Dima 		= { photo: "img/photo1.png", text: "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!", name: "Ковальчук Дмитрий", occupation: " - основатель Loftschool" };
 - var Zar 		= { photo: "img/photo2.png", text: "Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!", name: "Зар Захаров", occupation: "главный преподаватель" };
@@ -36,7 +36,7 @@ html(lang="en")
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
-
+		link(rel="stylesheet", href="fonts/stylesheet.css")
 		link(rel="stylesheet", href="css/libs.min.css")
 		link(rel="stylesheet", href="css/main.css")
 		link(rel="stylesheet", href="css/works.css")
@@ -47,59 +47,31 @@ html(lang="en")
 		<![endif]-->
 
 		
-		.main.main_works.background
+		.main.main-works.background
 			header#works-header.main-header
-				.header-wrap
-					.top-menu.clearfix
-						.welcome-block__soc Ищите в социальных сетях
-							ul.welcome-block__soc-list
-								li.welcome-block__soc-item.welcome-block__soc-item_first
-									a(href="#").welcome-block__soc-link.vk Вконтакте
-								li.welcome-block__soc-item
-									a(href="#").welcome-block__soc-link.git ГитХаб
-								li.welcome-block__soc-item
-									a(href="#").welcome-block__soc-link.in Линкедин
-						.main-menu
-							.main-menu__close
-
-							.main-menu__open.hidden Главное меню
-								ul.main-menu__list
-									li.main-menu__item
-										a.main-menu__link(href="works.html") Мои работы
-									li.main-menu__item
-										a.main-menu__link(href="blog.html") Блог
-									li.main-menu__item
-										a.main-menu__link(href="about.html") Обо мне
-									li.main-menu__item
-										a.main-menu__link(href="index.html") Авторизация
-					.info-block
-						.welcome-block__photo-wrap
-							img.welcome-block__photo(src="img/avatar2.png" alt="web developer photo")
-						h2.welcome-block__head Денис Бекленищев
-						.welcome-block__descr
-							span.welcome-block__text Личный сайт веб-разработчика
+				include header
 				.arrow__block
 					a(href="#myWorks").arrow__link.arrow__link_relative Перейти к моим работам
 
 			section.myWorks.clearfix
 				header#myWorks.section-header.myWorks__header
 					h2.myWorks__head Мои работы
+				.vision-part  
+					.vision-part__wrap
+						.vision-part__container
 				.descr-part
 					.descr-part__wrap
 						.descr-part__block
 							ul.descr-part__list
 								for item in works
 									+myWork-descr(item)
-				.vision-part  
-					.vision-part__wrap
-						.vision-part__container
-					.vision-part__navigation
-						.vision-part__navigation-block.vision-part__prev
-							.vision-part__navigation-wrap
-							.vision-part__arrow
-						.vision-part__navigation-block.vision-part__next
-							.vision-part__navigation-wrap
-							.vision-part__arrow.vision-part__arrow_up
+				.navigation-part
+					.navigation-part__block.navigation-part__prev
+						.navigation-part__wrap
+						.navigation-part__arrow
+					.navigation-part__block.navigation-part__next
+						.navigation-part__wrap
+						.navigation-part__arrow.navigation-part__arrow_up
 
 			section.reviews
 				header.section-header.reviews__header
@@ -119,7 +91,7 @@ html(lang="en")
 							.contact-block__data.contact-block__email
 								input(type="email" placeholder="Email").contact-block__input-text
 							.contact-block__data.contact-block__textarea
-								textarea.contact-block__input-text.contact-block__input-text_textarea Ваше сообщение
+								textarea(placeholder=" Ваше сообщение").contact-block__input-text.contact-block__input-text_textarea
 						.contact-block__enter Отправить или очистить?
 							ul.contact-block__enter-list
 								li.contact-block__enter-item.contact-block__enter-item_first
@@ -130,37 +102,8 @@ html(lang="en")
 			.arrow__block
 				a(href="#works-header").arrow__link.arrow__link_up Перейти в начало
 			
-
-		footer.footer
-			.footer__info
-				.footer__info-block.footer__descr
-					p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-				.footer__info-block.footer__links 
-					ul.footer__list Навигация по сайту
-						li.footer__item.footer__item_first
-							a.footer__link(href="") Мои работы
-						li.footer__item
-							a.footer__link(href="") Обо мне
-						li.footer__item
-							a.footer__link(href="") Блог
-						li.footer__item
-							a.footer__link(href="") Авторизация
-					.footer__soc.welcome-block__soc Ищите в социальных сетях
-						ul.welcome-block__soc-list
-							li.welcome-block__soc-item.welcome-block__soc-item_first
-								a(href="#").welcome-block__soc-link.vk Вконтакте
-							li.welcome-block__soc-item
-								a(href="#").welcome-block__soc-link.git ГитХаб
-							li.welcome-block__soc-item
-								a(href="#").welcome-block__soc-link.in Линкедин
-				.footer__info-block.footer__cite
-					blockquotes
-						p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-					p — Martin Golding
-			.footer__copyright.footer__copyright_works 
-				.footer__text.footer__begin &copy; Денис Бекленищев 
-				.footer__text.footer__main создано с любовью в LoftSchool 
-				.footer__text.footer__end 2016
+		include footer
+		
 		script(src="js/libs.min.js")
 		script(src="js/common.js")
 	

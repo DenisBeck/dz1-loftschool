@@ -1,6 +1,7 @@
 
 @media screen and (max-width: 1200px)
 	//Главная страница
+	.contact-block,
 	.autorize-block,
 	.welcome-block
 		width: 348px
@@ -8,22 +9,55 @@
 			padding: 0 25px
 
 	//Страница Works
+	.main-works
+		margin: 0 auto -280px
+		&:after
+			height: 275px
 	.section-header
 		font-size: 47px
+	+underline(".section-header", 5px, 20px, 90px, #373E42)
+	.myWorks__header
+		max-width: 520px
 	.descr-part,
-	.vision-part
+	.vision-part,
+	.navigation-part
 		width: 100%
 		float: none
 	.descr-part
+		height: 275px
 		&__head
 			font-size: 30px
+		+underline("&__head", 15px, 20px, 90px, #566358)
+		&__descr
+			margin-bottom: 40px
+	.footer__info
+	.footer__cite
+		display: block
+	.footer__info
+		min-height: 240px
+	.footer__links
+		display: inline-block
+		width: 50%
+	.footer__descr
+		display: inline-block
+		width: 50%
+	.footer__cite
+		clear: both
+		width: 100%
 
 @media screen and (max-width: 768px) 
+
+	.welcome-block__head
+		font: 21px/28px robotomedium
+		margin-bottom: 0
+	.welcome-block__text
+		font-size: 14px
 	.autorize
 		float: none
 		display: inline-block
 	.autorize-wrap
 		text-align: center
+	.contact-block,
 	.autorize-block,
 	.welcome-block
 		width: 300px
@@ -34,5 +68,44 @@
 	.footer__main
 		border-left: none
 
-
+	//Страница Works
+	.main-header
+		padding-bottom: 0
+	.arrow__block
+		height: 70px
+	.main-menu__close
+		width: 28px
+		height: 25px 
+		background-size: cover
+	.vk
+		width: 24px 
+		height: 15px
+	.git
+		width: 21px
+		height: 19px
+	.in
+		width: 19px
+		height: 17px
+	.section-header
+		font-size: 35px
+	.vision-part
+		height: 255px
+	.descr-part
+		height: 218px
+		&__head
+			font-size: 21px
+		&__descr
+			margin-bottom: 16px
+	.navigation-part
+		height: 92px
+	.reviews__item
+		width: 100%
+	.contact-block__head
+		font: 21px/28px sansus_webissimoregular
+	.footer 
+		text-align: center
+	.footer__links,
+	.footer__descr
+		display: block
+		width: 100%
 

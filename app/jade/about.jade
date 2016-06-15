@@ -1,0 +1,64 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		title Document
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		
+		//- link(rel="stylesheet", href="fonts/stylesheet.css")
+		//- link(rel="stylesheet", href="css/libs.min.css")
+		//- link(rel="stylesheet", href="css/main.css")
+		//- link(rel="stylesheet", href="css/works.css")
+
+	body
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		.main.main-works
+			header#about-header.main-header
+				include header
+				.arrow__block
+					a(href="#about").arrow__link.arrow__link_relative Перейти к моим работам
+
+			section.aboutMe.clearfix
+				.aboutMe-info
+					header#about.section-header
+						h2.aboutMe__head Обо мне
+					.aboutMe-info__photo
+						img(src="img/avatar2.png", alt="web developer photo")
+					.about-info__descr
+						h3.aboutMe-info__head Кто я
+						p.aboutMe-info__text 
+							|Я веб-разработчик из Каменска-Уральского. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							|Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нем контент. Апока посмотрите, как тут всё классно и красиво!
+				.abuoutMe-skills
+					h2.aboutMe-skills__head Чем я могу быть вам полезен
+					p.aboutMe-skills__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+					.aboutMe-skills__progress
+						ul.aboutMe-skills__list-outer
+							li.aboutMe-skills__item-outer Frontend
+								ul.aboutMe-skills__list-inner
+									li.aboutMe-skills__item-inner HTML5
+									li.aboutMe-skills__item-inner CCS3
+									li.aboutMe-skills__item-inner JavaScript & jQuery
+							li.aboutMe-skills__item-outer Backend
+								ul.aboutMe-skills__list-inner
+									li.aboutMe-skills__item-inner PHP
+									li.aboutMe-skills__item-inner mySQL
+									li.aboutMe-skills__item-inner Node.js &npm
+									li.aboutMe-skills__list-inner Mongo.db
+							li.aboutMe-skills__item-outer WorkFlow
+								ul.aboutMe-skills__list-inner
+									li.aboutMe-skills__item-inner Git
+									li.aboutMe-skills__item-inner Gulp
+									li.aboutMe-skills__item-inner Bower
+
+			section.contacts
+		
+		
+		include footer
+
+		//- script(src="js/libs.min.js")
+		//- script(src="js/common.js")

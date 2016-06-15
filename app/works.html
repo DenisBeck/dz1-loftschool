@@ -6,6 +6,7 @@
     <title>Document</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="fonts/stylesheet.css"/>
     <link rel="stylesheet" href="css/libs.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/works.css"/>
@@ -14,15 +15,15 @@
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="main main_works background">
+    <div class="main main-works background">
       <header id="works-header" class="main-header">
         <div class="header-wrap">
           <div class="top-menu clearfix">
             <div class="welcome-block__soc">Ищите в социальных сетях
               <ul class="welcome-block__soc-list">
-                <li class="welcome-block__soc-item welcome-block__soc-item_first"><a href="#" class="welcome-block__soc-link vk">Вконтакте</a></li>
-                <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link git">ГитХаб</a></li>
-                <li class="welcome-block__soc-item"><a href="#" class="welcome-block__soc-link in">Линкедин</a></li>
+                <li class="welcome-block__soc-item welcome-block__soc-item_first"><a href="https://vk.com/den_beck" target="_blank" class="welcome-block__soc-link vk">Вконтакте</a></li>
+                <li class="welcome-block__soc-item"><a href="https://github.com/DenisBeck" target="_blank" class="welcome-block__soc-link git">ГитХаб</a></li>
+                <li class="welcome-block__soc-item"><a href="#" target="_blank" class="welcome-block__soc-link in">Линкедин</a></li>
               </ul>
             </div>
             <div class="main-menu">
@@ -49,42 +50,42 @@
         <header id="myWorks" class="section-header myWorks__header">
           <h2 class="myWorks__head">Мои работы</h2>
         </header>
+        <div class="vision-part"> 
+          <div class="vision-part__wrap">
+            <div class="vision-part__container"></div>
+          </div>
+        </div>
         <div class="descr-part">
           <div class="descr-part__wrap">
             <div class="descr-part__block">
               <ul class="descr-part__list">
                 <li class="descr-part__item">
                   <h3 class="descr-part__head">Сайт школы онлайн образования</h3>
-                  <div class="descr-part__img hidden"><img src="img/site1.png" alt=""/></div>
+                  <div class="descr-part__img hidden"><img src="img/site1.svg" alt=""/></div>
                   <p class="descr-part__descr">html, css, javascript</p><a href="http://www.loftschool.com" target="_blank" class="descr-part__visit">Посмотреть сайт </a>
                 </li>
                 <li class="descr-part__item">
                   <h3 class="descr-part__head">Сайт школы онлайн образования</h3>
-                  <div class="descr-part__img hidden"><img src="img/site1.png" alt=""/></div>
+                  <div class="descr-part__img hidden"><img src="img/site1.svg" alt=""/></div>
                   <p class="descr-part__descr">html, css, javascript</p><a href="http://www.loftschool.com" target="_blank" class="descr-part__visit">Посмотреть сайт </a>
                 </li>
                 <li class="descr-part__item">
                   <h3 class="descr-part__head">Сайт школы онлайн образования</h3>
-                  <div class="descr-part__img hidden"><img src="img/site1.png" alt=""/></div>
+                  <div class="descr-part__img hidden"><img src="img/site1.svg" alt=""/></div>
                   <p class="descr-part__descr">html, css, javascript</p><a href="http://www.loftschool.com" target="_blank" class="descr-part__visit">Посмотреть сайт </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="vision-part"> 
-          <div class="vision-part__wrap">
-            <div class="vision-part__container"></div>
+        <div class="navigation-part">
+          <div class="navigation-part__block navigation-part__prev">
+            <div class="navigation-part__wrap"></div>
+            <div class="navigation-part__arrow"></div>
           </div>
-          <div class="vision-part__navigation">
-            <div class="vision-part__navigation-block vision-part__prev">
-              <div class="vision-part__navigation-wrap"></div>
-              <div class="vision-part__arrow"></div>
-            </div>
-            <div class="vision-part__navigation-block vision-part__next">
-              <div class="vision-part__navigation-wrap"></div>
-              <div class="vision-part__arrow vision-part__arrow_up"></div>
-            </div>
+          <div class="navigation-part__block navigation-part__next">
+            <div class="navigation-part__wrap"></div>
+            <div class="navigation-part__arrow navigation-part__arrow_up"></div>
           </div>
         </div>
       </section>
@@ -125,7 +126,7 @@
                 <input type="email" placeholder="Email" class="contact-block__input-text"/>
               </div>
               <div class="contact-block__data contact-block__textarea">
-                <textarea class="contact-block__input-text contact-block__input-text_textarea">Ваше сообщение</textarea>
+                <textarea placeholder=" Ваше сообщение" class="contact-block__input-text contact-block__input-text_textarea"></textarea>
               </div>
             </form>
             <div class="contact-block__enter">Отправить или очистить?
@@ -163,7 +164,7 @@
           <blockquotes>
             <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
           </blockquotes>
-          <p>— Martin Golding</p>
+          <p class="footer__author">— Martin Golding</p>
         </div>
       </div>
       <div class="footer__copyright footer__copyright_works"> 

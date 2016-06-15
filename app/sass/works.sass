@@ -54,10 +54,10 @@
 	+centering
 	+viewWindow
 	background-color: transparent
-	.welcome-block__head
-		font-size: 35px
-	.welcome-block__descr
-		color: #FFFFFF
+.welcome-block__head
+	font-size: 35px
+.welcome-block__descr
+	color: #FFFFFF
 
 .arrow__block
 	height: 90px
@@ -84,7 +84,7 @@
 	background-repeat: no-repeat
 	&__header
 		margin: auto
-		width: 700px
+		max-width: 700px
 		position: relative
 		&:before
 			content: ""
@@ -99,11 +99,12 @@
 			background-size: cover
 			opacity: 0.2
 .descr-part,
-.vision-part
+.vision-part,
+.navigation-part
 	width: 50%
-	height: 748px
 
 .descr-part
+	height: 748px
 	float: left
 	background-color: #EBEFE2
 	&__wrap
@@ -115,10 +116,12 @@
 		+centering
 	&__item
 		display: none
+		font-family: robotomedium
 		&:first-of-type
 			display: block
 	&__head
 		font-size: 35px
+		font-family: sansus_webissimoregular
 		color: #566358
 		text-transform: uppercase
 	+underline("&__head", 30px, 25px, 90px, #566358)
@@ -147,22 +150,24 @@
 
 .vision-part
 	float: right
+	height: 525px
 	background-color: #E1E4D7
 	&__wrap
 		position: relative
-		height: 70%
+		height: 100%
 	&__container
 		width: 450px
 		text-align: center
 		+centering
-	&__navigation 
-		height: 30%
-	&__navigation-block
+.navigation-part
+	float: right
+	height: 223px
+	&__block
 		background-color: #373E42
 		width: 50%
 		position: relative
 		height: 100%
-	&__navigation-wrap
+	&__wrap
 		+centering
 		width: 270px
 		text-align: center
@@ -191,6 +196,7 @@
 	text-align: center
 	padding-top: 66px
 	font-size: 63px
+	font-family: sansus_webissimoregular
 	color: #373E42
 	text-transform: uppercase
 +underline(".section-header", 35px, 30px, 90px, #373E42)

@@ -2,7 +2,7 @@
 
 body, html
 	height: 100%
-	font-family: robotobold
+	font-family: robotoregular
 
 * 
 	box-sizing: border-box
@@ -40,7 +40,7 @@ a
 		display: block
 		height: 100px
 		margin-top: 20px
-	&_works
+	&-works
 		margin: 0 auto -185px
 		&:after
 			content: ""
@@ -72,8 +72,6 @@ a
 @import "autorize-block"
 
 .footer
-	&__info
-		
 	&__copyright
 		text-align: center
 		font-weight: bold
@@ -95,6 +93,7 @@ a
 	&__begin 
 		border-left: none
 	&__info
+		position: relative
 		min-height: 145px
 		background-color: rgba(55, 62, 66, 0.85)
 		width: 100%
@@ -108,6 +107,7 @@ a
 		padding: 0 25px
 	&__descr
 		border-left: none
+		font-family: robotolight
 	&__list
 		font-size: 0
 	&__item
@@ -119,11 +119,17 @@ a
 	&__soc
 		margin-bottom: 10px 
 		margin-top: 30px
+		font-family: robotobold
 		.vk:hover
 			background-image: url('../img/icons/vk_hover_white.svg')
 		.git:hover
 			background-image: url('../img/icons/github_hover_white.svg')
 		.in:hover
 			background-image: url('../img/icons/in_hover_white.svg')
+	&__cite
+		font-family: robotoitalic
+		&__author
+			font-weight: bold
+
 
 @import "media"

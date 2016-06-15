@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
 	var container 	= $('.vision-part__container'),
-		prev		= $('.vision-part__prev .vision-part__navigation-wrap'),
-		next		= $('.vision-part__next .vision-part__navigation-wrap')
+		prev		= $('.navigation-part__prev .navigation-part__wrap'),
+		next		= $('.navigation-part__next .navigation-part__wrap')
 		pics 		= $('.descr-part__img');
 
 		container.append(pics[1]);
