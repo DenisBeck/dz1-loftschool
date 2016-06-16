@@ -10,16 +10,16 @@
     width: 50%;
     padding-top: 8.8%;
     background-repeat: no-repeat;
-    background-size: cover; }
+    vertical-align: top; }
   .aboutMe-info {
-    background-image: url("../img/icons/about_bg_left.svg");
+    background-image: url("../img/icons/about_bg_left1.svg");
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 25px; }
     .aboutMe-info__photo {
       margin-bottom: 15px; }
     .aboutMe-info__head {
-      width: 300px;
+      max-width: 300px;
       padding-top: 20px;
       font: 35px/41px sansus_webissimoregular;
       text-transform: uppercase;
@@ -29,17 +29,28 @@
     .aboutMe-info__head:after {
       content: "";
       display: block;
-      margin: 22px auto 30px;
+      margin: 14px auto 20px;
+      width: 90px;
+      height: 3px;
+      background-color: #373E42; }
+    @media screen and (max-width: 1200px) {
+      .aboutMe-info__head {
+        font: 30px/36px sansus_webissimoregular; } }
+    .aboutMe-info__head:after {
+      content: "";
+      display: block;
+      margin: 5px auto 15px;
       width: 90px;
       height: 3px;
       background-color: #373E42; }
   .aboutMe-skills {
-    background-image: url("../img/icons/about_bg_right.svg");
+    background-image: url("../img/icons/about_bg_right1.svg");
     background-position: right top;
-    padding-left: 35px;
-    padding-right: 35px; }
+    background-size: cover;
+    padding-left: 25px;
+    padding-right: 25px; }
     .aboutMe-skills__head {
-      width: 300px;
+      max-width: 300px;
       padding-top: 20px;
       font: 35px/41px sansus_webissimoregular;
       text-transform: uppercase;
@@ -49,7 +60,17 @@
     .aboutMe-skills__head:after {
       content: "";
       display: block;
-      margin: 22px auto 30px;
+      margin: 14px auto 20px;
+      width: 90px;
+      height: 3px;
+      background-color: #373E42; }
+    @media screen and (max-width: 1200px) {
+      .aboutMe-skills__head {
+        font: 30px/36px sansus_webissimoregular; } }
+    .aboutMe-skills__head:after {
+      content: "";
+      display: block;
+      margin: 5px auto 15px;
       width: 90px;
       height: 3px;
       background-color: #373E42; }
@@ -66,13 +87,11 @@
               border-radius: 50%;
       background-color: #DFDCD5;
       color: #6C9C5A;
-      margin-right: 20px;
+      margin: 10px;
       padding: 20px;
       font-size: 13px;
       text-align: center;
       vertical-align: bottom; }
-      .aboutMe-skills__item-inner:last-of-type {
-        margin-right: 0; }
     .aboutMe-skills__tech-wrap {
       display: block;
       position: relative;
@@ -81,7 +100,7 @@
       -webkit-border-radius: 50%;
               border-radius: 50%;
       vertical-align: middle;
-      background-color: #EFEBE0; }
+      background-color: #F4F5F0; }
     .aboutMe-skills__tech {
       display: block;
       position: absolute;
@@ -92,7 +111,8 @@
               transform: translate(-50%, -50%); }
 
 .about-contacts {
-  height: 980px; }
+  height: 980px;
+  background-color: #6C9C5A; }
   .about-contacts__wrap {
     height: 800px;
     position: relative;
@@ -101,7 +121,7 @@
     background-color: rgba(244, 245, 240, 0.85);
     -webkit-border-radius: 5px;
             border-radius: 5px;
-    width: 380px;
+    max-width: 380px;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -110,7 +130,7 @@
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
   .about-contacts__head {
-    width: 300px;
+    max-width: 300px;
     padding-top: 20px;
     font: 35px/41px sansus_webissimoregular;
     text-transform: uppercase;
@@ -120,7 +140,17 @@
   .about-contacts__head:after {
     content: "";
     display: block;
-    margin: 22px auto 30px;
+    margin: 14px auto 20px;
+    width: 90px;
+    height: 3px;
+    background-color: #373E42; }
+  @media screen and (max-width: 1200px) {
+    .about-contacts__head {
+      font: 30px/36px sansus_webissimoregular; } }
+  .about-contacts__head:after {
+    content: "";
+    display: block;
+    margin: 5px auto 15px;
     width: 90px;
     height: 3px;
     background-color: #373E42; }
@@ -132,7 +162,9 @@
     padding: 10px;
     padding-left: 35px;
     background-repeat: no-repeat;
-    background-position: left center; }
+    background-position: left center;
+    font-size: 16px;
+    font-family: robotomedium; }
   .about-contacts__skype {
     background-image: url("../img/icons/skype.svg"); }
   .about-contacts__email {
@@ -145,9 +177,6 @@
 iframe {
   width: 100%;
   height: 100%; }
-
-.footer {
-  margin-top: -180px; }
 
 @media screen and (max-width: 1200px) {
   .contact-block,
@@ -203,7 +232,34 @@ iframe {
     width: 50%; }
   .footer__cite {
     clear: both;
-    width: 100%; } }
+    width: 100%; }
+  .aboutMe {
+    margin-top: -8.5%;
+    background-image: url("../img/icons/bg1.svg");
+    background-size: 101%;
+    padding-top: 8.5%;
+    background-repeat: no-repeat; }
+    .aboutMe-info, .aboutMe-skills {
+      display: block;
+      width: 100%;
+      background-image: none;
+      padding-top: 30px; }
+    .aboutMe-info {
+      background-color: #E9EFE2;
+      padding-left: 145px;
+      padding-right: 145px; }
+    .aboutMe-skills {
+      background-color: #F4F5F0;
+      padding-left: 100px;
+      padding-right: 100px; }
+      .aboutMe-skills__text {
+        padding: 0 45px; }
+      .aboutMe-skills__progress {
+        text-align: center; }
+  .about-contacts {
+    height: 900px; }
+    .about-contacts__wrap {
+      height: 630px; } }
 
 @media screen and (max-width: 768px) {
   .welcome-block__head {
@@ -266,4 +322,27 @@ iframe {
   .footer__links,
   .footer__descr {
     display: block;
-    width: 100%; } }
+    width: 100%; }
+  .aboutMe-info {
+    padding-left: 0;
+    padding-right: 0; }
+    .aboutMe-info__text {
+      padding: 0 10px;
+      line-height: 24px; }
+  .aboutMe-skills {
+    padding-left: 0;
+    padding-right: 0; }
+    .aboutMe-skills__text {
+      padding: 0 10px;
+      line-height: 24px; } }
+
+@media screen and (max-width: 380px) {
+  .about-contacts__data {
+    position: static;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background-color: #FBFBFB;
+    width: 100%;
+    -webkit-border-radius: 0;
+            border-radius: 0; } }

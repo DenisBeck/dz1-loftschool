@@ -52,6 +52,10 @@ $baseColor: #6C9C5A
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
+//Очистка стилей выравнивания
+=uncentering
+	position: static
+	transform: translate(0, 0)
 
 //Стилизация формы
 =formStyle($class)
@@ -118,11 +122,15 @@ $baseColor: #6C9C5A
 //Заголовки
 =header-h3($class, $color)
 	#{$class}
-		width: 300px
+		max-width: 300px
 		padding-top: 20px
 		font: 35px/41px sansus_webissimoregular
 		text-transform: uppercase
 		margin: auto
 		text-align: center
 		color: $color
-	+underline(#{$class}, 22px, 30px, $color)
+	+underline(#{$class}, 14px, 20px, $color)
+	@media screen and (max-width: 1200px)
+		#{$class}
+			font: 30px/36px sansus_webissimoregular
+	+underline(#{$class}, 5px, 15px, $color)

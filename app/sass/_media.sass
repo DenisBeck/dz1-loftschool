@@ -46,6 +46,35 @@
 		width: 100%
 
 	//Страница About
+	.aboutMe
+		margin-top: -8.5%
+		background-image: url('../img/icons/bg1.svg')
+		background-size: 101%
+		padding-top: 8.5%
+		background-repeat: no-repeat
+		&-info,
+		&-skills
+			display: block
+			width: 100%
+			background-image: none
+			padding-top: 30px
+		&-info 
+			background-color: #E9EFE2
+			padding-left: 145px
+			padding-right: 145px
+		&-skills
+			background-color: #F4F5F0
+			padding-left: 100px
+			padding-right: 100px
+			&__text
+				padding: 0 45px
+			&__progress
+				text-align: center
+
+	.about-contacts
+		height: 900px
+		&__wrap
+			height: 630px
 
 @media screen and (max-width: 768px) 
 
@@ -110,4 +139,26 @@
 	.footer__descr
 		display: block
 		width: 100%
+
+	//Страница About
+	.aboutMe-info
+		padding-left: 0
+		padding-right: 0
+		&__text
+			padding: 0 10px
+			line-height: 24px
+	.aboutMe-skills
+		padding-left: 0
+		padding-right: 0
+		&__text
+			padding: 0 10px
+			line-height: 24px
+
+
+@media screen and (max-width: 380px) 
+	.about-contacts__data
+		+uncentering
+		background-color: #FBFBFB
+		width: 100%
+		border-radius: 0
 
