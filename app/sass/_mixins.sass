@@ -1,3 +1,7 @@
+//Переменные
+$textColor: #373E42
+$baseColor: #6C9C5A
+
 // Стилизация кнопок меню
 =menuButtons ($class)
 	#{$class}
@@ -33,12 +37,12 @@
 	overflow: hidden
 
 //Стилизация подстрочной линии
-=underline($elem, $heightUp, $heightDown, $width, $color)
+=underline($elem, $heightUp, $heightDown, $color)
 	#{$elem}:after
 		content: ""
 		display: block
 		margin: $heightUp auto $heightDown
-		width: $width
+		width: 90px
 		height: 3px
 		background-color: $color
 	
@@ -56,7 +60,7 @@
 		&__head
 			font: 35px/41px sansus_webissimoregular
 			text-transform: uppercase
-		+underline("&__head", 22px, 30px, 90px, #FFFFFF)
+		+underline("&__head", 16px, 25px, #FFFFFF)
 		&__form
 			padding: 0 20px
 		&__data
@@ -89,17 +93,16 @@
 				content: ""
 				position: absolute
 				display: block
-				width: 12px
-				height: 12px
-				background-color: #FFFFFF
+				width: 20px
+				height: 20px
+				border-radius: 3px
+				background-color: #77A266
+				background-image: url('../img/icons/check.svg')
+				background-repeat: no-repeat
+				background-position: center center
 				left: 1px
 				top: 2px
-			&:after
-				color: #5F8A51
-				content: "\f14a"
-				position: absolute
-				left: 0px
-				top: 0
+			
 		&__text
 			margin-bottom: 10px
 			font-family: robotobold
@@ -111,3 +114,15 @@
 				outline: none
 		&__choice1
 			margin-right: 40px
+
+//Заголовки
+=header-h3($class, $color)
+	#{$class}
+		width: 300px
+		padding-top: 20px
+		font: 35px/41px sansus_webissimoregular
+		text-transform: uppercase
+		margin: auto
+		text-align: center
+		color: $color
+	+underline(#{$class}, 22px, 30px, $color)

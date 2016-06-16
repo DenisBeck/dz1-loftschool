@@ -34,7 +34,7 @@
 		left: 0
 		bottom: 0
 		z-index: 10
-		background-color: #6C9C5A
+		background-color: $baseColor
 		opacity: 0.87	
 		font-size: 0
 	&__list
@@ -47,8 +47,8 @@
 		text-align: center
 	&__link
 		display: inline-block
-	+underline("&__link", 22px, 30px, 90px, transparent)
-	+underline("&__link:hover", 22px, 30px, 90px, #FFFFFF)
+	+underline("&__link", 22px, 30px, transparent)
+	+underline("&__link:hover", 22px, 30px, #FFFFFF)
 
 .info-block
 	+centering
@@ -124,7 +124,7 @@
 		font-family: sansus_webissimoregular
 		color: #566358
 		text-transform: uppercase
-	+underline("&__head", 30px, 25px, 90px, #566358)
+	+underline("&__head", 30px, 25px, #566358)
 	&__descr
 		font-size: 16px
 		color: #6C9C5A
@@ -133,7 +133,7 @@
 		margin-bottom: 60px
 	&__visit
 		display: inline-block
-		background-color: #6C9C5A
+		background-color: $baseColor
 		padding: 12px 25px 12px 15px
 		font-size: 16px
 		border-radius: 50px
@@ -163,7 +163,7 @@
 	float: right
 	height: 223px
 	&__block
-		background-color: #373E42
+		background-color: $textColor
 		width: 50%
 		position: relative
 		height: 100%
@@ -197,9 +197,9 @@
 	padding-top: 66px
 	font-size: 63px
 	font-family: sansus_webissimoregular
-	color: #373E42
+	color: $textColor
 	text-transform: uppercase
-+underline(".section-header", 35px, 30px, 90px, #373E42)
++underline(".section-header", 15px, 30px, $textColor)
 
 +formStyle(".contact-block")
 
@@ -208,7 +208,7 @@
 .contact-block
 	background-color: rgba(224, 224, 220, 0.6)
 	color: #566358
-+underline(".contact-block__head", 22px, 30px, 90px, #566358)
++underline(".contact-block__head", 22px, 30px, #566358)
 +menuButtons(".contact-block__enter")
 .contact-block__enter-list
 	table-layout: fixed

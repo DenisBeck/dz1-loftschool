@@ -6,6 +6,11 @@
     <title>Document</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="fonts/stylesheet.css"/>
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/works.css"/>
+    <link rel="stylesheet" href="css/about.css"/>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -42,9 +47,9 @@
         </div>
         <div class="arrow__block"><a href="#about" class="arrow__link arrow__link_relative">Перейти к моим работам</a></div>
       </header>
-      <section class="aboutMe clearfix">
+      <section class="aboutMe">
         <div class="aboutMe-info">
-          <header id="about" class="section-header">
+          <header id="about" class="section-header aboutMe__header">
             <h2 class="aboutMe__head">Обо мне</h2>
           </header>
           <div class="aboutMe-info__photo"><img src="img/avatar2.png" alt="web developer photo"/></div>
@@ -53,42 +58,97 @@
             <p class="aboutMe-info__text">
                
               Я веб-разработчик из Каменска-Уральского. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нем контент. Апока посмотрите, как тут всё классно и красиво!
+            </p>
+            <p class="aboutMe-info__text">
+               
+              Этот сайт я сделал 	в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нем контент. А пока посмотрите, как тут всё классно и красиво!
             </p>
           </div>
         </div>
-        <div class="abuoutMe-skills">
+        <div class="aboutMe-skills">
           <h2 class="aboutMe-skills__head">Чем я могу быть вам полезен</h2>
           <p class="aboutMe-skills__text">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
           <div class="aboutMe-skills__progress">
             <ul class="aboutMe-skills__list-outer">
               <li class="aboutMe-skills__item-outer">Frontend
                 <ul class="aboutMe-skills__list-inner">
-                  <li class="aboutMe-skills__item-inner">HTML5</li>
-                  <li class="aboutMe-skills__item-inner">CCS3</li>
-                  <li class="aboutMe-skills__item-inner">JavaScript & jQuery</li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">HTML5</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">CCS3</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">JavaScript & jQuery</div>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li class="aboutMe-skills__item-outer">Backend
                 <ul class="aboutMe-skills__list-inner">
-                  <li class="aboutMe-skills__item-inner">PHP</li>
-                  <li class="aboutMe-skills__item-inner">mySQL</li>
-                  <li class="aboutMe-skills__item-inner">Node.js &npm</li>
-                  <li class="aboutMe-skills__list-inner">Mongo.db</li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">PHP</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">mySQL</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">Node.js & npm</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">Mongo.db</div>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li class="aboutMe-skills__item-outer">WorkFlow
                 <ul class="aboutMe-skills__list-inner">
-                  <li class="aboutMe-skills__item-inner">Git</li>
-                  <li class="aboutMe-skills__item-inner">Gulp</li>
-                  <li class="aboutMe-skills__item-inner">Bower</li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">Git</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">Gulp</div>
+                    </div>
+                  </li>
+                  <li class="aboutMe-skills__item-inner"> 
+                    <div class="aboutMe-skills__tech-wrap">
+                      <div class="aboutMe-skills__tech">Bower</div>
+                    </div>
+                  </li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="contacts"></section>
+      <section class="about-contacts">
+        <div class="about-contacts__wrap">
+          <div class="about-contacts__data">
+            <h3 class="about-contacts__head">Контакты</h3>
+            <ul class="about-contacts__list">
+              <li class="about-contacts__item"><a href="#" class="about-contacts__link about-contacts__skype">denny13241</a></li>
+              <li class="about-contacts__item"><a href="#" class="about-contacts__link about-contacts__email">beckass86@gmail.com</a></li>
+              <li class="about-contacts__item"><a href="#" class="about-contacts__link about-contacts__phone">+7 912 698 79 25</a></li>
+              <li class="about-contacts__item"><a href="#" class="about-contacts__link about-contacts__address">Каменск-Уральский</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="footer__info">
@@ -123,5 +183,7 @@
         <div class="footer__text footer__end">2016</div>
       </div>
     </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

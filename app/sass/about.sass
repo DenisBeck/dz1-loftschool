@@ -1,0 +1,104 @@
+@import "mixins"
+
+.section-header
+	padding-top: 0
+.aboutMe
+	margin-top: -8.9%
+	color: $textColor
+	display: table
+	&-info,
+	&-skills
+		display: table-cell
+		width: 50%
+		padding-top: 8.8%
+		background-repeat: no-repeat
+		background-size: cover
+	&-info
+		background-image: url('../img/icons/about_bg_left.svg')
+		padding-left: 80px
+		padding-right: 80px
+		padding-bottom: 25px
+		&__photo
+			margin-bottom: 15px
+		+header-h3("&__head", $textColor)
+
+	&-skills
+		background-image: url('../img/icons/about_bg_right.svg')
+		background-position: right top
+		padding-left: 35px
+		padding-right: 35px
+		+header-h3("&__head", $textColor)
+		&__progress
+			font-size: 28px
+			font-family: robotomedium
+		&__list-outer
+			margin: 50px 0
+		&__item-outer
+			margin-bottom: 35px
+		&__item-inner
+			display: inline-block
+			border-radius: 50%
+			background-color: #DFDCD5
+			color: $baseColor
+			margin-right: 20px
+			padding: 20px
+			font-size: 13px
+			text-align: center
+			vertical-align: bottom
+			&:last-of-type
+				margin-right: 0
+		&__tech-wrap
+			display: block
+			position: relative
+			width: 70px
+			height: 70px
+			border-radius: 50%
+			vertical-align: middle
+			background-color: #EFEBE0
+		&__tech
+			display: block
+			+centering
+.about-contacts
+	height: 980px
+	&__wrap 
+		height: 800px
+		position: relative
+		color: $textColor
+	&__data
+		background-color: rgba(#F4F5F0, 0.85)
+		border-radius: 5px
+		width: 380px
+		padding: 40px
+		+centering
+	+header-h3("&__head", $textColor)
+	&__item
+		marghi-bottom: 30px
+	&__link
+		display: block
+		color: $textColor
+		padding: 10px
+		padding-left: 35px
+		background-repeat: no-repeat
+		background-position: left center
+	&__skype
+		background-image: url("../img/icons/skype.svg")
+	&__email
+		background-image: url("../img/icons/envelope.svg")
+	&__phone
+		background-image: url("../img/icons/phone.svg")
+	&__address
+		background-image: url("../img/icons/map_marker.svg")
+
+iframe
+	width: 100%
+	height: 100%
+
+.footer
+	margin-top: -180px
+
+@import "media"
+
+
+
+
+		

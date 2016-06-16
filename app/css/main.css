@@ -37,7 +37,8 @@ a {
 
 .main {
   min-height: 100%;
-  margin: 0 auto -100px; }
+  margin: 0 auto -100px;
+  position: relative; }
   .main:after {
     content: "";
     display: block;
@@ -50,6 +51,10 @@ a {
       display: block;
       height: 180px;
       margin-top: 20px; }
+
+.content {
+  min-height: 450px;
+  height: auto; }
 
 .autorize-wrap {
   margin-bottom: 34px;
@@ -73,7 +78,13 @@ a {
       border-color: #729E19; }
 
 .welcome-block-wrap {
-  padding: 0 10px; }
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .welcome-block {
   width: 380px;
@@ -87,7 +98,7 @@ a {
   .welcome-block__photo-wrap {
     width: 140px;
     height: 140px;
-    margin: 0 auto 20px;
+    margin: 0 auto 24px;
     -webkit-border-radius: 50%;
             border-radius: 50%;
     overflow: hidden;
@@ -170,7 +181,16 @@ a {
     background-image: url("../img/icons/in_hover.svg"); }
 
 .autorize-block-wrap {
-  padding: 0 10px; }
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
 
 .autorize-block__enter {
   font-size: 0; }
@@ -216,7 +236,7 @@ a {
   .autorize-block__head:after {
     content: "";
     display: block;
-    margin: 22px auto 30px;
+    margin: 16px auto 25px;
     width: 90px;
     height: 3px;
     background-color: #FFFFFF; }
@@ -252,17 +272,16 @@ a {
       content: "";
       position: absolute;
       display: block;
-      width: 12px;
-      height: 12px;
-      background-color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      background-color: #77A266;
+      background-image: url("../img/icons/check.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
       left: 1px;
       top: 2px; }
-    .autorize-block__check:after {
-      color: #5F8A51;
-      content: "\f14a";
-      position: absolute;
-      left: 0px;
-      top: 0; }
   .autorize-block__text {
     margin-bottom: 10px;
     font-family: robotobold; }
@@ -446,7 +465,7 @@ a {
     .contact-block__nav-menu-link,
     .autorize-block__nav-menu-link,
     .welcome-block__nav-menu-link {
-      padding: 0 18px; }
+      padding: 0 17px; }
   .footer__begin {
     display: block; }
   .footer__main {

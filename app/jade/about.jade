@@ -6,10 +6,11 @@ html(lang="en")
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
-		//- link(rel="stylesheet", href="fonts/stylesheet.css")
-		//- link(rel="stylesheet", href="css/libs.min.css")
-		//- link(rel="stylesheet", href="css/main.css")
-		//- link(rel="stylesheet", href="css/works.css")
+		link(rel="stylesheet", href="fonts/stylesheet.css")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/works.css")
+		link(rel="stylesheet", href="css/about.css")
 
 	body
 		<!--[if lt IE 8]>
@@ -22,9 +23,9 @@ html(lang="en")
 				.arrow__block
 					a(href="#about").arrow__link.arrow__link_relative Перейти к моим работам
 
-			section.aboutMe.clearfix
+			section.aboutMe
 				.aboutMe-info
-					header#about.section-header
+					header#about.section-header.aboutMe__header
 						h2.aboutMe__head Обо мне
 					.aboutMe-info__photo
 						img(src="img/avatar2.png", alt="web developer photo")
@@ -32,33 +33,65 @@ html(lang="en")
 						h3.aboutMe-info__head Кто я
 						p.aboutMe-info__text 
 							|Я веб-разработчик из Каменска-Уральского. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-							|Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нем контент. Апока посмотрите, как тут всё классно и красиво!
-				.abuoutMe-skills
+						p.aboutMe-info__text 
+							|Этот сайт я сделал 	в рамках обучения в Школе онлайн-образования LoftSchool. Чуть позже я освежу в нем контент. А пока посмотрите, как тут всё классно и красиво!
+				.aboutMe-skills
 					h2.aboutMe-skills__head Чем я могу быть вам полезен
 					p.aboutMe-skills__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 					.aboutMe-skills__progress
 						ul.aboutMe-skills__list-outer
 							li.aboutMe-skills__item-outer Frontend
 								ul.aboutMe-skills__list-inner
-									li.aboutMe-skills__item-inner HTML5
-									li.aboutMe-skills__item-inner CCS3
-									li.aboutMe-skills__item-inner JavaScript & jQuery
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech HTML5
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech CCS3
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech JavaScript & jQuery
 							li.aboutMe-skills__item-outer Backend
 								ul.aboutMe-skills__list-inner
-									li.aboutMe-skills__item-inner PHP
-									li.aboutMe-skills__item-inner mySQL
-									li.aboutMe-skills__item-inner Node.js &npm
-									li.aboutMe-skills__list-inner Mongo.db
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech PHP
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech mySQL
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech Node.js & npm
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech Mongo.db
 							li.aboutMe-skills__item-outer WorkFlow
 								ul.aboutMe-skills__list-inner
-									li.aboutMe-skills__item-inner Git
-									li.aboutMe-skills__item-inner Gulp
-									li.aboutMe-skills__item-inner Bower
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech Git
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech Gulp
+									li.aboutMe-skills__item-inner 
+										.aboutMe-skills__tech-wrap
+											.aboutMe-skills__tech Bower
 
-			section.contacts
-		
+			section.about-contacts
+				.about-contacts__wrap
+					.about-contacts__data
+						h3.about-contacts__head Контакты
+						ul.about-contacts__list
+							li.about-contacts__item
+								a(href="#").about-contacts__link.about-contacts__skype denny13241
+							li.about-contacts__item
+								a(href="#").about-contacts__link.about-contacts__email beckass86@gmail.com
+							li.about-contacts__item
+								a(href="#").about-contacts__link.about-contacts__phone +7 912 698 79 25
+							li.about-contacts__item
+								a(href="#").about-contacts__link.about-contacts__address Каменск-Уральский
 		
 		include footer
 
-		//- script(src="js/libs.min.js")
-		//- script(src="js/common.js")
+		script(src="js/libs.min.js")
+		script(src="js/common.js")
