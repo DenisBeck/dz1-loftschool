@@ -1,4 +1,4 @@
-- var blogs = [ "Самое важное в SASS", "Приемы в вёрстке, без которых не обходится ни один сайт", "Самый необходимый набор Gulp плагинов", "Почему я выбрал Jade" ]
+include blocks/mixins
 
 
 html(lang="en")
@@ -23,7 +23,7 @@ html(lang="en")
 
 		.main
 			header#blog-header.main-header
-				include header
+				include blocks/header
 				.arrow__block
 					a(href="#blog").arrow__link.arrow__link_relative Перейти к моим работам
 			.green-folder
@@ -81,7 +81,7 @@ html(lang="en")
 
 
 		
-		include footer
+		include blocks/footer
 
 		script(src="js/libs.min.js")
 		script(src="js/common.js")

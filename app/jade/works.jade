@@ -1,32 +1,4 @@
-
-- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-
-- var Dima 		= { photo: "img/photo1.png", text: "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!", name: "Ковальчук Дмитрий", occupation: " - основатель Loftschool" };
-- var Zar 		= { photo: "img/photo2.png", text: "Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!", name: "Зар Захаров", occupation: "главный преподаватель" };
-
-
-- var works 	= [ loftSchool, itLoft, loftBlog ];
-- var reviews 	= [ Dima, Zar ]
-
-mixin myWork-descr(work)
-	li.descr-part__item
-		h3.descr-part__head #{work.header}
-		.descr-part__img.hidden
-			img(src="#{work.imgSrc}", alt="")
-		p.descr-part__descr #{work.descr}
-		a.descr-part__visit(href="#{work.href}" target="_blank") Посмотреть сайт 
-
-mixin review(object)
-	li.reviews__item
-		.reviews__photo
-			img(src="#{object.photo}", alt="")
-		blockquote
-			p.reviews__text #{object.text}
-		p.reviews__name #{object.name}
-		p.reviews__occupation #{object.occupation}
-	
+include blocks/mixins
 
 html(lang="en")
 	head
@@ -49,7 +21,7 @@ html(lang="en")
 		
 		.main.main-works.background
 			header#works-header.main-header
-				include header
+				include blocks/header
 				.arrow__block
 					a(href="#myWorks").arrow__link.arrow__link_relative Перейти к моим работам
 
@@ -102,7 +74,7 @@ html(lang="en")
 			.arrow__block
 				a(href="#works-header").arrow__link.arrow__link_up Перейти в начало
 			
-		include footer
+		include blocks/footer
 		
 		script(src="js/libs.min.js")
 		script(src="js/common.js")
