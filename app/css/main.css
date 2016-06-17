@@ -472,7 +472,49 @@ a {
   .about-contacts {
     height: 900px; }
     .about-contacts__wrap {
-      height: 630px; } }
+      height: 630px; }
+  .sidebar {
+    float: none;
+    height: 100%;
+    width: 280px;
+    background-color: #6C9C5A;
+    z-index: 10; }
+    .sidebar__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100%; }
+    .sidebar__link {
+      color: #D3E1CE; }
+    .sidebar__item {
+      padding-left: 17px; }
+      .sidebar__item_active .sidebar__link {
+        color: #FFFFFF; }
+  .content {
+    width: 100%;
+    float: none;
+    padding: 10px 24px;
+    margin-left: 280px; }
+  .article {
+    margin: auto;
+    font-size: 14px;
+    line-height: 21px; }
+    .article__head {
+      font: 30px/36px sansus_webissimoregular; }
+  .green-folder a {
+    height: 45px;
+    margin-left: 280px;
+    width: 12px;
+    position: fixed;
+    top: 50%;
+    -webkit-border-radius: 0 120px 120px 0;
+            border-radius: 0 120px 120px 0;
+    background-color: #6C9C5A; }
+  .main {
+    overflow: hidden; } }
 
 @media screen and (max-width: 768px) {
   .welcome-block__head {
@@ -493,10 +535,14 @@ a {
     .autorize-block__nav-menu-link,
     .welcome-block__nav-menu-link {
       padding: 0 17px; }
-  .footer__begin {
-    display: block; }
-  .footer__main {
-    border-left: none; }
+  .footer {
+    font-size: 14px; }
+    .footer__begin {
+      display: block; }
+    .footer__main {
+      border-left: none; }
+    .footer__link {
+      font-size: 14px; }
   .main-header {
     padding-bottom: 0; }
   .arrow__block {
@@ -547,7 +593,9 @@ a {
     padding-right: 0; }
     .aboutMe-skills__text {
       padding: 0 10px;
-      line-height: 24px; } }
+      line-height: 24px; }
+  .article__head {
+    font: 30px/36px sansus_webissimoregular; } }
 
 @media screen and (max-width: 380px) {
   .about-contacts__data {

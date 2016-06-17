@@ -70,11 +70,50 @@
 				padding: 0 45px
 			&__progress
 				text-align: center
-
 	.about-contacts
 		height: 900px
 		&__wrap
 			height: 630px
+
+	//Страница Blog
+	.sidebar
+		float: none
+		height: 100%
+		width: $contentTableSize
+		background-color: $baseColor
+		z-index: 10
+		&__list
+			+centering
+			width: 100%
+		&__link
+			color: #D3E1CE
+		&__item
+			padding-left: 17px
+			&_active
+				.sidebar__link
+					color: #FFFFFF
+	.content
+		width: 100%
+		float: none
+		padding: 10px 24px
+		margin-left: $contentTableSize
+	.article
+		margin: auto
+		font-size: 14px
+		line-height: 21px
+		&__head
+			font: 30px/36px sansus_webissimoregular
+	.green-folder
+		a
+			height: 45px
+			margin-left: $contentTableSize
+			width: 12px 
+			position: fixed
+			top: 50%
+			border-radius: 0 120px 120px 0
+			background-color: $baseColor
+	.main
+		overflow: hidden
 
 @media screen and (max-width: 768px) 
 
@@ -94,10 +133,14 @@
 		width: 300px
 		&__nav-menu-link
 			padding: 0 17px
-	.footer__begin
-		display: block 
-	.footer__main
-		border-left: none
+	.footer	
+		font-size: 14px
+		&__begin
+			display: block 
+		&__main
+			border-left: none
+		&__link
+			font-size: 14px
 
 	//Страница Works
 	.main-header
@@ -153,6 +196,11 @@
 		&__text
 			padding: 0 10px
 			line-height: 24px
+
+	//Страница Blog
+	.article
+		&__head
+			font: 30px/36px sansus_webissimoregular
 
 
 @media screen and (max-width: 380px) 

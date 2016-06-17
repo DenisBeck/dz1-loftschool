@@ -1,0 +1,51 @@
+@import "mixins"
+
+
+.green-folder
+	font-size: 0
+.blogs
+	margin-top: -8.5%
+	background-image: url('../img/icons/bg.svg')
+	background-size: 101%
+	padding-top: 8.5%
+	background-repeat: no-repeat
+	color: $textColor
+	
+
+.content__wrap
+	padding-top: 50px
+.sidebar
+	position: fixed
+	float: left
+	width: 25%
+	&__item
+		padding: 17px
+		padding-left: 40px
+		text-align: right
+		&_active
+			border-right: 3px solid $baseColor
+			.sidebar__link
+				color: $baseColor
+				font-family: robotobold
+	&__link
+		color: $textColor
+		font-size: 16px
+		max-width: 274px
+.content 
+	padding: 10px 100px
+	float: right
+	width: 75%
+	&__head
+		font-size: 0
+	
+.article
+	max-width: 900px
+	font-size: 16px
+	line-height: 26px
+	&__head
+		font: 35px/41px sansus_webissimoregular
+	&__date
+		time
+			color: $baseColor
+
+
