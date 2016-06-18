@@ -84,18 +84,18 @@
 
 
 .about-contacts
+	iframe
+		width: 100%
+		height: 100%
 	height: 980px
-	background-color: $baseColor
-	padding-bottom: 185px
-	&__wrap 
-		height: 800px
-		position: relative
-		color: $textColor
+	position: relative
 	&__data
 		background-color: rgba(#F4F5F0, 0.85)
 		border-radius: 5px
+		margin-top: -92px
 		max-width: 380px
 		padding: 40px
+		color: $textColor
 		+centering
 	+header-h3("&__head", $textColor)
 	&__item
@@ -118,9 +118,14 @@
 	&__address
 		background-image: url("../img/icons/map_marker.svg")
 
-iframe
+/* .overlay 
+	background: transparent
+	position: relative
 	width: 100%
-	height: 100%
+	height: 900px
+	top: 900px
+	margin-top: -900px */
+
 
 
 @import "media"

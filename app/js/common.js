@@ -15,5 +15,9 @@ $(document).ready(function() {
 		})
 
 		aside.find('.sidebar__item').first().addClass('sidebar__item_active')
+
+		$('.overlay').click(function() {
+			$(this).remove();
+		});
 		
 });
