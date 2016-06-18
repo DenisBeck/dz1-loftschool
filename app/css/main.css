@@ -1118,29 +1118,60 @@ a {
     .aboutMe-skills__item-outer {
       margin-bottom: 35px; }
     .aboutMe-skills__item-inner {
+      position: relative;
       display: inline-block;
       border-radius: 50%;
-      background-color: #DFDCD5;
       color: #6C9C5A;
       margin: 10px;
-      padding: 20px;
       font-size: 13px;
       text-align: center;
       vertical-align: bottom; }
-    .aboutMe-skills__tech-wrap {
-      display: block;
-      position: relative;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      vertical-align: middle;
-      background-color: #F4F5F0; }
     .aboutMe-skills__tech {
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      width: 60px; }
+
+.g-circles {
+  transform: rotate(-90deg);
+  fill: none;
+  stroke-width: 20; }
+
+.sector {
+  stroke: #6C9C5A;
+  transition: all 1s;
+  stroke-dasharray: 282; }
+
+.html {
+  stroke-dashoffset: 201; }
+
+.css {
+  stroke-dashoffset: 221; }
+
+.js {
+  stroke-dashoffset: 241; }
+
+.php {
+  stroke-dashoffset: 261; }
+
+.mysql {
+  stroke-dashoffset: 271; }
+
+.node {
+  stroke-dashoffset: 271; }
+
+.mongo {
+  stroke-dashoffset: 282; }
+
+.git {
+  stroke-dashoffset: 221; }
+
+.gulp {
+  stroke-dashoffset: 241; }
+
+.bower {
+  stroke-dashoffset: 221; }
 
 .about-contacts {
   height: 980px;
