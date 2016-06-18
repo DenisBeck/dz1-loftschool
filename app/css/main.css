@@ -414,7 +414,7 @@ a {
       font-weight: bold; }
 
 .reviews__header {
-  max-width: 800px;
+  width: 60%;
   margin: auto;
   position: relative; }
   .reviews__header:before {
@@ -557,19 +557,19 @@ a {
   background-repeat: no-repeat; }
   .myWorks__header {
     margin: auto;
-    max-width: 700px;
+    width: 50%;
     position: relative; }
     .myWorks__header:before {
       content: "";
-      position: absolute;
       display: block;
+      position: absolute;
       width: 100%;
-      height: 100%;
-      top: 0;
+      height: 150px;
+      top: -45px;
       background-image: url("../img/icons/works_header.svg");
       background-repeat: no-repeat;
       background-position: center 0;
-      background-size: cover;
+      background-size: 100% 100%;
       opacity: 0.2; }
 
 .descr-part,
@@ -638,12 +638,18 @@ a {
     position: relative;
     height: 100%; }
   .vision-part__container {
-    width: 450px;
+    width: 80%;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  .vision-part__img {
+    width: 100%; }
+  .vision-part__item {
+    display: none; }
+    .vision-part__item:first-of-type {
+      display: block; }
 
 .navigation-part {
   float: right;
@@ -658,8 +664,12 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 270px;
+    width: 280px;
     text-align: center; }
+  .navigation-part__item {
+    display: none; }
+    .navigation-part__item:first-of-type {
+      display: block; }
   .navigation-part__prev {
     float: left;
     opacity: 0.4; }
@@ -846,13 +856,13 @@ a {
     width: 90px;
     height: 3px;
     background-color: #373E42; }
-  .myWorks__header {
-    max-width: 520px; }
   .descr-part,
   .vision-part,
   .navigation-part {
     width: 100%;
     float: none; }
+  .vision-part__container {
+    max-width: 600px; }
   .descr-part {
     height: 275px; }
     .descr-part__head {
@@ -891,7 +901,7 @@ a {
         text-align: center; }
   .about-contacts {
     height: 900px;
-    padding-bottom: 272px; }
+    padding-bottom: 270px; }
     .about-contacts__wrap {
       height: 630px; }
   .sidebar {
@@ -997,8 +1007,12 @@ a {
     height: 17px; }
   .section-header {
     font-size: 35px; }
+  .myWorks-header {
+    width: 75%; }
   .vision-part {
     height: 255px; }
+    .vision-part__img img {
+      width: 280px; }
   .descr-part {
     height: 218px; }
     .descr-part__head {
@@ -1007,6 +1021,8 @@ a {
       margin-bottom: 16px; }
   .navigation-part {
     height: 92px; }
+    .navigation-part__img img {
+      width: 120px; }
   .reviews__item {
     width: 100%; }
   .contact-block__head {
@@ -1023,8 +1039,12 @@ a {
     .aboutMe-skills__text {
       padding: 0 10px;
       line-height: 24px; }
+  .about-contacts {
+    padding-bottom: 350px; }
   .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
+    font: 30px/36px sansus_webissimoregular; }
+  .blogs {
+    padding-bottom: 350px; } }
 
 @media screen and (max-width: 380px) {
   .about-contacts__data {
@@ -1032,7 +1052,9 @@ a {
     transform: translate(0, 0);
     background-color: #FBFBFB;
     width: 100%;
-    border-radius: 0; } }
+    border-radius: 0; }
+  .myWorks-header {
+    width: 100%; } }
 
 .section-header {
   padding-top: 0; }
@@ -1276,13 +1298,13 @@ iframe {
     width: 90px;
     height: 3px;
     background-color: #373E42; }
-  .myWorks__header {
-    max-width: 520px; }
   .descr-part,
   .vision-part,
   .navigation-part {
     width: 100%;
     float: none; }
+  .vision-part__container {
+    max-width: 600px; }
   .descr-part {
     height: 275px; }
     .descr-part__head {
@@ -1321,7 +1343,7 @@ iframe {
         text-align: center; }
   .about-contacts {
     height: 900px;
-    padding-bottom: 272px; }
+    padding-bottom: 270px; }
     .about-contacts__wrap {
       height: 630px; }
   .sidebar {
@@ -1427,8 +1449,12 @@ iframe {
     height: 17px; }
   .section-header {
     font-size: 35px; }
+  .myWorks-header {
+    width: 75%; }
   .vision-part {
     height: 255px; }
+    .vision-part__img img {
+      width: 280px; }
   .descr-part {
     height: 218px; }
     .descr-part__head {
@@ -1437,6 +1463,8 @@ iframe {
       margin-bottom: 16px; }
   .navigation-part {
     height: 92px; }
+    .navigation-part__img img {
+      width: 120px; }
   .reviews__item {
     width: 100%; }
   .contact-block__head {
@@ -1453,8 +1481,12 @@ iframe {
     .aboutMe-skills__text {
       padding: 0 10px;
       line-height: 24px; }
+  .about-contacts {
+    padding-bottom: 350px; }
   .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
+    font: 30px/36px sansus_webissimoregular; }
+  .blogs {
+    padding-bottom: 350px; } }
 
 @media screen and (max-width: 380px) {
   .about-contacts__data {
@@ -1462,7 +1494,9 @@ iframe {
     transform: translate(0, 0);
     background-color: #FBFBFB;
     width: 100%;
-    border-radius: 0; } }
+    border-radius: 0; }
+  .myWorks-header {
+    width: 100%; } }
 
 .green-folder {
   font-size: 0; }
@@ -1550,13 +1584,13 @@ iframe {
     width: 90px;
     height: 3px;
     background-color: #373E42; }
-  .myWorks__header {
-    max-width: 520px; }
   .descr-part,
   .vision-part,
   .navigation-part {
     width: 100%;
     float: none; }
+  .vision-part__container {
+    max-width: 600px; }
   .descr-part {
     height: 275px; }
     .descr-part__head {
@@ -1595,7 +1629,7 @@ iframe {
         text-align: center; }
   .about-contacts {
     height: 900px;
-    padding-bottom: 272px; }
+    padding-bottom: 270px; }
     .about-contacts__wrap {
       height: 630px; }
   .sidebar {
@@ -1701,8 +1735,12 @@ iframe {
     height: 17px; }
   .section-header {
     font-size: 35px; }
+  .myWorks-header {
+    width: 75%; }
   .vision-part {
     height: 255px; }
+    .vision-part__img img {
+      width: 280px; }
   .descr-part {
     height: 218px; }
     .descr-part__head {
@@ -1711,6 +1749,8 @@ iframe {
       margin-bottom: 16px; }
   .navigation-part {
     height: 92px; }
+    .navigation-part__img img {
+      width: 120px; }
   .reviews__item {
     width: 100%; }
   .contact-block__head {
@@ -1727,8 +1767,12 @@ iframe {
     .aboutMe-skills__text {
       padding: 0 10px;
       line-height: 24px; }
+  .about-contacts {
+    padding-bottom: 350px; }
   .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
+    font: 30px/36px sansus_webissimoregular; }
+  .blogs {
+    padding-bottom: 350px; } }
 
 @media screen and (max-width: 380px) {
   .about-contacts__data {
@@ -1736,4 +1780,6 @@ iframe {
     transform: translate(0, 0);
     background-color: #FBFBFB;
     width: 100%;
-    border-radius: 0; } }
+    border-radius: 0; }
+  .myWorks-header {
+    width: 100%; } }

@@ -1,6 +1,4 @@
-@media screen and (min-width: 1201px)
-	
-	$footerHeight: 185px
+
 
 @media screen and (max-width: 1200px)
 	//Главная страница
@@ -38,13 +36,13 @@
 	.section-header
 		font-size: 47px
 	+underline(".section-header", 5px, 20px, #373E42)
-	.myWorks__header
-		max-width: 520px
 	.descr-part,
 	.vision-part,
 	.navigation-part
 		width: 100%
 		float: none
+	.vision-part__container
+		max-width: 600px
 	.descr-part
 		height: 275px
 		&__head
@@ -80,9 +78,9 @@
 				text-align: center
 	.about-contacts
 		height: 900px
-		padding-bottom: 272px
 		&__wrap
 			height: 630px
+		padding-bottom: 270px
 
 	//Страница Blog
 	.sidebar
@@ -120,6 +118,9 @@
 			top: 50%
 			border-radius: 0 75% 75% 0
 			background-color: $baseColor
+	.blogs
+		padding-bottom
+			270px
 
 
 @media screen and (max-width: 768px) 
@@ -140,12 +141,8 @@
 		width: 300px
 		&__nav-menu-link
 			padding: 0 17px
-	
 
-
-
-	.footer	
-		
+	.footer
 		margin-top: -350px
 		text-align: center
 		&-welcome
@@ -196,8 +193,13 @@
 		height: 17px
 	.section-header
 		font-size: 35px
+	.myWorks-header
+		width: 75%
 	.vision-part
 		height: 255px
+		&__img
+			img
+				width: 280px
 	.descr-part
 		height: 218px
 		&__head
@@ -206,6 +208,9 @@
 			margin-bottom: 16px
 	.navigation-part
 		height: 92px
+		&__img
+			img
+				width: 120px
 	.reviews__item
 		width: 100%
 	.contact-block__head
@@ -225,11 +230,16 @@
 		&__text
 			padding: 0 10px
 			line-height: 24px
+	.about-contacts
+		padding-bottom: 350px
 
 	//Страница Blog
 	.article
 		&__head
 			font: 30px/36px sansus_webissimoregular
+	.blogs
+		padding-bottom: 350px
+
 
 
 
@@ -240,4 +250,7 @@
 		background-color: #FBFBFB
 		width: 100%
 		border-radius: 0
+
+	.myWorks-header
+		width: 100%
 

@@ -1,8 +1,8 @@
 - var blogs = [ "Самое важное в SASS", "Приемы в вёрстке, без которых не обходится ни один сайт", "Самый необходимый набор Gulp плагинов", "Почему я выбрал Jade" ]
 
-- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
-- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.svg", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var itLoft 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
+- var loftBlog 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", descr: "html, css, javascript", href: "http://www.loftschool.com" };
 
 - var Dima 		= { photo: "img/photo1.png", text: "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!", name: "Ковальчук Дмитрий", occupation: " - основатель Loftschool" };
 - var Zar 		= { photo: "img/photo2.png", text: "Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!", name: "Зар Захаров", occupation: "главный преподаватель" };
@@ -14,10 +14,16 @@
 mixin myWork-descr(work)
 	li.descr-part__item
 		h3.descr-part__head #{work.header}
-		.descr-part__img.hidden
-			img(src="#{work.imgSrc}", alt="")
 		p.descr-part__descr #{work.descr}
 		a.descr-part__visit(href="#{work.href}" target="_blank") Посмотреть сайт 
+mixin myWork-vision(work)
+	li.vision-part__item
+		.vision-part__img
+			img(src="#{work.imgSrc}", alt="Моя работа")
+mixin myWork-navigation(work)
+	li.navigation-part__item
+		.navigation-part__img
+			img(src="#{work.imgSrc}", alt="Моя работа")
 
 mixin review(object)
 	li.reviews__item

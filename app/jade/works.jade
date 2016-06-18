@@ -13,6 +13,9 @@ block content
 		.vision-part  
 			.vision-part__wrap
 				.vision-part__container
+					ul.vision-part__list
+						for item in works
+							+myWork-vision(item)
 		.descr-part
 			.descr-part__wrap
 				.descr-part__block
@@ -22,9 +25,15 @@ block content
 		.navigation-part
 			.navigation-part__block.navigation-part__prev
 				.navigation-part__wrap
+					ul.navigation-part__list
+						for item in works
+							+myWork-navigation(item)
 				.navigation-part__arrow
 			.navigation-part__block.navigation-part__next
 				.navigation-part__wrap
+					ul.navigation-part__list
+						for item in works
+							+myWork-navigation(item)
 				.navigation-part__arrow.navigation-part__arrow_up
 	.background
 		section.reviews
