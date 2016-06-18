@@ -1,35 +1,39 @@
+include mixins
+
 
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
-		title Document
+		block title 
+			title Document
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
 		link(rel="stylesheet", href="fonts/stylesheet.css")
-		link(rel="stylesheet", href="fonts/libs.css")
 		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/blog.css")
 		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/works.css")
+		link(rel="stylesheet", href="css/about.css")
+
 	body
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		.container
-			.main.main-welcome
-				.autorize-wrap.clearfix
-					.autorize
-						a(href="#login").autorize__text Авторизоваться
-				.welcome-content
-					include blocks/menu-block.jade
-					include blocks/autorize-block.jade
-			footer.footer-welcome
-				.footer__copyright
-					.footer__text.footer__begin &copy; Денис Бекленищев 
-					.footer__text.footer__main создано с любовью в LoftSchool 
-					.footer__text.footer__end 2016
+		.main
+			header#main-header.main-header
+				include header
+				.arrow__block
+					block arrow
+						a(href="#").arrow__link.arrow__link_relative 
+
+
+			block content
+				section content
+
+		include footer
 
 		script(src="js/libs.min.js")
 		script(src="js/common.js")
-	

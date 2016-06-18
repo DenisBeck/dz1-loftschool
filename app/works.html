@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Works</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="fonts/stylesheet.css"/>
     <link rel="stylesheet" href="css/libs.min.css"/>
+    <link rel="stylesheet" href="css/blog.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/works.css"/>
+    <link rel="stylesheet" href="css/about.css"/>
   </head>
   <body>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="main main-works background">
-      <header id="works-header" class="main-header">
+    <div class="main">
+      <header id="main-header" class="main-header">
         <div class="header-wrap">
           <div class="top-menu clearfix">
             <div class="welcome-block__soc">Ищите в социальных сетях
@@ -89,56 +91,58 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
-        <header class="section-header reviews__header">
-          <h2 class="reviews__head">Что обо мне говорят</h2>
-        </header>
-        <div class="reviews__block">
-          <ul class="reviews__list">
-            <li class="reviews__item">
-              <div class="reviews__photo"><img src="img/photo1.png" alt=""/></div>
-              <blockquote>
-                <p class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
-              </blockquote>
-              <p class="reviews__name">Ковальчук Дмитрий</p>
-              <p class="reviews__occupation"> - основатель Loftschool</p>
-            </li>
-            <li class="reviews__item">
-              <div class="reviews__photo"><img src="img/photo2.png" alt=""/></div>
-              <blockquote>
-                <p class="reviews__text">Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!</p>
-              </blockquote>
-              <p class="reviews__name">Зар Захаров</p>
-              <p class="reviews__occupation">главный преподаватель</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="contact">
-        <div class="contact-block-wrap">
-          <div class="contact-block">
-            <h1 class="contact-block__head">Связаться со мной</h1>
-            <form class="contact-block__form">
-              <div class="contact-block__data contact-block__login">
-                <input type="text" placeholder="Имя" class="contact-block__input-text"/>
+      <div class="background">
+        <section class="reviews">
+          <header class="section-header reviews__header">
+            <h2 class="reviews__head">Что обо мне говорят</h2>
+          </header>
+          <div class="reviews__block">
+            <ul class="reviews__list">
+              <li class="reviews__item">
+                <div class="reviews__photo"><img src="img/photo1.png" alt=""/></div>
+                <blockquote>
+                  <p class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+                </blockquote>
+                <p class="reviews__name">Ковальчук Дмитрий</p>
+                <p class="reviews__occupation"> - основатель Loftschool</p>
+              </li>
+              <li class="reviews__item">
+                <div class="reviews__photo"><img src="img/photo2.png" alt=""/></div>
+                <blockquote>
+                  <p class="reviews__text">Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!</p>
+                </blockquote>
+                <p class="reviews__name">Зар Захаров</p>
+                <p class="reviews__occupation">главный преподаватель</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="contact-block-wrap">
+            <div class="contact-block">
+              <h1 class="contact-block__head">Связаться со мной</h1>
+              <form class="contact-block__form">
+                <div class="contact-block__data contact-block__login">
+                  <input type="text" placeholder="Имя" class="contact-block__input-text"/>
+                </div>
+                <div class="contact-block__data contact-block__email">
+                  <input type="email" placeholder="Email" class="contact-block__input-text"/>
+                </div>
+                <div class="contact-block__data contact-block__textarea">
+                  <textarea placeholder=" Ваше сообщение" class="contact-block__input-text contact-block__input-text_textarea"></textarea>
+                </div>
+              </form>
+              <div class="contact-block__enter">Отправить или очистить?
+                <ul class="contact-block__enter-list">
+                  <li class="contact-block__enter-item contact-block__enter-item_first"><a href="#" class="contact-block__enter-link">Отправить</a></li>
+                  <li class="contact-block__enter-item"><a href="#" class="contact-block__enter-link">Очистить</a></li>
+                </ul>
               </div>
-              <div class="contact-block__data contact-block__email">
-                <input type="email" placeholder="Email" class="contact-block__input-text"/>
-              </div>
-              <div class="contact-block__data contact-block__textarea">
-                <textarea placeholder=" Ваше сообщение" class="contact-block__input-text contact-block__input-text_textarea"></textarea>
-              </div>
-            </form>
-            <div class="contact-block__enter">Отправить или очистить?
-              <ul class="contact-block__enter-list">
-                <li class="contact-block__enter-item contact-block__enter-item_first"><a href="#" class="contact-block__enter-link">Отправить</a></li>
-                <li class="contact-block__enter-item"><a href="#" class="contact-block__enter-link">Очистить</a></li>
-              </ul>
             </div>
           </div>
-        </div>
-      </section>
-      <div class="arrow__block"><a href="#works-header" class="arrow__link arrow__link_up">Перейти в начало</a></div>
+        </section>
+        <div class="arrow__block"><a href="#main-header" class="arrow__link arrow__link_up">Перейти в начало</a></div>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer__info">
@@ -167,7 +171,7 @@
           <p class="footer__author">— Martin Golding</p>
         </div>
       </div>
-      <div class="footer__copyright footer__copyright_works"> 
+      <div class="footer__copyright footer__copyright_pages">
         <div class="footer__text footer__begin">&copy; Денис Бекленищев </div>
         <div class="footer__text footer__main">создано с любовью в LoftSchool </div>
         <div class="footer__text footer__end">2016</div>

@@ -34,24 +34,30 @@ a
 	color: #FFFFFF
 .main 
 	min-height: 100%
-	margin: 0 auto -100px
+	margin: 0 auto 
 	position: relative
-	&:after
-		content: ""
-		display: block
-		height: 100px
-		margin-top: 20px
-	&-works
-		margin: 0 auto -185px
+	&-welcome 
 		&:after
 			content: ""
 			display: block
-			height: 180px
-			margin-top: 20px
-.content 
-	min-height: 450px
-	height: auto
+			height: 100px
 
+.main-header 
+	padding: 30px
+	min-height: 650px
+	height: 100%
+	.welcome-block__soc
+		float: left
+		&-link
+			opacity: 1
+.header-wrap
+	position: relative
+	height: 100%
+	margin-bottom: -90px
+
+.welcome-content
+	position: relative
+	min-height: 650px
 .autorize-wrap 
 	margin-bottom: 34px
 	padding: 20px 
@@ -73,31 +79,11 @@ a
 @import "menu-block"
 @import "autorize-block"
 
-.footer
-	&__copyright
-		position: relative
-		text-align: center
-		font-weight: bold
-		color: #D5DDD9
-		font-size: 15px
-		min-height: 100px
-		&_works
-			min-height: 40px
-			background-color: rgba($baseColor, 0.85)
-			&:before
-				content: ""
-				display: inline-block
-				vertical-align: middle
-				height: 40px
-	&__text
-		display: inline-block
-		padding: 0 5px
-		border-left: 1px solid #D5DDD9
-	&__begin 
-		border-left: none
+/* .footer
+	
 	&__info
 		position: relative
-		min-height: 145px
+		height: 145px
 		background-color: rgba(55, 62, 66, 0.85)
 		width: 100%
 		display: table
@@ -108,6 +94,70 @@ a
 		display: table-cell
 		border-left: 1px solid #9B9FA1
 		padding: 0 25px
+	&__descr
+		border-left: none
+		font-family: robotolight
+	&__list
+		font-size: 0
+	&__item
+		font-size: 16px
+		display: inline-block
+		margin-left: 18px
+		&_first
+			margin-left: 0
+	&__soc
+		margin-bottom: 10px 
+		margin-top: 30px
+		font-family: robotobold
+		.vk:hover
+			background-image: url('../img/icons/vk_hover_white.svg')
+		.git:hover
+			background-image: url('../img/icons/github_hover_white.svg')
+		.in:hover
+			background-image: url('../img/icons/in_hover_white.svg')
+	&__cite
+		font-family: robotoitalic
+		&__author
+			font-weight: bold */
+
+
+.footer-welcome
+	margin-top: -40px
+.footer
+	margin-top: -185px
+	&__copyright
+		height: 40px
+		text-align: center
+		font-weight: bold
+		padding: 10px
+		color: #D5DDD9
+		line-height: 24px
+	&__text
+		display: inline-block
+		padding: 0 5px
+		border-left: 1px solid #D5DDD9
+	&__begin 
+		border-left: none
+
+	&__copyright_pages
+		position: relative
+		background-color: rgba($baseColor, .85)
+	&__info
+		position: relative
+		height: 145px
+		background-color: rgba(55, 62, 66, 0.85)
+		width: 100%
+		display: table
+		table-layout: fixed
+		padding: 25px 0
+		color: #FFFFFF
+	&__info-block
+		display: table-cell
+		border-left: 1px solid #9B9FA1
+		padding: 0 25px
+		vertical-align: top
+		p
+			margin: 0
 	&__descr
 		border-left: none
 		font-family: robotolight

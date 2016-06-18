@@ -15,13 +15,13 @@ var gulp        = require('gulp'),
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass())
-		.pipe(autoprefixer([ 'last 15 versions', '> 1%', 'ie 8', 'ie 7' ], { cascade: true }))
-		.pipe(gulp.dest('app/css'))
+/*		.pipe(autoprefixer([ 'last 15 versions', '> 1%', 'ie 8', 'ie 7' ], { cascade: true }))
+*/		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('jade', function() {
-	return gulp.src('app/jade/*.jade')
+	return gulp.src(['app/jade/**/*.jade'])
 		.pipe(jade({
 			pretty: true
 		}))
@@ -77,7 +77,7 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('watch', ['browser-sync', 'clean-app', 'css-libs', 'jade', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'clean-app', 'css-libs', 'jade'/*, 'scripts'*/], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/jade/**/*.jade', ['jade']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
