@@ -41,5 +41,5 @@ $(document).ready(function() {
 
 		$(this).parent().toggleClass('green-folder_open');
 		sidebar.fadeToggle(0);
-	})
+
 });

@@ -91,8 +91,8 @@
     background-image: url("../img/icons/vk_hover.svg"); }
 
 .git {
-  width: 30px;
-  height: 26px;
+  width: 32px;
+  height: 27px;
   background-image: url("../img/icons/github.svg"); }
   .git:hover {
     opacity: 1;
@@ -468,7 +468,7 @@
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 280px;
+    max-width: 280px;
     text-align: center; }
   .navigation-part__item {
     display: none; }
@@ -684,247 +684,6 @@
 .reviews__name {
   color: #4E8839;
   font-weight: bold; }
-
-@media screen and (max-width: 1200px) {
-  .contact-block,
-  .autorize-block,
-  .welcome-block {
-    width: 348px; }
-    .contact-block__nav-menu-link,
-    .autorize-block__nav-menu-link,
-    .welcome-block__nav-menu-link {
-      padding: 0 25px; }
-  .footer {
-    margin-top: -270px;
-    font-size: 14px; }
-    .footer__info, .footer__cite {
-      display: block;
-      width: 100%; }
-    .footer__info {
-      height: 230px; }
-    .footer__links, .footer__descr {
-      display: inline-block;
-      width: 49%; }
-    .footer__cite {
-      padding-top: 25px; }
-  .background {
-    padding-bottom: 270px; }
-  .main-works {
-    margin: 0 auto -280px; }
-    .main-works:after {
-      height: 275px; }
-  .section-header {
-    font-size: 47px; }
-  .section-header:after {
-    content: "";
-    display: block;
-    margin: 5px auto 20px;
-    width: 90px;
-    height: 3px;
-    background-color: #373E42; }
-  .descr-part,
-  .vision-part,
-  .navigation-part {
-    width: 100%;
-    float: none; }
-  .vision-part__container {
-    max-width: 600px; }
-  .descr-part {
-    height: 275px; }
-    .descr-part__head {
-      font-size: 30px; }
-    .descr-part__head:after {
-      content: "";
-      display: block;
-      margin: 15px auto 20px;
-      width: 90px;
-      height: 3px;
-      background-color: #566358; }
-    .descr-part__descr {
-      margin-bottom: 40px; }
-  .aboutMe {
-    margin-top: -8.5%;
-    background-image: url("../img/icons/bg1.svg");
-    background-size: 101%;
-    padding-top: 8.5%;
-    background-repeat: no-repeat; }
-    .aboutMe-info, .aboutMe-skills {
-      display: block;
-      width: 100%;
-      background-image: none;
-      padding-top: 30px; }
-    .aboutMe-info {
-      background-color: #E9EFE2;
-      padding-left: 145px;
-      padding-right: 145px; }
-    .aboutMe-skills {
-      background-color: #F4F5F0;
-      padding-left: 100px;
-      padding-right: 100px; }
-      .aboutMe-skills__text {
-        padding: 0 45px; }
-      .aboutMe-skills__progress {
-        text-align: center; }
-  .about-contacts {
-    height: 900px; }
-    .about-contacts__data {
-      margin-top: -135px; }
-  .sidebar {
-    position: fixed;
-    float: none;
-    display: none;
-    height: 100%;
-    width: 280px;
-    top: 0;
-    background-color: #6C9C5A;
-    z-index: 6; }
-    .sidebar__list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      width: 100%; }
-    .sidebar__link {
-      color: #D3E1CE; }
-    .sidebar__item {
-      padding-left: 17px; }
-      .sidebar__item_active .sidebar__link {
-        color: #FFFFFF; }
-  .content {
-    width: 100%;
-    float: none;
-    padding: 10px 24px; }
-  .article {
-    margin: auto;
-    font-size: 14px;
-    line-height: 21px; }
-    .article__head {
-      font: 30px/36px sansus_webissimoregular; }
-  .green-folder {
-    display: block; } }
-
-@media screen and (max-width: 768px) {
-  .welcome-block__head {
-    font: 21px/28px robotomedium;
-    margin-bottom: 0; }
-  .welcome-block__text {
-    font-size: 14px; }
-  .autorize {
-    float: none;
-    display: inline-block; }
-  .autorize-wrap {
-    text-align: center; }
-  .contact-block,
-  .autorize-block,
-  .welcome-block {
-    width: 300px; }
-    .contact-block__nav-menu-link,
-    .autorize-block__nav-menu-link,
-    .welcome-block__nav-menu-link {
-      padding: 0 17px; }
-  .footer {
-    margin-top: -350px;
-    text-align: center; }
-    .footer-welcome {
-      margin: -60px; }
-    .footer__copyright {
-      height: 60px; }
-    .footer__begin {
-      display: block; }
-    .footer__main {
-      border-left: none; }
-    .footer__info {
-      height: 290px;
-      padding: 0 20px; }
-    .footer__links, .footer__descr {
-      display: block;
-      padding: 15px 0;
-      width: 100%;
-      border-left: none;
-      border-bottom: 1px solid #D5DDD9; }
-    .footer__cite {
-      border-left: none;
-      padding-top: 20px; }
-    .footer__item {
-      font-size: 13px;
-      margin-left: 12px; }
-  .background {
-    padding-bottom: 350px; }
-  .main-header {
-    padding-bottom: 0; }
-  .arrow__block {
-    height: 70px; }
-  .main-menu__close {
-    width: 28px;
-    height: 25px;
-    background-size: cover; }
-  .vk {
-    width: 24px;
-    height: 15px; }
-  .git {
-    width: 21px;
-    height: 19px; }
-  .in {
-    width: 19px;
-    height: 17px; }
-  .section-header {
-    font-size: 35px; }
-  .myWorks-header {
-    width: 75%; }
-  .vision-part {
-    height: 255px; }
-    .vision-part__img img {
-      width: 280px; }
-  .descr-part {
-    height: 218px; }
-    .descr-part__head {
-      font-size: 21px; }
-    .descr-part__descr {
-      margin-bottom: 16px; }
-  .navigation-part {
-    height: 92px; }
-    .navigation-part__img img {
-      width: 120px; }
-  .reviews__item {
-    width: 100%; }
-  .contact-block__head {
-    font: 21px/28px sansus_webissimoregular; }
-  .aboutMe-info {
-    padding-left: 0;
-    padding-right: 0; }
-    .aboutMe-info__text {
-      padding: 0 10px;
-      line-height: 24px; }
-  .aboutMe-skills {
-    padding-left: 0;
-    padding-right: 0; }
-    .aboutMe-skills__text {
-      padding: 0 10px;
-      line-height: 24px; }
-  .about-contacts {
-    height: 860px; }
-    .about-contacts__data {
-      margin-top: -175px; }
-  .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
-
-@media screen and (max-width: 380px) {
-  .about-contacts__data {
-    position: static;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-    background-color: #FBFBFB;
-    width: 100%;
-    -webkit-border-radius: 0;
-            border-radius: 0;
-    margin-top: 0; }
-  .footer-about {
-    margin-top: 0; }
-  .myWorks-header {
-    width: 100%; } }
 
 .section-header {
   padding-top: 0; }
@@ -1250,6 +1009,8 @@
       padding-left: 17px; }
       .sidebar__item_active .sidebar__link {
         color: #FFFFFF; }
+  .blogs {
+    padding-bottom: 270px; }
   .content {
     width: 100%;
     float: none;
@@ -1286,9 +1047,11 @@
     margin-top: -350px;
     text-align: center; }
     .footer-welcome {
-      margin: -60px; }
+      margin-top: -60px;
+      font-size: 14px; }
     .footer__copyright {
-      height: 60px; }
+      height: 60px;
+      padding-top: 5px; }
     .footer__begin {
       display: block; }
     .footer__main {
@@ -1306,8 +1069,8 @@
       border-left: none;
       padding-top: 20px; }
     .footer__item {
-      font-size: 13px;
-      margin-left: 12px; }
+      font-size: 12px;
+      margin-left: 10px; }
   .background {
     padding-bottom: 350px; }
   .main-header {
@@ -1319,7 +1082,7 @@
     height: 25px;
     background-size: cover; }
   .vk {
-    width: 24px;
+    width: 28px;
     height: 15px; }
   .git {
     width: 21px;
@@ -1366,7 +1129,9 @@
     .about-contacts__data {
       margin-top: -175px; }
   .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
+    font: 30px/36px sansus_webissimoregular; }
+  .blogs {
+    padding-bottom: 350px; } }
 
 @media screen and (max-width: 380px) {
   .about-contacts__data {
@@ -1414,6 +1179,7 @@
   padding-top: 50px; }
 
 .sidebar {
+  display: block;
   float: left;
   width: 25%; }
   .sidebar_fixed {
@@ -1448,247 +1214,6 @@
     font: 35px/41px sansus_webissimoregular; }
   .article__date time {
     color: #6C9C5A; }
-
-@media screen and (max-width: 1200px) {
-  .contact-block,
-  .autorize-block,
-  .welcome-block {
-    width: 348px; }
-    .contact-block__nav-menu-link,
-    .autorize-block__nav-menu-link,
-    .welcome-block__nav-menu-link {
-      padding: 0 25px; }
-  .footer {
-    margin-top: -270px;
-    font-size: 14px; }
-    .footer__info, .footer__cite {
-      display: block;
-      width: 100%; }
-    .footer__info {
-      height: 230px; }
-    .footer__links, .footer__descr {
-      display: inline-block;
-      width: 49%; }
-    .footer__cite {
-      padding-top: 25px; }
-  .background {
-    padding-bottom: 270px; }
-  .main-works {
-    margin: 0 auto -280px; }
-    .main-works:after {
-      height: 275px; }
-  .section-header {
-    font-size: 47px; }
-  .section-header:after {
-    content: "";
-    display: block;
-    margin: 5px auto 20px;
-    width: 90px;
-    height: 3px;
-    background-color: #373E42; }
-  .descr-part,
-  .vision-part,
-  .navigation-part {
-    width: 100%;
-    float: none; }
-  .vision-part__container {
-    max-width: 600px; }
-  .descr-part {
-    height: 275px; }
-    .descr-part__head {
-      font-size: 30px; }
-    .descr-part__head:after {
-      content: "";
-      display: block;
-      margin: 15px auto 20px;
-      width: 90px;
-      height: 3px;
-      background-color: #566358; }
-    .descr-part__descr {
-      margin-bottom: 40px; }
-  .aboutMe {
-    margin-top: -8.5%;
-    background-image: url("../img/icons/bg1.svg");
-    background-size: 101%;
-    padding-top: 8.5%;
-    background-repeat: no-repeat; }
-    .aboutMe-info, .aboutMe-skills {
-      display: block;
-      width: 100%;
-      background-image: none;
-      padding-top: 30px; }
-    .aboutMe-info {
-      background-color: #E9EFE2;
-      padding-left: 145px;
-      padding-right: 145px; }
-    .aboutMe-skills {
-      background-color: #F4F5F0;
-      padding-left: 100px;
-      padding-right: 100px; }
-      .aboutMe-skills__text {
-        padding: 0 45px; }
-      .aboutMe-skills__progress {
-        text-align: center; }
-  .about-contacts {
-    height: 900px; }
-    .about-contacts__data {
-      margin-top: -135px; }
-  .sidebar {
-    position: fixed;
-    float: none;
-    display: none;
-    height: 100%;
-    width: 280px;
-    top: 0;
-    background-color: #6C9C5A;
-    z-index: 6; }
-    .sidebar__list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      width: 100%; }
-    .sidebar__link {
-      color: #D3E1CE; }
-    .sidebar__item {
-      padding-left: 17px; }
-      .sidebar__item_active .sidebar__link {
-        color: #FFFFFF; }
-  .content {
-    width: 100%;
-    float: none;
-    padding: 10px 24px; }
-  .article {
-    margin: auto;
-    font-size: 14px;
-    line-height: 21px; }
-    .article__head {
-      font: 30px/36px sansus_webissimoregular; }
-  .green-folder {
-    display: block; } }
-
-@media screen and (max-width: 768px) {
-  .welcome-block__head {
-    font: 21px/28px robotomedium;
-    margin-bottom: 0; }
-  .welcome-block__text {
-    font-size: 14px; }
-  .autorize {
-    float: none;
-    display: inline-block; }
-  .autorize-wrap {
-    text-align: center; }
-  .contact-block,
-  .autorize-block,
-  .welcome-block {
-    width: 300px; }
-    .contact-block__nav-menu-link,
-    .autorize-block__nav-menu-link,
-    .welcome-block__nav-menu-link {
-      padding: 0 17px; }
-  .footer {
-    margin-top: -350px;
-    text-align: center; }
-    .footer-welcome {
-      margin: -60px; }
-    .footer__copyright {
-      height: 60px; }
-    .footer__begin {
-      display: block; }
-    .footer__main {
-      border-left: none; }
-    .footer__info {
-      height: 290px;
-      padding: 0 20px; }
-    .footer__links, .footer__descr {
-      display: block;
-      padding: 15px 0;
-      width: 100%;
-      border-left: none;
-      border-bottom: 1px solid #D5DDD9; }
-    .footer__cite {
-      border-left: none;
-      padding-top: 20px; }
-    .footer__item {
-      font-size: 13px;
-      margin-left: 12px; }
-  .background {
-    padding-bottom: 350px; }
-  .main-header {
-    padding-bottom: 0; }
-  .arrow__block {
-    height: 70px; }
-  .main-menu__close {
-    width: 28px;
-    height: 25px;
-    background-size: cover; }
-  .vk {
-    width: 24px;
-    height: 15px; }
-  .git {
-    width: 21px;
-    height: 19px; }
-  .in {
-    width: 19px;
-    height: 17px; }
-  .section-header {
-    font-size: 35px; }
-  .myWorks-header {
-    width: 75%; }
-  .vision-part {
-    height: 255px; }
-    .vision-part__img img {
-      width: 280px; }
-  .descr-part {
-    height: 218px; }
-    .descr-part__head {
-      font-size: 21px; }
-    .descr-part__descr {
-      margin-bottom: 16px; }
-  .navigation-part {
-    height: 92px; }
-    .navigation-part__img img {
-      width: 120px; }
-  .reviews__item {
-    width: 100%; }
-  .contact-block__head {
-    font: 21px/28px sansus_webissimoregular; }
-  .aboutMe-info {
-    padding-left: 0;
-    padding-right: 0; }
-    .aboutMe-info__text {
-      padding: 0 10px;
-      line-height: 24px; }
-  .aboutMe-skills {
-    padding-left: 0;
-    padding-right: 0; }
-    .aboutMe-skills__text {
-      padding: 0 10px;
-      line-height: 24px; }
-  .about-contacts {
-    height: 860px; }
-    .about-contacts__data {
-      margin-top: -175px; }
-  .article__head {
-    font: 30px/36px sansus_webissimoregular; } }
-
-@media screen and (max-width: 380px) {
-  .about-contacts__data {
-    position: static;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-    background-color: #FBFBFB;
-    width: 100%;
-    -webkit-border-radius: 0;
-            border-radius: 0;
-    margin-top: 0; }
-  .footer-about {
-    margin-top: 0; }
-  .myWorks-header {
-    width: 100%; } }
 
 body, html {
   height: 100%;
@@ -1837,3 +1362,250 @@ a {
     font-family: robotoitalic; }
     .footer__cite__author {
       font-weight: bold; }
+
+@media screen and (max-width: 1200px) {
+  .contact-block,
+  .autorize-block,
+  .welcome-block {
+    width: 348px; }
+    .contact-block__nav-menu-link,
+    .autorize-block__nav-menu-link,
+    .welcome-block__nav-menu-link {
+      padding: 0 25px; }
+  .footer {
+    margin-top: -270px;
+    font-size: 14px; }
+    .footer__info, .footer__cite {
+      display: block;
+      width: 100%; }
+    .footer__info {
+      height: 230px; }
+    .footer__links, .footer__descr {
+      display: inline-block;
+      width: 49%; }
+    .footer__cite {
+      padding-top: 25px; }
+  .background {
+    padding-bottom: 270px; }
+  .main-works {
+    margin: 0 auto -280px; }
+    .main-works:after {
+      height: 275px; }
+  .section-header {
+    font-size: 47px; }
+  .section-header:after {
+    content: "";
+    display: block;
+    margin: 5px auto 20px;
+    width: 90px;
+    height: 3px;
+    background-color: #373E42; }
+  .descr-part,
+  .vision-part,
+  .navigation-part {
+    width: 100%;
+    float: none; }
+  .vision-part__container {
+    max-width: 600px; }
+  .descr-part {
+    height: 275px; }
+    .descr-part__head {
+      font-size: 30px; }
+    .descr-part__head:after {
+      content: "";
+      display: block;
+      margin: 15px auto 20px;
+      width: 90px;
+      height: 3px;
+      background-color: #566358; }
+    .descr-part__descr {
+      margin-bottom: 40px; }
+  .aboutMe {
+    margin-top: -8.5%;
+    background-image: url("../img/icons/bg1.svg");
+    background-size: 101%;
+    padding-top: 8.5%;
+    background-repeat: no-repeat; }
+    .aboutMe-info, .aboutMe-skills {
+      display: block;
+      width: 100%;
+      background-image: none;
+      padding-top: 30px; }
+    .aboutMe-info {
+      background-color: #E9EFE2;
+      padding-left: 145px;
+      padding-right: 145px; }
+    .aboutMe-skills {
+      background-color: #F4F5F0;
+      padding-left: 100px;
+      padding-right: 100px; }
+      .aboutMe-skills__text {
+        padding: 0 45px; }
+      .aboutMe-skills__progress {
+        text-align: center; }
+  .about-contacts {
+    height: 900px; }
+    .about-contacts__data {
+      margin-top: -135px; }
+  .sidebar {
+    position: fixed;
+    float: none;
+    display: none;
+    height: 100%;
+    width: 280px;
+    top: 0;
+    background-color: #6C9C5A;
+    z-index: 6; }
+    .sidebar__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100%; }
+    .sidebar__link {
+      color: #D3E1CE; }
+    .sidebar__item {
+      padding-left: 17px; }
+      .sidebar__item_active .sidebar__link {
+        color: #FFFFFF; }
+  .blogs {
+    padding-bottom: 270px; }
+  .content {
+    width: 100%;
+    float: none;
+    padding: 10px 24px; }
+  .article {
+    margin: auto;
+    font-size: 14px;
+    line-height: 21px; }
+    .article__head {
+      font: 30px/36px sansus_webissimoregular; }
+  .green-folder {
+    display: block; } }
+
+@media screen and (max-width: 768px) {
+  .welcome-block__head {
+    font: 21px/28px robotomedium;
+    margin-bottom: 0; }
+  .welcome-block__text {
+    font-size: 14px; }
+  .autorize {
+    float: none;
+    display: inline-block; }
+  .autorize-wrap {
+    text-align: center; }
+  .contact-block,
+  .autorize-block,
+  .welcome-block {
+    width: 300px; }
+    .contact-block__nav-menu-link,
+    .autorize-block__nav-menu-link,
+    .welcome-block__nav-menu-link {
+      padding: 0 17px; }
+  .footer {
+    margin-top: -350px;
+    text-align: center; }
+    .footer-welcome {
+      margin-top: -60px;
+      font-size: 14px; }
+    .footer__copyright {
+      height: 60px;
+      padding-top: 5px; }
+    .footer__begin {
+      display: block; }
+    .footer__main {
+      border-left: none; }
+    .footer__info {
+      height: 290px;
+      padding: 0 20px; }
+    .footer__links, .footer__descr {
+      display: block;
+      padding: 15px 0;
+      width: 100%;
+      border-left: none;
+      border-bottom: 1px solid #D5DDD9; }
+    .footer__cite {
+      border-left: none;
+      padding-top: 20px; }
+    .footer__item {
+      font-size: 12px;
+      margin-left: 10px; }
+  .background {
+    padding-bottom: 350px; }
+  .main-header {
+    padding-bottom: 0; }
+  .arrow__block {
+    height: 70px; }
+  .main-menu__close {
+    width: 28px;
+    height: 25px;
+    background-size: cover; }
+  .vk {
+    width: 28px;
+    height: 15px; }
+  .git {
+    width: 21px;
+    height: 19px; }
+  .in {
+    width: 19px;
+    height: 17px; }
+  .section-header {
+    font-size: 35px; }
+  .myWorks-header {
+    width: 75%; }
+  .vision-part {
+    height: 255px; }
+    .vision-part__img img {
+      width: 280px; }
+  .descr-part {
+    height: 218px; }
+    .descr-part__head {
+      font-size: 21px; }
+    .descr-part__descr {
+      margin-bottom: 16px; }
+  .navigation-part {
+    height: 92px; }
+    .navigation-part__img img {
+      width: 120px; }
+  .reviews__item {
+    width: 100%; }
+  .contact-block__head {
+    font: 21px/28px sansus_webissimoregular; }
+  .aboutMe-info {
+    padding-left: 0;
+    padding-right: 0; }
+    .aboutMe-info__text {
+      padding: 0 10px;
+      line-height: 24px; }
+  .aboutMe-skills {
+    padding-left: 0;
+    padding-right: 0; }
+    .aboutMe-skills__text {
+      padding: 0 10px;
+      line-height: 24px; }
+  .about-contacts {
+    height: 860px; }
+    .about-contacts__data {
+      margin-top: -175px; }
+  .article__head {
+    font: 30px/36px sansus_webissimoregular; }
+  .blogs {
+    padding-bottom: 350px; } }
+
+@media screen and (max-width: 380px) {
+  .about-contacts__data {
+    position: static;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background-color: #FBFBFB;
+    width: 100%;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    margin-top: 0; }
+  .footer-about {
+    margin-top: 0; }
+  .myWorks-header {
+    width: 100%; } }
