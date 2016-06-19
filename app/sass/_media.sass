@@ -83,11 +83,14 @@
 
 	//Страница Blog
 	.sidebar
+		position: fixed
 		float: none
+		display: none
 		height: 100%
 		width: 280px
+		top: 0
 		background-color: $baseColor
-		z-index: 10
+		z-index: 6
 		&__list
 			+centering
 			width: 100%
@@ -109,17 +112,7 @@
 		&__head
 			font: 30px/36px sansus_webissimoregular
 	.green-folder
-		a
-			height: 45px
-			margin-left: 280px
-			width: 12px 
-			position: fixed
-			top: 50%
-			border-radius: 0 75% 75% 0
-			background-color: $baseColor
-	.blogs
-		padding-bottom
-			270px
+		display: block
 
 
 @media screen and (max-width: 768px) 
@@ -238,12 +231,7 @@
 	.article
 		&__head
 			font: 30px/36px sansus_webissimoregular
-	.blogs
-		padding-bottom: 350px
-
-
-
-
+	
 
 @media screen and (max-width: 380px) 
 	.about-contacts__data

@@ -1,7 +1,10 @@
 .autorize-block-wrap
 	padding: 10px
+	transition: all 0.5s
 	+centering
-	transform: scale(0)
+	display: none
+	&_active
+		display: block
 
 +menuButtons(".autorize-block__enter")
 .autorize-block__enter-list

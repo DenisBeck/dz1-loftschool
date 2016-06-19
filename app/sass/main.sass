@@ -1,5 +1,14 @@
 @import "mixins"
 
+@import "menu-block"
+@import "autorize-block"
+
+@import "works"
+@import "about"
+@import "blog"
+
+@import "media"
+
 body, html
 	height: 100%
 	font-family: robotoregular
@@ -72,53 +81,10 @@ a
 		line-height: 43px
 		font-family: "robotobold"
 		transition: all 0.5s
+		&_active,
 		&:hover
 			background: #4E8839
 			border-color: #729E19
-
-@import "menu-block"
-@import "autorize-block"
-
-/* .footer
-	
-	&__info
-		position: relative
-		height: 145px
-		background-color: rgba(55, 62, 66, 0.85)
-		width: 100%
-		display: table
-		table-layout: fixed
-		padding: 25px 0
-		color: #FFFFFF
-	&__info-block
-		display: table-cell
-		border-left: 1px solid #9B9FA1
-		padding: 0 25px
-	&__descr
-		border-left: none
-		font-family: robotolight
-	&__list
-		font-size: 0
-	&__item
-		font-size: 16px
-		display: inline-block
-		margin-left: 18px
-		&_first
-			margin-left: 0
-	&__soc
-		margin-bottom: 10px 
-		margin-top: 30px
-		font-family: robotobold
-		.vk:hover
-			background-image: url('../img/icons/vk_hover_white.svg')
-		.git:hover
-			background-image: url('../img/icons/github_hover_white.svg')
-		.in:hover
-			background-image: url('../img/icons/in_hover_white.svg')
-	&__cite
-		font-family: robotoitalic
-		&__author
-			font-weight: bold */
 
 
 .footer-welcome
@@ -184,8 +150,3 @@ a
 		&__author
 			font-weight: bold
 
-@import "works"
-@import "about"
-@import "blog"
-
-@import "media"
