@@ -1,6 +1,6 @@
 include mixins
 
-
+<!DOCTYPE html>
 html(lang="en")
 	head
 		meta(charset="UTF-8")
@@ -9,6 +9,8 @@ html(lang="en")
 			title Document
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		link(href="favicon.ico" rel="shortcut icon" type="image/x-icon")
 		
 		link(rel="stylesheet", href="fonts/stylesheet.css")
 		link(rel="stylesheet", href="css/libs.min.css")
@@ -18,6 +20,14 @@ html(lang="en")
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		.page-preloader
+			.spinner
+				.counter 100
+				svg(version="1.1" viewbox="0 0 80 95.113" width="40" height="50")
+					g
+						path(d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_first
+						path(d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_second
+						path(d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_third
 
 		.main
 			header#main-header.main-header

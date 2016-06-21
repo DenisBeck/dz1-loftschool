@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 html(lang="en")
 	head
 		meta(charset="UTF-8")
@@ -6,9 +6,10 @@ html(lang="en")
 		title Document
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		link(href="favicon.ico" rel="shortcut icon" type="image/x-icon")
 		
 		link(rel="stylesheet", href="fonts/stylesheet.css")
-		link(rel="stylesheet", href="fonts/libs.css")
 		link(rel="stylesheet", href="css/libs.min.css")
 		link(rel="stylesheet", href="css/main.css")
 	body
@@ -24,8 +25,8 @@ html(lang="en")
 				.welcome-content
 					include blocks/menu-block.jade
 					include blocks/autorize-block.jade
-			footer.footer-welcome
-				.footer__copyright
+			footer.footer_welcome
+				.footer__copyright.footer__copyright_welcome
 					.footer__text.footer__begin &copy; Денис Бекленищев 
 					.footer__text.footer__main создано с любовью в LoftSchool 
 					.footer__text.footer__end 2016

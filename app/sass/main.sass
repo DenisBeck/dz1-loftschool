@@ -17,6 +17,9 @@ body, html
 img
 	width: 100%
 	height: auto
+blockquote
+	margin-right: 10px
+	margin-left: 10px
 ul 
 	list-style: none
 	padding: 0
@@ -35,39 +38,48 @@ a
 .hidden
 	display: none
 
+.page-preloader 
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background-color: rgba($baseColor, 0.8)
+	background-image: url('../img/pre_bg.jpg')
+	z-index: 12
+.spinner 
+	+centering
+.wave
+	animation: move 1s infinite
+.wave_second
+	animation-delay: 0.15s
+.wave_third
+	animation-delay: 0.3s
+
+@keyframes move
+	from 
+		stroke-dashoffset: 150%
+	to 
+		stroke-dashoffset: -150%
+.counter 
+	font: 24px arial;
+	color: #FFFFFF
+
 .container,
 .main-header
 	background-image: url("../img/bg-forest.jpg")
 	background-size: cover
 	color: #FFFFFF
 .main 
-	min-height: 100%
 	margin: 0 auto 
-	position: relative
-	&-welcome 
-		&:after
-			content: ""
-			display: block
-			height: 100px
+	min-height: 100%
 
-.main-header 
-	padding: 30px
-	min-height: 650px
-	height: 100%
-	.welcome-block__soc
-		float: left
-		&-link
-			opacity: 1
-.header-wrap
-	position: relative
-	height: 100%
-	margin-bottom: -90px
 
 .welcome-content
 	position: relative
-	min-height: 650px
+	min-height: 590px
 .autorize-wrap 
-	margin-bottom: 34px
+	margin-bottom: 25px
 	padding: 20px 
 .autorize
 	float: right
@@ -78,7 +90,7 @@ a
 		padding: 0 27px
 		font-size: 16px
 		line-height: 43px
-		font-family: "robotobold"
+		font-family: "robotomedium"
 		transition: all 0.5s
 		&_active,
 		&:hover
@@ -86,8 +98,21 @@ a
 			border-color: #729E19
 
 
-.footer-welcome
-	margin-top: -40px
+.main-header 
+	padding: 40px 30px
+	min-height: 600px
+	height: 100%
+	.welcome-block__soc
+		float: left
+		&-link
+			opacity: 1
+.header-wrap
+	position: relative
+	height: 100%
+	margin-bottom: -53px
+
+.footer_welcome
+	margin-top: -70px
 .footer
 	margin-top: -185px
 	&__copyright
@@ -96,10 +121,12 @@ a
 		font-weight: bold
 		padding: 10px
 		color: #D5DDD9
-		line-height: 24px
+		line-height: 12px
+		&_welcome
+			height: 70px
 	&__text
 		display: inline-block
-		padding: 0 5px
+		padding: 2px 5px
 		border-left: 1px solid #D5DDD9
 	&__begin 
 		border-left: none
@@ -126,7 +153,7 @@ a
 	&__descr
 		border-left: none
 		font-family: robotolight
-	&__list
+	&__links
 		font-size: 0
 	&__item
 		font-size: 16px
@@ -135,8 +162,8 @@ a
 		&_first
 			margin-left: 0
 	&__soc
-		margin-bottom: 10px 
-		margin-top: 30px
+		margin-top: 38px
+		margin-bottom: 0
 		font-family: robotobold
 		.vk:hover
 			background-image: url('../img/icons/vk_hover_white.svg')

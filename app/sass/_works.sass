@@ -45,14 +45,19 @@
 .info-block
 	+centering
 	+viewWindow
+	padding: 0 0 40px
 	background-color: transparent
-.welcome-block__head
-	font-size: 35px
+	.welcome-block__head
+		font-size: 35px
+	.welcome-block__photo-wrap
+		margin: 0 auto 28px
 .welcome-block__descr
 	color: #FFFFFF
 
 .arrow__block
-	height: 90px
+	height: 53px
+	&_up
+		height: 82px
 .arrow__link
 	margin: auto
 	background-image: url('../img/icons/arrow_down.svg')
@@ -76,7 +81,6 @@
 	background-repeat: no-repeat
 	&__header
 		margin: auto
-		width: 50%
 		position: relative
 		&:before
 			content: ""
@@ -84,7 +88,7 @@
 			position: absolute
 			width: 100%
 			height: 150px
-			top: -45px
+			top: 0
 			background-image: url('../img/icons/works_header.svg')
 			background-repeat: no-repeat
 			background-position: center 0
@@ -116,7 +120,7 @@
 		font-family: sansus_webissimoregular
 		color: #566358
 		text-transform: uppercase
-	+underline("&__head", 30px, 25px, #566358)
+	+underline("&__head", 23px, 23px, #566358)
 	&__descr
 		font-size: 16px
 		color: #6C9C5A
@@ -195,13 +199,14 @@
 
 
 .section-header 
+	width: 40%
 	text-align: center
-	padding-top: 66px
-	font-size: 63px
+	padding-top: 54px
+	font-size: 42px
 	font-family: sansus_webissimoregular
 	color: $textColor
 	text-transform: uppercase
-+underline(".section-header", 15px, 30px, $textColor)
++underline(".section-header", 18px, 34px, $textColor)
 
 +formStyle(".contact-block")
 
@@ -217,7 +222,6 @@
 
 .reviews
 	&__header
-		width: 60%
 		margin: auto
 		position: relative
 		&:before
@@ -225,16 +229,16 @@
 			position: absolute
 			display: block
 			width: 100%
-			height: 100%
+			height: 150px
 			top: 0
 			background-image: url('../img/icons/about_header.svg')
 			background-repeat: no-repeat
 			background-position: center 0
-			background-size: contain
+			background-size: 100% 100%
 			opacity: 0.2
 	&__block
 		margin: auto
-		max-width: 775px
+		max-width: 786px
 	&__item
 		width: 50%
 		vertical-align: top
@@ -242,9 +246,8 @@
 		margin-right: -4px
 		margin-bottom: 60px;
 		text-align: center
-		p 
-			font-family: robotoitalic
-			font-size: 16px
+		font-family: robotoitalic
+		font-size: 16px
 	&__photo
 		width: 78px
 		height: 78px
@@ -254,10 +257,24 @@
 	&__text
 		line-height: 26px
 		text-align: left
+		position: relative
+		&:before,
+		&:after
+			font-size: 163px
+			font-family: "Times New Roman"
+			position: absolute
+			color: rgba($textColor, 0.5)
 		&:before
 			content: "\201c"
+			left: -10px
+			top: 35px
 		&:after
 			content: "\201d"
+			right: 0
+			bottom: -35px
 	&__name
 		color: #4E8839
 		font-weight: bold
+		margin: 0
+	&__occupation
+		margin: 0

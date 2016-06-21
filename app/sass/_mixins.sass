@@ -34,7 +34,7 @@ $contentTableSize: 280px //Размер области оглавления бл
 	padding-top: 40px
 	background: rgba(18, 38, 32, .6)
 	text-align: center
-	border-radius: 10px
+	border-radius: 5px
 	overflow: hidden
 
 //Стилизация подстрочной линии
@@ -65,6 +65,9 @@ $contentTableSize: 280px //Размер области оглавления бл
 		&__head
 			font: 35px/41px sansus_webissimoregular
 			text-transform: uppercase
+		@media screen and (max-width: 768px)
+			#{$class}__head
+				font: 30px/41px sansus_webissimoregular
 		+underline("&__head", 16px, 25px, #FFFFFF)
 		&__form
 			padding: 0 20px
@@ -72,7 +75,7 @@ $contentTableSize: 280px //Размер области оглавления бл
 			margin-bottom: 20px
 		&__input-text
 			width: 100%
-			padding: 15px 20px
+			padding: 12px 20px
 			border: none
 			outline: none
 			&_textarea
@@ -113,12 +116,40 @@ $contentTableSize: 280px //Размер области оглавления бл
 			font-family: robotobold
 		&__choice1,
 		&__choice2 
+			position: relative
 			display: inline-block
-			font-family: robotomedium
+			cursor: pointer
 			input 
 				outline: none
+				display: none
+			label
+				font-family: robotomedium
+			&:before 
+				content: ""
+				display: inline-block
+				width: 10px
+				height: 10px
+				left: -15px
+				top: -2px
+				border-radius: 50%
+				background-color: $baseColor
+				position: relative
+				z-index: 2
+			&:after
+				content: ""
+				position: absolute
+				width: 20px
+				height: 20px
+				left: -20px
+				top: 0
+				background-color: #FFFFFF
+				border-radius: 50%
+		&__choice2
+			&:before
+				visibility: hidden
+
 		&__choice1
-			margin-right: 40px
+			margin-right: 60px
 
 //Заголовки
 =header-h3($class, $color)

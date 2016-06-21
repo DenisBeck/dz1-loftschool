@@ -2,13 +2,27 @@
 
 @media screen and (max-width: 1200px)
 	//Главная страница
+	.autorize-block-wrap
+	.welcome-block-wrap
+		+centering
 	.contact-block,
 	.autorize-block,
 	.welcome-block
 		width: 348px
 		&__nav-menu-link
 			padding: 0 25px
-	
+	.autorize-block__form
+			padding: 2px 20px
+
+	.main-header
+		min-height: 500px
+		padding: 30px 30px
+	.info-block
+		margin-top: 15px
+	.header-wrap
+		margin-bottom: -32px
+	.arrow__block
+		height: 32px
 	.footer
 		margin-top: -270px
 		font-size: 14px
@@ -22,6 +36,8 @@
 		&__descr
 			display: inline-block
 			width: 49%
+		&__item
+			font-size: 14px
 		&__cite
 			padding-top: 25px
 
@@ -34,22 +50,40 @@
 		&:after
 			height: 275px
 	.section-header
-		font-size: 47px
-	+underline(".section-header", 5px, 20px, #373E42)
+		font-size: 32px
+		padding-top: 38px
+	+underline(".section-header", 10px, 30px, #373E42)
 	.descr-part,
 	.vision-part,
 	.navigation-part
 		width: 100%
 		float: none
+	.navigation-part
+		height: 210px
 	.vision-part__container
 		max-width: 600px
 	.descr-part
 		height: 275px
 		&__head
 			font-size: 30px
-		+underline("&__head", 15px, 20px, #566358)
+		+underline("&__head", 10px, 20px, #566358)
 		&__descr
-			margin-bottom: 40px
+			margin-bottom: 30px
+		&__visit
+			margin-bottom: 20px
+	.reviews
+		&__item
+			margin-bottom: 48px
+		&__text,
+		&__name,
+		&__occupation
+			font-size: 14px
+			line-height: 21px
+	.contact-block	
+		padding-top: 30px
+	.arrow__block_up
+		height: 50px
+
 
 	//Страница About
 	.aboutMe
@@ -119,23 +153,49 @@
 
 
 @media screen and (max-width: 768px) 
-
-	.welcome-block__head
-		font: 21px/28px robotomedium
-		margin-bottom: 0
-	.welcome-block__text
-		font-size: 14px
+	
+	.autorize-block,
+	.welcome-block
+		&-wrap
+			+uncentering
+		&__photo-wrap
+			margin-bottom: 18px
+		&__head
+			font: 21px/28px robotomedium
+		&__text
+			font-size: 14px
+		&__descr
+			margin-bottom: 35px
+	.welcome-content
+		position: static
+		min-height: 473px
 	.autorize
 		float: none
 		display: inline-block
+		padding: 0 20px
+		&__text
+			font-size: 14px
+			padding: 0 18px
 	.autorize-wrap
 		text-align: center
+		padding: 8px
+		margin-bottom: 15px
 	.contact-block,
 	.autorize-block,
 	.welcome-block
 		width: 300px
+		padding-top: 28px
 		&__nav-menu-link
 			padding: 0 17px
+
+	.main-header
+		padding: 12px
+	.header-wrap
+		margin-bottom: -68px
+	.info-block
+		margin-top: -20px
+		.welcome-block__head
+			font-size: 22px
 
 	.footer
 		margin-top: -350px
@@ -174,7 +234,7 @@
 	.main-header
 		padding-bottom: 0
 	.arrow__block
-		height: 70px
+		height: 68px
 	.main-menu__close
 		width: 28px
 		height: 25px 
@@ -189,7 +249,10 @@
 		width: 19px
 		height: 17px
 	.section-header
-		font-size: 35px
+		font-size: 23px
+		padding-top: 20px
+		width: 60%
+	+underline(".section-header", 10px, 20px, #373E42)	
 	.myWorks-header
 		width: 75%
 	.vision-part
@@ -203,13 +266,24 @@
 			font-size: 21px
 		&__descr
 			margin-bottom: 16px
+			font-size: 14px
+		&__visit
+			font-size: 13px
 	.navigation-part
 		height: 92px
 		&__img
 			img
 				width: 120px
-	.reviews__item
-		width: 100%
+	.reviews	
+		margin-bottom: 1px	
+		&__item
+			margin-bottom: 22px
+			margin-top: 22px
+			width: 100%
+		&__photo
+			width: 48px
+			height: 48px
+
 	.contact-block__head
 		font: 21px/28px sansus_webissimoregular
 	
@@ -247,7 +321,7 @@
 		width: 100%
 		border-radius: 0
 		margin-top: 0
-	.footer-about
+	.footer
 		margin-top: 0
 
 	.myWorks-header

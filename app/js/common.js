@@ -1,12 +1,19 @@
 
 $(document).ready(function() {
 
-	var aside	= $('.sidebar'),
+	var preload	= $('.page-preloader'),
+		spinner	= preload.find('.spinner'),
+		aside	= $('.sidebar'),
 		login	= $('.autorize__text'),
 		welcome	= login.closest('.autorize-wrap').next(),
 		menu	= $('.main-menu__close'),
 		folder	= $('.green-folder__link'),
 		sidebar = $('#content-table');
+
+	$(window).on('load', function () { 
+		spinner.fadeOut();
+		preload.delay(350).fadeOut('slow');
+	});
 	
 	$(window).on('scroll', function() {
 		
@@ -41,5 +48,7 @@ $(document).ready(function() {
 
 		$(this).parent().toggleClass('green-folder_open');
 		sidebar.fadeToggle(0);
+	})
+})
 
-});
+
