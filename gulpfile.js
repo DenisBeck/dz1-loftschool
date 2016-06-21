@@ -102,4 +102,7 @@ gulp.task('build', [ 'clean', 'img', 'sass', 'jade', 'scripts' ], function() {
 	var buildHtml = gulp.src('app/*.html')
 		.pipe(gulp.dest('dist'))
 
+	var buildFav = gulp.src('app/favicon.ico')
+		.pipe(gulp.dest('dist'))
+
 });
