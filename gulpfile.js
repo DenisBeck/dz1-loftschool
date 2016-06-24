@@ -10,11 +10,13 @@ var gulp        = require('gulp'),
 	imagemin	= require('gulp-imagemin'),
 	pngquant	= require('imagemin-pngquant'),
 	cache		= require('gulp-cache'),
-	autoprefixer= require('gulp-autoprefixer');
+	autoprefixer= require('gulp-autoprefixer'),
+	plumber		= require('gulp-plumber');
 
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
+		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer([ 'last 15 versions', '> 1%', 'ie 8', 'ie 7' ], { cascade: true }))
 		.pipe(gulp.dest('app/css'))
@@ -23,6 +25,7 @@ gulp.task('sass', function() {
 
 gulp.task('jade', function() {
 	return gulp.src(['app/jade/*.jade'])
+		.pipe(plumber())
 		.pipe(jade({
 			pretty: true
 		}))
@@ -43,6 +46,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 			'app/libs/jquery/dist/jquery.min.js'
 			])
+		.pipe(plumber())
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'));
@@ -51,6 +55,7 @@ gulp.task('scripts', function() {
 gulp.task('css-libs',['sass'], function() {
 	return gulp.src(['app/css/libs.css',
 					 'app/fonts/stylesheet.css'])
+		.pipe(plumber())
 		.pipe(cssnano())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('app/css'))
