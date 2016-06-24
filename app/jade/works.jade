@@ -9,19 +9,20 @@ block arrow
 block content
 	section.myWorks.clearfix
 		header#myWorks.section-header.myWorks__header
-			h2.myWorks__head Мои работы
+			.myWorks__wrap
+				h2.myWorks__head Мои работы
 		.vision-part  
 			.vision-part__wrap
 				.vision-part__container
 					ul.vision-part__list
 						for item in works
 							+myWork-vision(item)
-		.descr-part
-			.descr-part__wrap
-				.descr-part__block
-					ul.descr-part__list
+		.description-part
+			.description-part__wrap
+				.description-part__block
+					ul.description-part__list
 						for item in works
-							+myWork-descr(item)
+							+myWork-description(item)
 		.navigation-part
 			.navigation-part__block.navigation-part__prev
 				.navigation-part__wrap
@@ -55,12 +56,12 @@ block content
 							input(type="email" placeholder="Email").contact-block__input-text
 						.contact-block__data.contact-block__textarea
 							textarea(placeholder=" Ваше сообщение").contact-block__input-text.contact-block__input-text_textarea
-					.contact-block__enter Отправить или очистить?
-						ul.contact-block__enter-list
-							li.contact-block__enter-item.contact-block__enter-item_first
-								a(href="#").contact-block__enter-link Отправить
-							li.contact-block__enter-item
-								a(href="#").contact-block__enter-link Очистить
+						.contact-block__enter Отправить или очистить?
+							ul.contact-block__enter-list
+								li.contact-block__enter-item.contact-block__enter-item_first
+									input(type="submit" value="Отправить").contact-block__enter-link 
+								li.contact-block__enter-item
+									input(type="reset" value="Очистить").contact-block__enter-link 
 		
 		.arrow__block.arrow__block_up
 			a(href="#main-header").arrow__link.arrow__link_up Перейти в начало

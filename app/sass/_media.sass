@@ -1,4 +1,4 @@
-
+@import "mixins"
 
 @media screen and (max-width: 1200px)
 	//Главная страница
@@ -33,7 +33,7 @@
 		&__info
 			height: 230px
 		&__links,
-		&__descr
+		&__description
 			display: inline-block
 			width: 49%
 		&__item
@@ -53,7 +53,7 @@
 		font-size: 32px
 		padding-top: 38px
 	+underline(".section-header", 10px, 30px, #373E42)
-	.descr-part,
+	.description-part,
 	.vision-part,
 	.navigation-part
 		width: 100%
@@ -62,12 +62,12 @@
 		height: 210px
 	.vision-part__container
 		max-width: 600px
-	.descr-part
+	.description-part
 		height: 275px
 		&__head
 			font-size: 30px
 		+underline("&__head", 10px, 20px, #566358)
-		&__descr
+		&__description
 			margin-bottom: 30px
 		&__visit
 			margin-bottom: 20px
@@ -164,7 +164,7 @@
 			font: 21px/28px robotomedium
 		&__text
 			font-size: 14px
-		&__descr
+		&__description
 			margin-bottom: 35px
 	.welcome-content
 		position: static
@@ -214,7 +214,7 @@
 			height: 290px 
 			padding: 0 20px
 		&__links,
-		&__descr
+		&__description
 			display: block
 			padding: 15px 0
 			width: 100%
@@ -260,11 +260,11 @@
 		&__img
 			img
 				width: 280px
-	.descr-part
+	.description-part
 		height: 218px
 		&__head
 			font-size: 21px
-		&__descr
+		&__description
 			margin-bottom: 16px
 			font-size: 14px
 		&__visit
@@ -315,14 +315,16 @@
 
 
 @media screen and (max-width: 380px) 
-	.about-contacts__data
-		+uncentering
-		background-color: #FBFBFB
-		width: 100%
-		border-radius: 0
-		margin-top: 0
-	.footer
-		margin-top: 0
+	.about-contacts
+		height: 1150px
+		.about-contacts__data
+			+uncentering
+			background-color: #FBFBFB
+			width: 100%
+			border-radius: 0
+			margin-top: 0
+
+	
 
 	.myWorks-header
 		width: 100%

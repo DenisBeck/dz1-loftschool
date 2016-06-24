@@ -12,6 +12,7 @@ var gulp        = require('gulp'),
 	cache		= require('gulp-cache'),
 	autoprefixer= require('gulp-autoprefixer');
 
+
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass())
@@ -48,7 +49,8 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('css-libs',['sass'], function() {
-	return gulp.src('app/css/libs.css')
+	return gulp.src(['app/css/libs.css',
+					 'app/fonts/stylesheet.css'])
 		.pipe(cssnano())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('app/css'))
@@ -77,7 +79,7 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('watch', ['browser-sync', 'clean-app', 'css-libs', 'jade'/*, 'scripts'*/], function() {
+gulp.task('watch', ['browser-sync', 'css-libs', 'jade', 'scripts'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/jade/**/*.jade', ['jade']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);

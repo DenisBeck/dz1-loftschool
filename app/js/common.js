@@ -16,13 +16,16 @@ $(document).ready(function() {
 	});
 	
 	$(window).on('scroll', function() {
-		
-		if (($(this).scrollTop() >= aside.next().offset().top) && (document.body.clientWidth > 1200)) {
-			aside.addClass('sidebar_fixed');
+
+		if (aside.length) {
+			if (($(this).scrollTop() >= aside.next().offset().top) && (document.body.clientWidth > 1200)) {
+				aside.addClass('sidebar_fixed');
+			}
+			else {
+				aside.removeClass('sidebar_fixed');
+			}
 		}
-		else {
-			aside.removeClass('sidebar_fixed');
-		}
+			
 		
 	})
 

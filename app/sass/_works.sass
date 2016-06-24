@@ -1,3 +1,4 @@
+@import "mixins"
 
 .background
 	background-image: url('../img/bg-ground.jpg')
@@ -51,7 +52,7 @@
 		font-size: 35px
 	.welcome-block__photo-wrap
 		margin: 0 auto 28px
-.welcome-block__descr
+.welcome-block__description
 	color: #FFFFFF
 
 .arrow__block
@@ -94,12 +95,12 @@
 			background-position: center 0
 			background-size: 100% 100%
 			opacity: 0.2
-.descr-part,
+.description-part,
 .vision-part,
 .navigation-part
 	width: 50%
 
-.descr-part
+.description-part
 	height: 748px
 	float: left
 	background-color: #EBEFE2
@@ -121,7 +122,7 @@
 		color: #566358
 		text-transform: uppercase
 	+underline("&__head", 23px, 23px, #566358)
-	&__descr
+	&__description
 		font-size: 16px
 		color: #6C9C5A
 		text-transform: uppercase
@@ -180,12 +181,12 @@
 	&__prev
 		float: left
 		opacity: 0.4
-		.descr-part__img
+		.description-part__img
 			opacity: 0.5
 	&__next
 		float: right
 		opacity: 0.5
-		.descr-part__img
+		.description-part__img
 			opacity: 0.5
 	&__arrow
 		width: 25px
@@ -219,6 +220,12 @@
 +menuButtons(".contact-block__enter")
 .contact-block__enter-list
 	table-layout: fixed
+.contact-block__enter-link
+	width: 100%
+	border: none
+	color: #FFFFFF
+	cursor: pointer
+	
 
 .reviews
 	&__header

@@ -24,23 +24,23 @@
   .welcome-block__head {
     font: 27px/34px robotomedium;
     margin-bottom: 6px; }
-  .welcome-block__descr {
+  .welcome-block__description {
     color: #BBC3BF;
     margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.5; }
-  .welcome-block__soc {
+  .welcome-block__socials {
     font-size: 0;
     margin-bottom: 38px; }
-  .welcome-block__soc-list {
+  .welcome-block__socials-list {
     display: inline-block; }
-  .welcome-block__soc-item {
+  .welcome-block__socials-item {
     display: inline-block;
     vertical-align: middle;
     margin-left: 25px; }
-    .welcome-block__soc-item_first {
+    .welcome-block__socials-item_first {
       margin-left: 0; }
-  .welcome-block__soc-link {
+  .welcome-block__socials-link {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,6 +65,7 @@
 
 .welcome-block__nav-menu-link {
   display: block;
+  height: 100%;
   line-height: 45px;
   background-color: #5F8A51;
   padding: 0 30px;
@@ -121,6 +122,7 @@
 
 .autorize-block__enter-link {
   display: block;
+  height: 100%;
   line-height: 45px;
   background-color: #5F8A51;
   padding: 0 30px;
@@ -155,10 +157,8 @@
     width: 90px;
     height: 3px;
     background-color: #FFFFFF; }
-  .autorize-block__form {
-    padding: 0 20px; }
   .autorize-block__data {
-    margin-bottom: 20px; }
+    margin: 0 20px 20px; }
   .autorize-block__input-text {
     width: 100%;
     padding: 12px 20px;
@@ -345,7 +345,7 @@
   .info-block .welcome-block__photo-wrap {
     margin: 0 auto 28px; }
 
-.welcome-block__descr {
+.welcome-block__description {
   color: #FFFFFF; }
 
 .arrow__block {
@@ -390,19 +390,19 @@
       background-size: 100% 100%;
       opacity: 0.2; }
 
-.descr-part,
+.description-part,
 .vision-part,
 .navigation-part {
   width: 50%; }
 
-.descr-part {
+.description-part {
   height: 748px;
   float: left;
   background-color: #EBEFE2; }
-  .descr-part__wrap {
+  .description-part__wrap {
     position: relative;
     height: 100%; }
-  .descr-part__block {
+  .description-part__block {
     width: 80%;
     text-align: center;
     position: absolute;
@@ -411,37 +411,37 @@
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  .descr-part__item {
+  .description-part__item {
     display: none;
     font-family: robotomedium; }
-    .descr-part__item:first-of-type {
+    .description-part__item:first-of-type {
       display: block; }
-  .descr-part__head {
+  .description-part__head {
     font-size: 35px;
     font-family: sansus_webissimoregular;
     color: #566358;
     text-transform: uppercase; }
-  .descr-part__head:after {
+  .description-part__head:after {
     content: "";
     display: block;
     margin: 23px auto 23px;
     width: 90px;
     height: 3px;
     background-color: #566358; }
-  .descr-part__descr {
+  .description-part__description {
     font-size: 16px;
     color: #6C9C5A;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 60px; }
-  .descr-part__visit {
+  .description-part__visit {
     display: inline-block;
     background-color: #6C9C5A;
     padding: 12px 25px 12px 15px;
     font-size: 16px;
     -webkit-border-radius: 50px;
             border-radius: 50px; }
-    .descr-part__visit:before {
+    .description-part__visit:before {
       content: "";
       display: inline-block;
       vertical-align: middle;
@@ -498,12 +498,12 @@
   .navigation-part__prev {
     float: left;
     opacity: 0.4; }
-    .navigation-part__prev .descr-part__img {
+    .navigation-part__prev .description-part__img {
       opacity: 0.5; }
   .navigation-part__next {
     float: right;
     opacity: 0.5; }
-    .navigation-part__next .descr-part__img {
+    .navigation-part__next .description-part__img {
       opacity: 0.5; }
   .navigation-part__arrow {
     width: 25px;
@@ -561,10 +561,8 @@
     width: 90px;
     height: 3px;
     background-color: #FFFFFF; }
-  .contact-block__form {
-    padding: 0 20px; }
   .contact-block__data {
-    margin-bottom: 20px; }
+    margin: 0 20px 20px; }
   .contact-block__input-text {
     width: 100%;
     padding: 12px 20px;
@@ -674,6 +672,7 @@
 
 .contact-block__enter-link {
   display: block;
+  height: 100%;
   line-height: 45px;
   background-color: #5F8A51;
   padding: 0 30px;
@@ -685,6 +684,12 @@
 
 .contact-block__enter-list {
   table-layout: fixed; }
+
+.contact-block__enter-link {
+  width: 100%;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer; }
 
 .reviews__header {
   margin: auto;
@@ -899,9 +904,6 @@
 .about-contacts {
   height: 980px;
   position: relative; }
-  .about-contacts iframe {
-    width: 100%;
-    height: 100%; }
   .about-contacts__data {
     background-color: rgba(244, 245, 240, 0.85);
     -webkit-border-radius: 5px;
@@ -960,6 +962,11 @@
     background-image: url("../img/icons/phone.svg"); }
   .about-contacts__address {
     background-image: url("../img/icons/map_marker.svg"); }
+  .about-contacts__map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    frameborder: 0; }
 
 /* .overlay
 	background: transparent
@@ -1155,9 +1162,9 @@ a {
   padding: 40px 30px;
   min-height: 600px;
   height: 100%; }
-  .main-header .welcome-block__soc {
+  .main-header .welcome-block__socials {
     float: left; }
-    .main-header .welcome-block__soc-link {
+    .main-header .welcome-block__socials-link {
       opacity: 1; }
 
 .header-wrap {
@@ -1204,7 +1211,7 @@ a {
     vertical-align: top; }
     .footer__info-block p {
       margin: 0; }
-  .footer__descr {
+  .footer__description {
     border-left: none;
     font-family: robotolight; }
   .footer__links {
@@ -1215,15 +1222,15 @@ a {
     margin-left: 18px; }
     .footer__item_first {
       margin-left: 0; }
-  .footer__soc {
+  .footer__socials {
     margin-top: 38px;
     margin-bottom: 0;
     font-family: robotobold; }
-    .footer__soc .vk:hover {
+    .footer__socials .vk:hover {
       background-image: url("../img/icons/vk_hover_white.svg"); }
-    .footer__soc .git:hover {
+    .footer__socials .git:hover {
       background-image: url("../img/icons/github_hover_white.svg"); }
-    .footer__soc .in:hover {
+    .footer__socials .in:hover {
       background-image: url("../img/icons/in_hover_white.svg"); }
   .footer__cite {
     font-family: robotoitalic; }
@@ -1266,7 +1273,7 @@ a {
       width: 100%; }
     .footer__info {
       height: 230px; }
-    .footer__links, .footer__descr {
+    .footer__links, .footer__description {
       display: inline-block;
       width: 49%; }
     .footer__item {
@@ -1289,7 +1296,7 @@ a {
     width: 90px;
     height: 3px;
     background-color: #373E42; }
-  .descr-part,
+  .description-part,
   .vision-part,
   .navigation-part {
     width: 100%;
@@ -1298,20 +1305,20 @@ a {
     height: 210px; }
   .vision-part__container {
     max-width: 600px; }
-  .descr-part {
+  .description-part {
     height: 275px; }
-    .descr-part__head {
+    .description-part__head {
       font-size: 30px; }
-    .descr-part__head:after {
+    .description-part__head:after {
       content: "";
       display: block;
       margin: 10px auto 20px;
       width: 90px;
       height: 3px;
       background-color: #566358; }
-    .descr-part__descr {
+    .description-part__description {
       margin-bottom: 30px; }
-    .descr-part__visit {
+    .description-part__visit {
       margin-bottom: 20px; }
   .reviews__item {
     margin-bottom: 48px; }
@@ -1403,8 +1410,8 @@ a {
   .autorize-block__text,
   .welcome-block__text {
     font-size: 14px; }
-  .autorize-block__descr,
-  .welcome-block__descr {
+  .autorize-block__description,
+  .welcome-block__description {
     margin-bottom: 35px; }
   .welcome-content {
     position: static;
@@ -1453,7 +1460,7 @@ a {
     .footer__info {
       height: 290px;
       padding: 0 20px; }
-    .footer__links, .footer__descr {
+    .footer__links, .footer__description {
       display: block;
       padding: 15px 0;
       width: 100%;
@@ -1501,14 +1508,14 @@ a {
     height: 255px; }
     .vision-part__img img {
       width: 280px; }
-  .descr-part {
+  .description-part {
     height: 218px; }
-    .descr-part__head {
+    .description-part__head {
       font-size: 21px; }
-    .descr-part__descr {
+    .description-part__description {
       margin-bottom: 16px;
       font-size: 14px; }
-    .descr-part__visit {
+    .description-part__visit {
       font-size: 13px; }
   .navigation-part {
     height: 92px; }
@@ -1547,17 +1554,17 @@ a {
     padding-bottom: 350px; } }
 
 @media screen and (max-width: 380px) {
-  .about-contacts__data {
-    position: static;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-    background-color: #FBFBFB;
-    width: 100%;
-    -webkit-border-radius: 0;
-            border-radius: 0;
-    margin-top: 0; }
-  .footer {
-    margin-top: 0; }
+  .about-contacts {
+    height: 1150px; }
+    .about-contacts .about-contacts__data {
+      position: static;
+      -webkit-transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+              transform: translate(0, 0);
+      background-color: #FBFBFB;
+      width: 100%;
+      -webkit-border-radius: 0;
+              border-radius: 0;
+      margin-top: 0; }
   .myWorks-header {
     width: 100%; } }
