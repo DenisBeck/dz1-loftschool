@@ -3,11 +3,15 @@ $(document).ready(function() {
 
 	function setPercents(total, current) {
 		var percent = Math.ceil(current/total*100);
+		$('.counter').text(percent + '%')
 		if(percent >= 100) 
 			$('.main').css('display', 'block');
 			$('.container').css('display', 'block');
 			$('.footer-welcome').css('display', 'block');
-		$('.counter').text(percent + '%')
+
+			spinner.fadeOut();
+			preload.delay(350).fadeOut('slow');
+
 	}
 
 	var $this 		= $(this),
@@ -39,6 +43,7 @@ $(document).ready(function() {
 		}
 	})
 
+	//Прелоадер
 	var percents = 1;
 	for(var i = 0; i < imgs.length; i++) {
 		var image = $('<img>', {
@@ -52,14 +57,14 @@ $(document).ready(function() {
 		})
 	}
 
-	$(window).on('load', function () { 
+	/*$(window).on('load', function () { 
 
 		var	preload	= $('.page-preloader'),
 			spinner	= preload.find('.spinner');
 
 		spinner.fadeOut();
 		preload.delay(350).fadeOut('slow');
-	});
+	});*/
 	
 	
 

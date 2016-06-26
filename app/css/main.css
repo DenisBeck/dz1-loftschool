@@ -1628,7 +1628,6 @@ a {
       margin-top: 0; }
     .about-contacts__map {
       position: relative;
-      margin-top: -350px;
-      z-index: -1; }
+      height: 860px; }
   .myWorks-header {
     width: 100%; } }
