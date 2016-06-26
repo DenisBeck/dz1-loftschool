@@ -5,15 +5,7 @@
 			.main-menu__close
 
 			.main-menu__open.hidden Главное меню
-				ul.main-menu__list
-					li.main-menu__item
-						a.main-menu__link(href="works.html") Мои работы
-					li.main-menu__item
-						a.main-menu__link(href="blog.html") Блог
-					li.main-menu__item
-						a.main-menu__link(href="about.html") Обо мне
-					li.main-menu__item
-						a.main-menu__link(href="index.html") Авторизация
+				+list("main-menu", navMain)
 	.info-block
 		.welcome-block__photo-wrap
 			img.welcome-block__photo(src="img/avatar2.svg" alt="web developer photo")

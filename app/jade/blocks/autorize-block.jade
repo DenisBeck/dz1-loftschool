@@ -7,20 +7,17 @@
 			.autorize-block__data.autorize-block__password
 				input(type="text" placeholder="Пароль").autorize-block__input-text
 			.autorize-block__data.autorize-block__check
-				input(type="checkbox" id="check").hidden
-				label(for="check") Я человек
+				label <input type="checkbox"> Я человек
 			.autorize-block__data.autorize-block__check-again
 				.autorize-block__text Вы точно не робот?
 				.autorize-block__choice1
-					input(type="radio" id="answer1" name="yes")
-					label(for="answer1") Да
+					label <input type="radio" name="robot" value="yes"> Да
 				.autorize-block__choice2
-					input(type="radio" id="answer2" name="no")
-					label(for="answer2") Не уверен
-		.autorize-block__enter Вернуться или войти?
-			ul.autorize-block__enter-list
-				li.autorize-block__enter-item.autorize-block__enter-item_first
-					a(href="#").autorize-block__enter-link На главную
-				li.autorize-block__enter-item
-					a(href="#").autorize-block__enter-link Войти
+					label <input type="radio" name="robot" value="no"> Не уверен
+		.autorize-block-enter Вернуться или войти?
+			ul.autorize-block-enter__list
+				li.autorize-block-enter__item.autorize-block-enter__item_first
+					a(href="#").autorize-block-enter__link На главную
+				li.autorize-block-enter__item
+					a(href="#").autorize-block-enter__link Войти
 			

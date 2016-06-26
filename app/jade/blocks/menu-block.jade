@@ -6,11 +6,5 @@
 		.welcome-block__description
 			span.welcome-block__text Личный сайт веб-разработчика
 		include socials-items
-		nav.welcome-block__nav-menu Навигация по сайту
-			ul.welcome-block__nav-menu-list
-				li.welcome-block__nav-menu-item.welcome-block__nav-menu-item_first
-					a(href="works.html").welcome-block__nav-menu-link Мои работы
-				li.welcome-block__nav-menu-item
-					a(href="about.html").welcome-block__nav-menu-link Обо мне
-				li.welcome-block__nav-menu-item
-					a(href="blog.html").welcome-block__nav-menu-link Блог
+		nav.welcome-block-nav-menu Навигация по сайту
+			+list("welcome-block-nav-menu", [navMain[0], navMain[1], navMain[2]])

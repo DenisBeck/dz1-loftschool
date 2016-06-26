@@ -7,17 +7,17 @@ $contentTableSize: 280px //Размер области оглавления бл
 =menuButtons ($class)
 	#{$class}
 		font-size: 0
-	#{$class}-list
+	#{$class}__list
 		font-size: 16px
 		display: table
 		width: 100%
-	#{$class}-item
+	#{$class}__item
 		display: table-cell
 		border-left: 2px solid #9FB79C
 		height: 45px
 		&_first
 			border-left: none
-	#{$class}-link
+	#{$class}__link
 		display: block
 		height: 100%
 		line-height: 45px
@@ -76,6 +76,7 @@ $contentTableSize: 280px //Размер области оглавления бл
 		&__input-text
 			width: 100%
 			padding: 12px 20px
+			color: lighten($textColor, 15)
 			border: none
 			outline: none
 			&_textarea
@@ -94,22 +95,37 @@ $contentTableSize: 280px //Размер области оглавления бл
 			border-radius: 20px
 		&__check
 			display: inline-block
-			cursor: pointer
 			padding: 0 30px
 			position: relative
-			&:before
+			&:before,
+			&:after
 				content: ""
 				position: absolute
 				display: block
+				top: 0
+				left: 26px
 				width: 20px
 				height: 20px
 				border-radius: 3px
+				cursor: pointer
+			&:before
 				background-color: #77A266
 				background-image: url('../img/icons/check.svg')
 				background-repeat: no-repeat
 				background-position: center center
-				left: 1px
-				top: 2px
+				visibility: hidden
+			&:after
+				background-color: #FFFFFF
+				visibility: visible
+			
+			input
+				margin-right: 10px
+				cursor: pointer
+				opacity: 0
+			label
+				cursor: pointer
+				position: relative
+				z-index: 4
 			
 		&__text
 			margin-bottom: 10px
@@ -121,37 +137,47 @@ $contentTableSize: 280px //Размер области оглавления бл
 			cursor: pointer
 			input 
 				outline: none
-				display: none
+				margin-right: 10px
+				opacity: 0
+				cursor: pointer
 			label
 				font-family: robotomedium
-			&:before 
-				content: ""
-				display: inline-block
-				width: 10px
-				height: 10px
-				left: -15px
-				top: -2px
-				border-radius: 50%
-				background-color: $baseColor
 				position: relative
-				z-index: 2
+				cursor: pointer
+				z-index: 4
+			&:before,
 			&:after
 				content: ""
 				position: absolute
+				border-radius: 50%
+			&:before 
+				display: inline-block
+				width: 10px
+				height: 10px
+				left: 5px
+				top: 5px
+				z-index: 2
+				background-color: $baseColor
+				visibility: hidden
+			&:after
 				width: 20px
 				height: 20px
-				left: -20px
+				left: 0
 				top: 0
 				background-color: #FFFFFF
-				border-radius: 50%
-		&__choice2
-			&:before
-				visibility: hidden
-
+			&
 		&__choice1
-			margin-right: 60px
+			margin-right: 40px
+	.show 
+		&:before
+			visibility: visible
+	.check-show
+		&:before
+			visibility: visible
+		&:after
+			visibility: hidden
 
-//Заголовки
+Заголовки
 =header-h3($class, $color)
 	#{$class}
 		max-width: 300px

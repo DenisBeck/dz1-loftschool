@@ -122,12 +122,14 @@
 		color: #566358
 		text-transform: uppercase
 	+underline("&__head", 23px, 23px, #566358)
-	&__description
-		font-size: 16px
-		color: #6C9C5A
-		text-transform: uppercase
-		text-align: center
-		margin-bottom: 60px
+	&-tech
+		&__item
+			text-transform: uppercase
+			font-size: 16px
+			display: inline-block
+			color: $baseColor
+			text-align: center
+			margin-bottom: 50px
 	&__visit
 		display: inline-block
 		background-color: $baseColor
@@ -215,12 +217,11 @@
 	margin-bottom: 70px
 .contact-block
 	background-color: rgba(224, 224, 220, 0.6)
-	color: #566358
 +underline(".contact-block__head", 22px, 30px, #566358)
-+menuButtons(".contact-block__enter")
-.contact-block__enter-list
++menuButtons(".contact-block-enter")
+.contact-block-enter__list
 	table-layout: fixed
-.contact-block__enter-link
+.contact-block-enter__link
 	width: 100%
 	border: none
 	color: #FFFFFF
@@ -255,6 +256,7 @@
 		text-align: center
 		font-family: robotoitalic
 		font-size: 16px
+		color: $textColor
 	&__photo
 		width: 78px
 		height: 78px

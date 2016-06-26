@@ -9,7 +9,7 @@
 	.autorize-block,
 	.welcome-block
 		width: 348px
-		&__nav-menu-link
+		&-nav-menu__link
 			padding: 0 25px
 	.autorize-block__form
 			padding: 2px 20px
@@ -162,6 +162,7 @@
 			margin-bottom: 18px
 		&__head
 			font: 21px/28px robotomedium
+		label,
 		&__text
 			font-size: 14px
 		&__description
@@ -185,7 +186,7 @@
 	.welcome-block
 		width: 300px
 		padding-top: 28px
-		&__nav-menu-link
+		&-nav-menu__link
 			padding: 0 17px
 
 	.main-header
@@ -316,13 +317,18 @@
 
 @media screen and (max-width: 380px) 
 	.about-contacts
-		height: 1150px
-		.about-contacts__data
+		height: 1210px
+		&__data
 			+uncentering
 			background-color: #FBFBFB
 			width: 100%
 			border-radius: 0
 			margin-top: 0
+		&__map
+			position: relative
+			margin-top: -350px
+			z-index: -1
+	
 
 	
 

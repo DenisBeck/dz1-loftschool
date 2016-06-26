@@ -7,6 +7,7 @@ block arrow
 	a(href="#about").arrow__link.arrow__link_relative Перейти к информации обо мне
 
 block content
+
 	section.aboutMe
 		.aboutMe-info
 			header#about.section-header.aboutMe__header
@@ -63,7 +64,7 @@ block content
 									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
 									circle(r="45" cx="55" cy="55"  class="s-mongo sector") 
 								.aboutMe-skills__tech Mongo.db
-					li.aboutMe-skills__item-outer Workflow
+					li.aboutMe-skills__item-outer.aboutMe-skills__item-outer_last Workflow
 						ul.aboutMe-skills__list-inner
 							li.aboutMe-skills__item-inner 
 								svg(width="110" height="110" class="g-circles")
@@ -87,7 +88,13 @@ block content
 			ul.about-contacts__list
 				each val in [ skype, email, phone, address ]
 					li.about-contacts__item
-						a(href="#{val.href}" target="_blank").about-contacts__link.about-contacts__=val.elem= val.text
+						a(href="#{val.href}" target="_blank" class="about-contacts__#{val.elem}").about-contacts__link= val.text
 				
-		iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8828.329385310415!2d61.90995904636763!3d56.414643284300205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1466280754819" allowfullscreen).about-contacts__map
 		
+		script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+		div.about-contacts__map
+			div#gmap_canvas.gmap_canvas
+			
+			<script type='text/javascript'>function init_map(){var myOptions = {scrollwheel:false,zoom:14,center:new google.maps.LatLng(56.417943,61.91150399999992),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.417943,61.91150399999992)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>Каменск-Уральский, ул. Тевосяна, 11<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+	
