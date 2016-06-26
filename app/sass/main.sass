@@ -182,5 +182,34 @@ a
 		&__author
 			font-weight: bold
 
+.flip-hide
+	animation: flip-hide 0.1s linear both
+.flip-show
+	animation: flip-show 0.1s linear 0.1s both
+.remove-mode
+	animation-fill-mode: none
+.flipped
+	transform: scaleX(0)
+
+@keyframes flip-hide 
+	0%
+		transform: scaleX(1)
+	50%
+		transform: scaleX(0.5)
+	90%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(0)
+
+@keyframes flip-show 
+	0%
+		transform: scaleX(0)
+	50%
+		transform: scaleX(0.5)
+	90%
+		transform: scaleX(1)
+	100%
+		transform: scaleX(1)
+
 
 @import "media"

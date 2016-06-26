@@ -1,5 +1,5 @@
 .autorize-block-wrap
-	.autorize-block#login
+	.autorize-block#login.flipped
 		h1.autorize-block__head Авторизуйтесь
 		form(action="some.php").autorize-block__form
 			.autorize-block__data.autorize-block__login
@@ -17,7 +17,7 @@
 		.autorize-block-enter Вернуться или войти?
 			ul.autorize-block-enter__list
 				li.autorize-block-enter__item.autorize-block-enter__item_first
-					a(href="#").autorize-block-enter__link На главную
+					a(href="/").autorize-block-enter__link.welcome-page На главную
 				li.autorize-block-enter__item
 					a(href="#").autorize-block-enter__link Войти
 			

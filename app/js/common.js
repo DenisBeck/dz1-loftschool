@@ -18,6 +18,7 @@ $(document).ready(function() {
 		aside		= $('.sidebar'),
 		login		= $('.autorize__text'),
 		welcome		= login.closest('.autorize-wrap').next(),
+		back		= welcome.find('.welcome-page'),
 		menu		= $('.main-menu__close'),
 		folder		= $('.green-folder__link'),
 		sidebar 	= $('#content-table'),
@@ -42,7 +43,6 @@ $(document).ready(function() {
 			imgs.push(path);
 		}
 	})
-
 	//Прелоадер
 	var percents = 1;
 	for(var i = 0; i < imgs.length; i++) {
@@ -89,11 +89,32 @@ $(document).ready(function() {
 	login.on('click', function(e) {
 		e.preventDefault();
 
-		$(this).toggleClass('autorize__text_active');
-		welcome.find('.welcome-block-wrap').toggleClass('welcome-block-wrap_hide');
-		welcome.find('.autorize-block-wrap').toggleClass('autorize-block-wrap_active');
+		$(this).closest('.autorize').addClass('flipped');
+		welcome.find('.welcome-block')
+				.removeClass('flip-show')
+				.addClass('flip-hide')
+				.parent().css('z-index', 0);
+		
+		welcome.find('.autorize-block')
+				.addClass('flip-show')
+				.parent().css('z-index', 1);
+		
 	})
 
+	back.on('click', function(e) {
+		e.preventDefault()
+
+		login.closest('.autorize').removeClass('flipped')
+		welcome.find('.autorize-block')
+				.removeClass('flip-show')
+				.addClass('flip-hide')
+				.parent().css('z-index', 0);
+		
+		welcome.find('.welcome-block')
+				.removeClass('flip-hide')
+				.addClass('flip-show')
+				.parent().css('z-index', 1);
+	})
 
 	//меню из гамбургера
 	menu.on('click', function(e) {
