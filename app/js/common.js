@@ -27,7 +27,9 @@ $(document).ready(function() {
 		checkAgain	= $('.autorize-block__check-again'),
 		preload		= $('.page-preloader'),
 		spinner		= preload.find('.spinner'),
-		imgs		= [];
+		imgs		= [],
+		next		= $('.navigation-part__next').find('.navigation-part__arrow'),
+		prev 		= $('.navigation-part__prev').find('.navigation-part__arrow');
 
 	$('*').each(function() {
 		var img 	= $(this).is('img'),
@@ -162,7 +164,195 @@ $(document).ready(function() {
 		}
 	})
 	
-	
+	var counter = 0;
+
+	next.on('click', function() {
+		
+		var $this 				= $(this),
+			block 				= $this.closest('.myWorks'),
+			descrItems 			= block.find('.description-part__item'),
+			activeDescrItem 	= block.find('.description-part__item_active'),
+			visionItems			= block.find('.vision-part__item'),
+			activeVisionItem	= block.find('.vision-part__item_active'),
+			navNextItems		= block.find('.navigation-part__next').find('.navigation-part__item'),
+			activeNavNextItem	= block.find('.navigation-part__next').find('.navigation-part__item_active'),
+			navPrevItems		= block.find('.navigation-part__prev').find('.navigation-part__item'),
+			activeNavPrevItem	= block.find('.navigation-part__prev').find('.navigation-part__item_active'),
+			activeDescrHead 	= activeDescrItem.find('.description-part__head'),
+			activeDescrText		= activeDescrItem.find('.description-part-tech__item');
+
+		counter++;
+		if(counter >= descrItems.length) {
+			counter = 0;
+		}
+		var	nextDescrItem 	= descrItems.eq(counter),
+			nextVisionItem	= visionItems.eq(counter),
+			nextNavNextItem	= navNextItems.eq(counter + 1),
+			nextNavPrevItem	= navPrevItems.eq(counter - 1);
+			/*nextDescrHead	= nextDescrItem.find('.description-part__head'),
+			nextDescrText	= nextDescrItem.find('.description-part-tech__item');*/
+		if(counter >= descrItems.length - 1) {
+			nextNavNextItem	= navNextItems.eq(0)
+		}
+		/*activeDescrHead.animate({
+			'opacity': '0'
+		}, 300);
+		activeDescrText.animate({
+			'opacity': '0'
+		}, 300);
+		nextDescrHead.animate({
+			'opacity': '1',
+			'z-index': '1'
+		}, 300, function(){
+			activeDescrHead.closest('.description-part__item').removeClass('.description-part__item_actve');
+			$(this).closest('.description-part__item').addClass('.description-part__item_actve');
+		});
+		nextDescrText.animate({
+			'opacity': '1'
+		}, 300, function(){
+			activeDescrText
+		});*/
+
+		activeNavNextItem.animate({
+			'top': '-50%'
+		}, 300);
+		nextNavNextItem.animate({
+			'top': '50%'
+		}, 300, function() {
+			activeNavNextItem.removeClass('navigation-part__item_active')
+							.css('top', '150%');
+			$(this).addClass('navigation-part__item_active');
+		})
+
+		activeNavPrevItem.animate({
+			'top': '150%'
+		}, 300);
+		nextNavPrevItem.animate({
+			'top': '50%'
+		}, 300, function() {
+			activeNavPrevItem.removeClass('navigation-part__item_active')
+							.css('top', '-50%');
+			$(this).addClass('navigation-part__item_active');
+		})
+
+		activeVisionItem.animate({
+			'opacity': '0'
+		}, 300);
+		nextVisionItem.animate({
+			'opacity': '1'
+		}, 300, function() {
+			activeVisionItem.removeClass('vision-part__item_active');
+			$(this).addClass('vision-part__item_active');
+		})
+
+		activeDescrItem.animate({
+			'left': '-50%'
+		}, 300);
+		nextDescrItem.animate({
+			'left': '50%'
+		}, 300, function() {
+			activeDescrItem.removeClass('description-part__item_active')
+							.css('left', '150%');
+			$(this).addClass('description-part__item_active');
+		})
+
+
+	})
+
+	prev.on('click', function() {
+		
+		var $this 				= $(this),
+			block 				= $this.closest('.myWorks'),
+			descrItems 			= block.find('.description-part__item'),
+			activeDescrItem 	= block.find('.description-part__item_active'),
+			visionItems			= block.find('.vision-part__item'),
+			activeVisionItem	= block.find('.vision-part__item_active'),
+			navNextItems		= block.find('.navigation-part__next').find('.navigation-part__item'),
+			activeNavNextItem	= block.find('.navigation-part__next').find('.navigation-part__item_active'),
+			navPrevItems		= block.find('.navigation-part__prev').find('.navigation-part__item'),
+			activeNavPrevItem	= block.find('.navigation-part__prev').find('.navigation-part__item_active'),
+			activeDescrHead 	= activeDescrItem.find('.description-part__head'),
+			activeDescrText		= activeDescrItem.find('.description-part-tech__item');
+
+		counter--;
+		if(counter < 0) {
+			counter = descrItems.length - 1;
+		}
+		var	prevDescrItem 	= descrItems.eq(counter),
+			prevVisionItem	= visionItems.eq(counter),
+			prevNavNextItem	= navNextItems.eq(counter + 1),
+			prevNavPrevItem	= navPrevItems.eq(counter - 1);
+			/*prevDescrHead	= nextDescrItem.find('.description-part__head'),
+			prevDescrText	= nextDescrItem.find('.description-part-tech__item');*/
+		/*if(counter < 1) {
+			prevNavPrevItem	= navPrevItems.eq(descrItems.length - 1)
+		*/
+		if(counter >= descrItems.length - 1) {
+			prevNavNextItem	= navNextItems.eq(0);
+		}
+		/*activeDescrHead.animate({
+			'opacity': '0'
+		}, 300);
+		activeDescrText.animate({
+			'opacity': '0'
+		}, 300);
+		prevDescrHead.animate({
+			'opacity': '1',
+			'z-index': '1'
+		}, 300, function(){
+			activeDescrHead.closest('.description-part__item').removeClass('.description-part__item_actve');
+			$(this).closest('.description-part__item').addClass('.description-part__item_actve');
+		});
+		prevDescrText.animate({
+			'opacity': '1'
+		}, 300, function(){
+			activeDescrText
+		});*/
+
+		activeNavNextItem.animate({
+			'top': '-50%'
+		}, 300);
+		prevNavNextItem.animate({
+			'top': '50%'
+		}, 300, function() {
+			activeNavNextItem.removeClass('navigation-part__item_active')
+							.css('top', '150%');
+			$(this).addClass('navigation-part__item_active');
+		})
+
+		activeNavPrevItem.animate({
+			'top': '150%'
+		}, 300);
+		prevNavPrevItem.animate({
+			'top': '50%'
+		}, 300, function() {
+			activeNavPrevItem.removeClass('navigation-part__item_active')
+							.css('top', '-50%');
+			$(this).addClass('navigation-part__item_active');
+		})
+
+		activeVisionItem.animate({
+			'opacity': '0'
+		}, 300);
+		prevVisionItem.animate({
+			'opacity': '1'
+		}, 300, function() {
+			activeVisionItem.removeClass('vision-part__item_active');
+			$(this).addClass('vision-part__item_active');
+		})
+
+		activeDescrItem.animate({
+			'left': '-50%'
+		}, 300);
+		prevDescrItem.animate({
+			'left': '50%'
+		}, 300, function() {
+			activeDescrItem.removeClass('description-part__item_active')
+							.css('left', '150%');
+			$(this).addClass('description-part__item_active');
+		})
+
+	})
 
 })
 

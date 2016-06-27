@@ -14,27 +14,19 @@ block content
 		.vision-part  
 			.vision-part__wrap
 				.vision-part__container
-					ul.vision-part__list
-						for item in works
-							+myWork-vision(item)
+					+myWork-vision
 		.description-part
 			.description-part__wrap
 				.description-part__block
-					ul.description-part__list
-						for item in works
-							+myWork-description(item)
+					+myWork-description
 		.navigation-part
 			.navigation-part__block.navigation-part__prev
 				.navigation-part__wrap
-					ul.navigation-part__list
-						for item in works
-							+myWork-navigation(item)
+					+myWork-navigation-prev
 				.navigation-part__arrow
 			.navigation-part__block.navigation-part__next
 				.navigation-part__wrap
-					ul.navigation-part__list
-						for item in works
-							+myWork-navigation(item)
+					+myWork-navigation-next
 				.navigation-part__arrow.navigation-part__arrow_up
 	.background
 		section.reviews

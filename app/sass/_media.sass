@@ -67,7 +67,7 @@
 		&__head
 			font-size: 30px
 		+underline("&__head", 10px, 20px, #566358)
-		&__description
+		&-tech__item
 			margin-bottom: 30px
 		&__visit
 			margin-bottom: 20px
@@ -253,6 +253,8 @@
 	+underline(".section-header", 10px, 20px, #373E42)	
 	.myWorks-header
 		width: 75%
+		&:before
+			height: 100px
 	.vision-part
 		height: 255px
 		&__img
@@ -262,9 +264,10 @@
 		height: 218px
 		&__head
 			font-size: 21px
-		&__description
-			margin-bottom: 16px
+		&-tech
 			font-size: 14px
+			&__item
+				margin-bottom: 16px
 		&__visit
 			font-size: 13px
 	.navigation-part
