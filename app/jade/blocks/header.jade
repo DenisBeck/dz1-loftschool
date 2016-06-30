@@ -3,9 +3,13 @@
 		include socials-items
 		.main-menu
 			.main-menu__close
+				.main-menu__hamburger
 
 			.main-menu__open.hidden Главное меню
-				+list("main-menu", navMain)
+				.main-menu__open-right
+				.main-menu__open-left
+				.main-menu__text
+					+list("main-menu", navMain)
 	.info-block
 		.welcome-block__photo-wrap
 			img.welcome-block__photo(src="img/avatar2.svg" alt="web developer photo")

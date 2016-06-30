@@ -1,9 +1,13 @@
+//- Объекты
 - var skype = { href: "skype:denny13241", elem: "skype", text: "denny13241" };
 - var email = { href: "mailto:beckass86@gmail.com", elem: "email", text: "beckass86@gmail.com" };
 - var phone = { href: "skype:+79126987925?call", elem: "phone", text: "+7 912 698 79 25" };
 - var address = { href: "https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A2%D0%B5%D0%B2%D0%BE%D1%81%D1%8F%D0%BD%D0%B0,+11,+%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA-%D0%A3%D1%80%D0%B0%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9,+%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+623428/@56.4180172,61.9055119,15z/data=!4m5!3m4!1s0x43c6d9c23fd46bdb:0x62c55fc4b4f82b2f!8m2!3d56.417943!4d61.911504", elem: "address", text: "Каменск-Уральский, ул. Тевосяна, 11" };
 
-- var blogs = [ "Самое важное в SASS", "Приемы в вёрстке, без которых не обходится ни один сайт", "Самый необходимый набор Gulp плагинов", "Почему я выбрал Jade" ]
+- var article1 = { title: "Самое важное в SASS", date: "2016-11-22", dateFull: "22 ноября 2016" };
+- var article2 = { title: "Приемы в вёрстке, без которых не обходится ни один сайт", date: "2016-11-13", dateFull: "13 ноября 2016" };
+- var article3 = { title: "Самый необходимый набор Gulp плагинов", date: "2016-10-29", dateFull: "29 октября 2016" };
+- var article4 = { title: "Почему я выбрал Jade", date: "2016-10-04", dateFull: "4 октября 2016" }
 
 - var loftSchool 	= { header: "Сайт школы онлайн образования", imgSrc: "img/site1.png", description: ["html", "css", "javascript"], href: "http://www.loftschool.com" };
 - var flSite 	= { header: "Лендинг-страница Фрилансера", imgSrc: "img/fl-site.png", description: [ "html", "css" ], href: "#" };
@@ -19,7 +23,7 @@
 
 - var navMain = [ { href: "works.html", text: "Мои работы" }, { href: "about.html", text: "Обо мне" }, { href: "blog.html", text: "Блог" }, { href: "index.html#login", text: "Авторизация" } ];
 - var socials = [ { href: "https://new.vk.com/den_beck", text: "Вконтакте", item: "vk" }, { href: "https://github.com/DenisBeck", text: "ГитХаб", item: "git" }, { href: "#", text: "Линкедин", item: "in" } ]
-
+- var blogs = [ article1, article2, article3, article4 ]
 
 mixin list(className, array)
 	ul(class="#{className}__list")

@@ -313,12 +313,54 @@
   .main-menu__close {
     width: 40px;
     height: 40px;
-    background-image: url("../img/icons/hamburger.svg");
     background-repeat: no-repeat;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; }
+    .main-menu__close .main-menu__hamburger {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100%;
+      height: 4px;
+      background-color: #FFFFFF;
+      -webkit-border-radius: 4px;
+              border-radius: 4px; }
+      .main-menu__close .main-menu__hamburger:before, .main-menu__close .main-menu__hamburger:after {
+        content: "";
+        position: absolute;
+        background-color: #FFFFFF;
+        -webkit-border-radius: 4px;
+                border-radius: 4px;
+        width: 100%;
+        height: 4px;
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s; }
+      .main-menu__close .main-menu__hamburger:before {
+        top: -10px; }
+      .main-menu__close .main-menu__hamburger:after {
+        top: 10px; }
     .main-menu__close_change {
-      position: relative;
       z-index: 100; }
+      .main-menu__close_change .main-menu__hamburger {
+        left: -40px; }
+        .main-menu__close_change .main-menu__hamburger:before {
+          left: 55px;
+          top: 0;
+          -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg); }
+        .main-menu__close_change .main-menu__hamburger:after {
+          left: 55px;
+          top: 0;
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg); }
   .main-menu__open {
     position: fixed;
     top: 0;
@@ -326,9 +368,20 @@
     left: 0;
     bottom: 0;
     z-index: 8;
-    background-color: #6C9C5A;
-    opacity: 0.87;
     font-size: 0; }
+    .main-menu__open-left, .main-menu__open-right {
+      position: absolute;
+      background-color: #6C9C5A;
+      opacity: 0.87;
+      height: 100%;
+      width: 50%; }
+    .main-menu__open-right {
+      right: 0;
+      left: 100%; }
+    .main-menu__open-left {
+      right: 100%; }
+  .main-menu__text {
+    opacity: 0; }
   .main-menu__list {
     font-size: 35px;
     text-transform: uppercase;
@@ -572,14 +625,14 @@
     overflow: hidden; }
   .navigation-part__prev {
     float: left;
-    opacity: 0.4; }
+    /* opacity: 0.4 */ }
     .navigation-part__prev .navigation-part__item {
       top: -50%; }
       .navigation-part__prev .navigation-part__item_active {
         top: 50%; }
   .navigation-part__next {
     float: right;
-    opacity: 0.5; }
+    /* opacity: 0.5 */ }
     .navigation-part__next .navigation-part__item {
       top: 150%; }
       .navigation-part__next .navigation-part__item_active {
@@ -1091,8 +1144,6 @@
   -webkit-border-radius: 0 75% 75% 0;
           border-radius: 0 75% 75% 0;
   background-color: #6C9C5A; }
-  .green-folder_open {
-    margin-left: 280px; }
   .green-folder__link {
     display: block;
     width: 100%;
@@ -1121,16 +1172,20 @@
   .sidebar__item {
     padding: 17px;
     padding-left: 40px;
-    text-align: right; }
+    text-align: right;
+    border-right: 3px solid transparent;
+    -webkit-transition: border-right 0.3s;
+    transition: border-right 0.3s; }
     .sidebar__item_active {
       border-right: 3px solid #6C9C5A; }
       .sidebar__item_active .sidebar__link {
-        color: #6C9C5A;
-        font-family: robotobold; }
+        color: #6C9C5A; }
   .sidebar__link {
     color: #373E42;
     font-size: 16px;
-    max-width: 274px; }
+    max-width: 274px;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
 
 .content {
   padding: 0 100px;
@@ -1195,7 +1250,6 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(108, 156, 90, 0.8);
   background-image: url("../img/pre_bg.jpg");
   z-index: 12; }
 
@@ -1533,9 +1587,9 @@ a {
   .sidebar {
     position: fixed;
     float: none;
-    display: none;
     height: 100%;
     width: 280px;
+    left: -280px;
     top: 0;
     background-color: #6C9C5A;
     z-index: 6; }
@@ -1566,7 +1620,8 @@ a {
     .article__head {
       font: 30px/36px sansus_webissimoregular; }
   .green-folder {
-    display: block; } }
+    display: block;
+    margin-left: 0; } }
 
 @media screen and (max-width: 768px) {
   .autorize-block__photo-wrap,
