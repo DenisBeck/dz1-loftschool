@@ -3,21 +3,21 @@
 		h1.autorize-block__head Авторизуйтесь
 		form(action="some.php").autorize-block__form
 			.autorize-block__data.autorize-block__login
-				input(type="text" placeholder="Логин").autorize-block__input-text
+				input(type="text" placeholder="Логин" name="login").autorize-block__input-text
 			.autorize-block__data.autorize-block__password
-				input(type="text" placeholder="Пароль").autorize-block__input-text
+				input(type="text" placeholder="Пароль" name="password").autorize-block__input-text
 			.autorize-block__data.autorize-block__check
-				label <input type="checkbox"> Я человек
+				label <input type="checkbox" name="checking"> Я человек
 			.autorize-block__data.autorize-block__check-again
 				.autorize-block__text Вы точно не робот?
 				.autorize-block__choice1
 					label <input type="radio" name="robot" value="yes"> Да
 				.autorize-block__choice2
 					label <input type="radio" name="robot" value="no"> Не уверен
-		.autorize-block-enter Вернуться или войти?
-			ul.autorize-block-enter__list
-				li.autorize-block-enter__item.autorize-block-enter__item_first
-					a(href="/").autorize-block-enter__link.welcome-page На главную
-				li.autorize-block-enter__item
-					a(href="#").autorize-block-enter__link Войти
+			.autorize-block-enter Вернуться или войти?
+				ul.autorize-block-enter__list
+					li.autorize-block-enter__item.autorize-block-enter__item_first
+						input(type="reset" value="На главную").autorize-block-enter__link.welcome-page 
+					li.autorize-block-enter__item
+						input(type="submit" value="Войти").autorize-block-enter__link
 			

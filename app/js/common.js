@@ -11,6 +11,7 @@ $(document).ready(function() {
 			preload.delay(350).fadeOut('slow');
 
 	}
+
 	//Прелоадер
 	var preload	= $('.page-preloader'),
 		spinner	= preload.find('.spinner'),
@@ -144,7 +145,7 @@ $(document).ready(function() {
 		}
 	})
 
-		
+
 
 
 	//Навигация по блогам
@@ -270,12 +271,14 @@ $(document).ready(function() {
 	
 
 	//слайдер
-	var next				= $('.navigation-part__next').find('.navigation-part__arrow'),
-		prev 				= $('.navigation-part__prev').find('.navigation-part__arrow'),
-		counter				= 0;
+	var next	= $('.navigation-part__next').find('.navigation-part__arrow'),
+		prev 	= $('.navigation-part__prev').find('.navigation-part__arrow'),
+		counter	= 0;
 		
 
 	next.on('click', function() {
+
+
 		
 		var $this = $(this),
 			block 				= $this.closest('.myWorks'),
@@ -287,6 +290,10 @@ $(document).ready(function() {
 			activeNavNextItem	= block.find('.navigation-part__next').find('.navigation-part__item_active'),
 			navPrevItems		= block.find('.navigation-part__prev').find('.navigation-part__item'),
 			activeNavPrevItem	= block.find('.navigation-part__prev').find('.navigation-part__item_active');
+
+		if($this.is('.going')) {
+			return false;
+		};
 
 		counter++;
 		if(counter >= descrItems.length) {
@@ -300,8 +307,9 @@ $(document).ready(function() {
 
 		if(counter >= descrItems.length - 1) {
 			nextNavNextItem	= navNextItems.eq(0)
-		}
-		
+		}		
+
+		$this.addClass('going')
 
 		activeNavNextItem.animate({
 			'top': '-50%'
@@ -344,6 +352,7 @@ $(document).ready(function() {
 			activeDescrItem.removeClass('description-part__item_active')
 							.css('left', '150%');
 			$(this).addClass('description-part__item_active');
+			$this.removeClass('going');
 		})
 
 
@@ -362,6 +371,10 @@ $(document).ready(function() {
 			navPrevItems		= block.find('.navigation-part__prev').find('.navigation-part__item'),
 			activeNavPrevItem	= block.find('.navigation-part__prev').find('.navigation-part__item_active');
 			
+		if($this.is('.going')) {
+			return false;
+		};
+
 		counter--;
 		if(counter < 0) {
 			counter = descrItems.length - 1;
@@ -375,6 +388,8 @@ $(document).ready(function() {
 		if(counter >= descrItems.length - 1) {
 			prevNavNextItem	= navNextItems.eq(0);
 		}
+
+		$this.addClass('going')
 
 		activeNavNextItem.animate({
 			'top': '-50%'
@@ -417,9 +432,30 @@ $(document).ready(function() {
 			activeDescrItem.removeClass('description-part__item_active')
 							.css('left', '150%');
 			$(this).addClass('description-part__item_active');
+			$this.removeClass('going');
 		})
 
 	})
+
+
+	/*$('.autorize-block__form').find('input[type="submit"]').on('click', function(e) {
+		e.preventDefault();
+
+		var data = {
+			login: $('input[name="login"]').val(),
+			password: $('input[name="password"]').val(),
+			isHuman: $('input[name="checking"]').is(':checked'),
+			human: $('input[name="robot"]').has(':checked').val()
+		}
+
+		$.ajax({
+			url: '/auth.js',
+			data: data,
+			dataType: 'json',
+			type: 'POST'
+		});
+
+	})*/
 
 })
 

@@ -23,7 +23,22 @@
 
 - var navMain = [ { href: "works.html", text: "Мои работы" }, { href: "about.html", text: "Обо мне" }, { href: "blog.html", text: "Блог" }, { href: "index.html#login", text: "Авторизация" } ];
 - var socials = [ { href: "https://new.vk.com/den_beck", text: "Вконтакте", item: "vk" }, { href: "https://github.com/DenisBeck", text: "ГитХаб", item: "git" }, { href: "#", text: "Линкедин", item: "in" } ]
-- var blogs = [ article1, article2, article3, article4 ]
+- var blogs = [ article1, article2, article3, article4 ];
+
+- var frontend = [{ tech: "HTML5", sector: "s-html" }, { tech: "CSS3", sector: "s-css" }, { tech: "JavaScript & jQuery", sector: "s-js" }];
+- var backend = [{ tech: "PHP", sector: "s-php" }, { tech: "MySQL", sector: "s-mysql" }, { tech: "Node.js & npm", sector: "s-node" }, { tech: "Mongo.db", sector: "s-mongo" }];
+- var workflow = [{ tech: "Git", sector: "s-git" }, { tech: "Gulp", sector: "s-gulp" }, { tech: "Bower", sector: "s-bower" }];
+-var skills = [{ title: "Frontend", category: frontend }, { title: "Backend", category: backend }, { title: "Workflow", category: workflow }];
+
+mixin preloader
+	.page-preloader
+		.spinner
+			.counter 0%
+			svg(version="1.1" viewbox="0 0 80 95.113" width="40" height="50")
+				g
+					path(d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_first
+					path(d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_second
+					path(d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px").wave.wave_third
 
 mixin list(className, array)
 	ul(class="#{className}__list")
@@ -70,10 +85,12 @@ mixin myWork-vision
 				li.vision-part__item.vision-part__item_active
 					.vision-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.vision-part__number= index + 1
 			else
 				li.vision-part__item
 					.vision-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.vision-part__number= index + 1
 mixin myWork-navigation-next
 	ul.navigation-part__list
 		each work, index in works
@@ -81,10 +98,12 @@ mixin myWork-navigation-next
 				li.navigation-part__item.navigation-part__item_active
 					.navigation-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.navigation-part__number= index + 1
 			else
 				li.navigation-part__item
 					.navigation-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.navigation-part__number= index + 1
 mixin myWork-navigation-prev
 	ul.navigation-part__list
 		each work, index in works
@@ -92,10 +111,12 @@ mixin myWork-navigation-prev
 				li.navigation-part__item.navigation-part__item_active
 					.navigation-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.navigation-part__number= index + 1
 			else
 				li.navigation-part__item
 					.navigation-part__img
 						img(src="#{work.imgSrc}", alt="Моя работа")
+					.navigation-part__number= index + 1
 
 mixin review(object)
 	li.reviews__item

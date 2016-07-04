@@ -46,15 +46,13 @@ gulp.task('scripts', function() {
 	return gulp.src([
 			'app/libs/jquery/dist/jquery.min.js'
 			])
-		.pipe(plumber())
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'));
 });
 
 gulp.task('css-libs',['sass'], function() {
-	return gulp.src(['app/css/libs.css',
-					 'app/fonts/stylesheet.css'])
+	return gulp.src(['app/css/libs.css'])
 		.pipe(plumber())
 		.pipe(cssnano())
 		.pipe(rename({suffix: '.min'}))

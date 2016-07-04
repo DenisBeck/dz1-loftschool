@@ -17,7 +17,7 @@
     <![endif]-->
     <div class="page-preloader">
       <div class="spinner">
-        <div class="counter"> </div>
+        <div class="counter">0%</div>
         <svg version="1.1" viewbox="0 0 80 95.113" width="40" height="50">
           <g>
             <path d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px" class="wave wave_first"></path>
@@ -38,13 +38,13 @@
               <h1 class="autorize-block__head">Авторизуйтесь</h1>
               <form action="some.php" class="autorize-block__form">
                 <div class="autorize-block__data autorize-block__login">
-                  <input type="text" placeholder="Логин" class="autorize-block__input-text"/>
+                  <input type="text" placeholder="Логин" name="login" class="autorize-block__input-text"/>
                 </div>
                 <div class="autorize-block__data autorize-block__password">
-                  <input type="text" placeholder="Пароль" class="autorize-block__input-text"/>
+                  <input type="text" placeholder="Пароль" name="password" class="autorize-block__input-text"/>
                 </div>
                 <div class="autorize-block__data autorize-block__check">
-                  <label><input type="checkbox"> Я человек</label>
+                  <label><input type="checkbox" name="checking"> Я человек</label>
                 </div>
                 <div class="autorize-block__data autorize-block__check-again">
                   <div class="autorize-block__text">Вы точно не робот?</div>
@@ -55,13 +55,17 @@
                     <label><input type="radio" name="robot" value="no"> Не уверен</label>
                   </div>
                 </div>
+                <div class="autorize-block-enter">Вернуться или войти?
+                  <ul class="autorize-block-enter__list">
+                    <li class="autorize-block-enter__item autorize-block-enter__item_first">
+                      <input type="reset" value="На главную" class="autorize-block-enter__link welcome-page"/>
+                    </li>
+                    <li class="autorize-block-enter__item">
+                      <input type="submit" value="Войти" class="autorize-block-enter__link"/>
+                    </li>
+                  </ul>
+                </div>
               </form>
-              <div class="autorize-block-enter">Вернуться или войти?
-                <ul class="autorize-block-enter__list">
-                  <li class="autorize-block-enter__item autorize-block-enter__item_first"><a href="/" class="autorize-block-enter__link welcome-page">На главную</a></li>
-                  <li class="autorize-block-enter__item"><a href="#" class="autorize-block-enter__link">Войти</a></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="welcome-block-wrap">

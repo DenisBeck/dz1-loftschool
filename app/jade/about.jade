@@ -1,5 +1,7 @@
 extends blocks/template.jade
 
+
+
 block title
 	title About
 
@@ -23,65 +25,20 @@ block content
 		.aboutMe-skills
 			h2.aboutMe-skills__head Чем я могу быть вам полезен
 			p.aboutMe-skills__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+
 			.aboutMe-skills__progress
 				ul.aboutMe-skills__list-outer
-					li.aboutMe-skills__item-outer Frontend
-						ul.aboutMe-skills__list-inner
-							li.aboutMe-skills__item-inner
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-html sector") 
-								.aboutMe-skills__tech HTML5
-							li.aboutMe-skills__item-inner
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-css sector")  
-								.aboutMe-skills__tech CCS3
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-js sector") 
-								.aboutMe-skills__tech JavaScript & jQuery
-					li.aboutMe-skills__item-outer Backend
-						ul.aboutMe-skills__list-inner
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-php sector") 
-								.aboutMe-skills__tech PHP
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-mysql sector") 
-								.aboutMe-skills__tech mySQL
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-node sector") 
-								.aboutMe-skills__tech Node.js & npm
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-mongo sector") 
-								.aboutMe-skills__tech Mongo.db
-					li.aboutMe-skills__item-outer.aboutMe-skills__item-outer_last Workflow
-						ul.aboutMe-skills__list-inner
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-git sector") 
-								.aboutMe-skills__tech Git
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-gulp sector") 
-								.aboutMe-skills__tech Gulp
-							li.aboutMe-skills__item-inner 
-								svg(width="110" height="110" class="g-circles")
-									circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
-									circle(r="45" cx="55" cy="55"  class="s-bower sector") 
-								.aboutMe-skills__tech Bower
-
+					each outerItem in skills
+						li.aboutMe-skills__item-outer #{outerItem.title}
+							ul.aboutMe-skills__list-inner
+								each innerItem in outerItem.category
+									li.aboutMe-skills__item-inner
+										svg(width="110" height="110" class="g-circles")
+											circle(r="45" cx="55" cy="55" stroke="#ccc" fill="none")
+											circle(r="45" cx="55" cy="55"  class="#{innerItem.sector} sector") 
+										.aboutMe-skills__tech #{innerItem.tech}
+							
 	section.about-contacts
 		.about-contacts__data
 			h3.about-contacts__head Контакты
@@ -97,4 +54,3 @@ block content
 			
 			<script type='text/javascript'>function init_map(){var myOptions = {scrollwheel:false,zoom:14,center:new google.maps.LatLng(56.417943,62.71150399999992),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.417943,61.91150399999992)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>Каменск-Уральский, ул. Тевосяна, 11<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 
-//- <script  src="//maps.googleapis.com/maps/api/js?YOUR_API_KEY" type="text/javascript"></script>
