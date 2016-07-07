@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Document</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="admin-body">
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="page-preloader">
+      <div class="spinner">
+        <div class="counter">0%</div>
+        <svg version="1.1" viewbox="0 0 80 95.113" width="40" height="50">
+          <g>
+            <path d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px" class="wave wave_first"></path>
+            <path d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px" class="wave wave_second"></path>
+            <path d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801   c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801   c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362" stroke="#FFFFFF" stroke-width="3.9003" stroke-miterlimit="10" fill="none" stroke-dasharray="150px" class="wave wave_third"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="admin-main">
+      <header class="admin-header clearfix">
+        <h1 class="header__title">Панель администрирования</h1>
+        <div class="header__wrap-link"><a href="index.html" class="header__link">Вернуться на сайт</a></div>
+      </header>
+      <nav class="main-tabs">
+        <ul class="main-tabs__list">
+          <li class="main-tabs__item main-tabs__item"><a href="#admin-about" class="main-tabs__link main-tabs__link_active">tab 1</a></li>
+          <li class="main-tabs__item"><a href="#admin-blog" class="main-tabs__link">tab 2</a></li>
+          <li class="main-tabs__item"><a href="#admin-works" class="main-tabs__link">tab 3</a></li>
+        </ul>
+      </nav>
+      <div class="tab-content">
+        <ul class="tab-content__list">
+          <li id="admin-about" class="tab-content__item tab-content__item_active">
+            <h2 class="tab-content__head">Страница "Обо мне"</h2>
+            <form class="tab-content-form form-about">
+              <ul class="tab-content-skills__list">
+                <li class="tab-content-skills__item">Frontend
+                  <ul class="tab-content-techs__list">
+                    <li class="tab-content-techs__item">
+                      <label for="s-html" class="tab-content-techs__text">HTML5 </label>
+                      <input type="text" name="s-html" id="#s-html"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-css" class="tab-content-techs__text">CSS3 </label>
+                      <input type="text" name="s-css" id="#s-css"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-js" class="tab-content-techs__text">JavaScript &amp; jQuery </label>
+                      <input type="text" name="s-js" id="#s-js"/><span>%</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tab-content-skills__item">Backend
+                  <ul class="tab-content-techs__list">
+                    <li class="tab-content-techs__item">
+                      <label for="s-php" class="tab-content-techs__text">PHP </label>
+                      <input type="text" name="s-php" id="#s-php"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-mysql" class="tab-content-techs__text">MySQL </label>
+                      <input type="text" name="s-mysql" id="#s-mysql"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-node" class="tab-content-techs__text">Node.js &amp; npm </label>
+                      <input type="text" name="s-node" id="#s-node"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-mongo" class="tab-content-techs__text">Mongo.db </label>
+                      <input type="text" name="s-mongo" id="#s-mongo"/><span>%</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tab-content-skills__item">Workflow
+                  <ul class="tab-content-techs__list">
+                    <li class="tab-content-techs__item">
+                      <label for="s-git" class="tab-content-techs__text">Git </label>
+                      <input type="text" name="s-git" id="#s-git"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-gulp" class="tab-content-techs__text">Gulp </label>
+                      <input type="text" name="s-gulp" id="#s-gulp"/><span>%</span>
+                    </li>
+                    <li class="tab-content-techs__item">
+                      <label for="s-bower" class="tab-content-techs__text">Bower </label>
+                      <input type="text" name="s-bower" id="#s-bower"/><span>%</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <input type="submit" value="Сохранить" class="tab-content-form__button"/>
+            </form>
+          </li>
+          <li id="admin-blog" class="tab-content__item">
+            <h2 class="tab-content__head">Страница "Блог"</h2>
+            <div class="tab-content__add">Добавить запись</div>
+            <form action="" class="tab-content-form form-blog">
+              <div class="tab-content-form__item tab-content-form__text">
+                <input type="text" name="title" placeholder="Название"/>
+              </div>
+              <div class="tab-content-form__item tab-content-form__text">
+                <input type="text" name="date" placeholder="Дата"/>
+              </div>
+              <div class="tab-content-form__item tab-content-form__content">
+                <textarea name="note" placeholder="Содержание"></textarea>
+              </div>
+              <div class="tab-content-form__item">
+                <input type="submit" value="Добавить" class="tab-content-form__button"/>
+              </div>
+            </form>
+          </li>
+          <li id="admin-works" class="tab-content__item">
+            <h2 class="tab-content__head">Страница "Мои работы"</h2>
+            <div class="tab-content__add">Добавить работу</div>
+            <form action="" class="tab-content-form form-works">
+              <div class="tab-content-form__item tab-content-form__text">
+                <input type="text" name="project" placeholder="Название проекта"/>
+              </div>
+              <div class="tab-content-form__item tab-content-form__text">
+                <input type="text" name="tech" placeholder="Технологии"/>
+              </div>
+              <div class="tab-content-form__item tab-content-form__file">
+                <label>
+                  <input type="file" name="file"/>загрузить картинку
+                </label>
+              </div>
+              <div class="tab-content-form__item">
+                <input type="submit" value="Добавить" class="tab-content-form__button"/>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

@@ -11,7 +11,8 @@ var gulp        = require('gulp'),
 	pngquant	= require('imagemin-pngquant'),
 	cache		= require('gulp-cache'),
 	autoprefixer= require('gulp-autoprefixer'),
-	plumber		= require('gulp-plumber');
+	plumber		= require('gulp-plumber'),
+	nodemon 	= require('gulp-nodemon');
 
 
 gulp.task('sass', function() {
@@ -33,13 +34,21 @@ gulp.task('jade', function() {
 		.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('browser-sync', function() {
-	browserSync({
-		server: {
-			baseDir: 'app',
-		},
-		notify: false
+gulp.task('browser-sync', ['nodemon'], function() {
+	browserSync.init(null, {
+		proxy: 'http:\/\/localhost:9999',
+		notify: false 
 	});
+});
+
+gulp.task('nodemon', function (cb) {
+    var callbackCalled = false;
+    return nodemon({script: './server.js'}).on('start', function () {
+        if (!callbackCalled) {
+            callbackCalled = true;
+            cb();
+        }
+    });
 });
 
 gulp.task('scripts', function() {

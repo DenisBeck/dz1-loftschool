@@ -1230,6 +1230,161 @@
   .article__date time {
     color: #6C9C5A; }
 
+html {
+  height: 100%; }
+
+.admin-body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: url("../img/bg-forest.jpg"); }
+
+.admin-header {
+  background-color: #6C9C5A;
+  min-height: 80px; }
+
+.header__title {
+  float: left;
+  padding-left: 30px;
+  line-height: 80px;
+  color: #FFFFFF; }
+
+.header__wrap-link {
+  float: right;
+  line-height: 80px;
+  vertical-align: middle; }
+
+.header__link {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  .header__link:hover {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF; }
+
+.admin-main {
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.main-tabs {
+  min-height: 60px; }
+  .main-tabs__list {
+    height: 100%;
+    width: 100%; }
+  .main-tabs__item {
+    margin-right: -4px;
+    display: inline-block;
+    min-width: 180px; }
+  .main-tabs__link {
+    display: block;
+    font: 16px robotomedium;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    color: #6C9C5A; }
+    .main-tabs__link_active, .main-tabs__link:hover {
+      background-color: #FFFFFF; }
+
+.tab-content {
+  padding: 40px 20px;
+  color: #373E42; }
+  .tab-content__item {
+    display: none;
+    padding-left: 10px; }
+    .tab-content__item_active {
+      display: block; }
+  .tab-content__head {
+    font: 21px robotobold;
+    margin-bottom: 50px; }
+  .tab-content-skills__item {
+    display: inline-block;
+    min-width: 230px;
+    vertical-align: top;
+    margin-bottom: 25px;
+    margin-right: 40px; }
+  .tab-content-techs__list {
+    margin-top: 20px; }
+  .tab-content-techs__item {
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    padding-left: 20px; }
+    .tab-content-techs__item input {
+      width: 45px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      outline: none;
+      border: none;
+      padding: 0 5px;
+      text-align: center;
+      color: #373E42;
+      margin-right: 10px; }
+  .tab-content-techs__text {
+    display: inline-block;
+    width: 150px; }
+  .tab-content-form__button {
+    background-color: #6C9C5A;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    font-family: robotomedium; }
+  .tab-content__add {
+    font-family: robotomedium;
+    margin-bottom: 20px; }
+  .tab-content-form__text {
+    height: 42px;
+    width: 300px;
+    line-height: 42px;
+    margin-bottom: 20px; }
+    .tab-content-form__text input {
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      border: none;
+      outline: none;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      color: #373E42; }
+  .tab-content-form__content {
+    margin-bottom: 30px; }
+    .tab-content-form__content textarea {
+      min-width: 500px;
+      min-height: 170px;
+      resize: none;
+      outline: none;
+      border: none;
+      -webkit-border-radius: 8px;
+              border-radius: 8px;
+      padding: 10px 20px;
+      color: #373E42; }
+  .tab-content-form__file {
+    margin-bottom: 165px;
+    height: 35px;
+    line-height: 35px;
+    color: #6C9C5A;
+    position: relative; }
+    .tab-content-form__file label {
+      padding-left: 50px;
+      position: relative;
+      index: 1;
+      cursor: pointer; }
+    .tab-content-form__file input {
+      display: none; }
+    .tab-content-form__file:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-image: url("../img/upload.png");
+      background-repeat: no-repeat;
+      left: 0; }
+
 body, html {
   height: 100%;
   font-family: robotoregular; }
@@ -1510,8 +1665,6 @@ a {
     .autorize-block-nav-menu__link,
     .welcome-block-nav-menu__link {
       padding: 0 25px; }
-  .autorize-block__form {
-    padding: 2px 20px; }
   .main-header {
     min-height: 500px;
     padding: 30px 30px; }

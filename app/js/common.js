@@ -437,6 +437,23 @@ $(document).ready(function() {
 
 	})
 
+	//Переключение вкладок на панели администрирования
+	$('.main-tabs__link').on('click', function(e) {
+		e.preventDefault();
+
+		var $this = $(this),
+			tabItem = $($this.attr('href'));
+
+		$this.addClass('main-tabs__link_active').parent().siblings().find('.main-tabs__link').removeClass('main-tabs__link_active')
+		if(!tabItem.is('.tab-content__item_active')) {
+			tabItem.addClass('tab-content__item_active').siblings().removeClass('tab-content__item_active');
+		}
+
+	})
+
+	$('.form-blog').on('submit', function() {
+		
+	})
 
 	/*$('.autorize-block__form').find('input[type="submit"]').on('click', function(e) {
 		e.preventDefault();
@@ -456,6 +473,27 @@ $(document).ready(function() {
 		});
 
 	})*/
+
+	//Добавление записей в блог
+	$('.form-blog').find('.tab-content-form__button').on('click', function(e) {
+		var titlePost	= $('[name="title"]').val(),
+			datePost	= $('[name="date"]').val(),
+			notePost	= $('[name="note"]').val();
+
+		e.preventDefault();
+
+		var data = {
+			title: titlePost,
+			date: datePost,
+			note: notePost
+		}
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/save');
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8')
+		xhr.send(JSON.stringify(data));
+
+		
+	})
 
 })
 
