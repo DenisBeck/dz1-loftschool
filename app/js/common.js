@@ -451,10 +451,8 @@ $(document).ready(function() {
 
 	})
 
-	$('.form-blog').on('submit', function() {
-		
-	})
-
+	
+	
 	/*$('.autorize-block__form').find('input[type="submit"]').on('click', function(e) {
 		e.preventDefault();
 
@@ -476,27 +474,255 @@ $(document).ready(function() {
 
 	//Добавление записей в блог
 	$('.form-blog').find('.tab-content-form__button').on('click', function(e) {
-		var titlePost	= $('[name="title"]').val(),
-			datePost	= $('[name="date"]').val(),
-			notePost	= $('[name="note"]').val();
+
+		var $this 		= $(this),
+			form 		= $this.closest('.form-blog')
+			titlePost	= form.find('[name="title"]'),
+			datePost	= form.find('[name="date"]'),
+			notePost	= form.find('[name="note"]'),
+			tabContent 	= form.closest('.tab-content'),
+			tabMenu 	= tabContent.siblings('.main-tabs'),
+
+			popup 		= $('.admin-popup'),
+			resText 	= popup.find('.admin-popup__text'),
+			resButton 	= popup.find('.admin-popup__button');
 
 		e.preventDefault();
 
 		var data = {
-			title: titlePost,
-			date: datePost,
-			note: notePost
+			title: titlePost.val(),
+			date: datePost.val(),
+			note: notePost.val()
 		}
 		var xhr = new XMLHttpRequest();
-		xhr.open('POST', '/save');
+		xhr.open('POST', '/savePost');
 		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8')
 		xhr.send(JSON.stringify(data));
 
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+
+			if(xhr.status != 200) {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.status + ': ' + xhr.statusText);
+			} else {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.responseText);
+			}
+
+		}
 		
+		resButton.on('click', function() {
+			tabContent.fadeIn(300);
+			tabMenu.fadeIn(300);
+			popup.fadeOut(300);
+			titlePost.val('');
+			datePost.val('');
+			notePost.val('');
+		})
+	})
+
+	var fileSrc = "";
+	//Отображение имени загружаемого файла
+	$('.form-works').find('[type="file"]').on('change', function() {
+		var $this = $(this);
+		if($this.val()) {
+			fileSrc = '/img/' + $this.val().slice($this.val().lastIndexOf('\\') + 1);
+			$this.siblings('span').text(fileSrc);
+		}
+	})
+	,
+	//Добавление работы на сайт
+	$('.form-works').find('.tab-content-form__button').on('click', function(e) {
+
+		var $this 		= $(this),
+			form 		= $this.closest('.form-works'),
+			projectWork	= form.find('[name="project"]'),
+			techWork	= form.find('[name="tech"]'),
+			fileWork	= form.find('[name="file"]'),
+			urlWork		= form.find('[name="url"]'),
+			tabContent 	= form.closest('.tab-content'),
+			tabMenu 	= tabContent.siblings('.main-tabs'),
+
+			popup 		= $('.admin-popup'),
+			resText 	= popup.find('.admin-popup__text'),
+			resButton 	= popup.find('.admin-popup__button');
+
+		e.preventDefault();
+		
+		
+		var data = {
+			project: projectWork.val(),
+			tech: techWork.val().split(','),
+			url: urlWork.val(),
+			file: fileSrc
+		}
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/saveWork');
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8');
+		xhr.send(JSON.stringify(data));
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+
+			if(xhr.status != 200) {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.status + ': ' + xhr.statusText);
+			} else {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.responseText);
+			}
+
+		}
+		
+		resButton.on('click', function() {
+			tabContent.fadeIn(300);
+			tabMenu.fadeIn(300);
+			popup.fadeOut(300);
+			projectWork.val('');
+			techWork.val('');
+			urlWork.val('');
+			fileWork.siblings('span').text('загрузить картинку');
+		})
+	})
+
+	//Изменение информации о навыках
+	$('.form-about').find('.tab-content-form__button').on('click', function(e) {
+
+		var $this 		= $(this),
+			form 		= $this.closest('.form-about'),
+			htmlSkill	= parseInt(form.find('[name="html"]').val()),
+			cssSkill	= parseInt(form.find('[name="css"]').val()),
+			jsSkill		= parseInt(form.find('[name="js"]').val()),
+			phpSkill	= parseInt(form.find('[name="php"]').val()),
+			mysqlSkill	= parseInt(form.find('[name="mysql"]').val()),
+			nodeSkill	= parseInt(form.find('[name="node"]').val()),
+			mongoSkill	= parseInt(form.find('[name="mongo"]').val()),
+			gitSkill	= parseInt(form.find('[name="git"]').val()),
+			gulpSkill	= parseInt(form.find('[name="gulp"]').val()),
+			bowerSkill	= parseInt(form.find('[name="bower"]').val()),
+			tabContent 	= form.closest('.tab-content'),
+			tabMenu 	= tabContent.siblings('.main-tabs'),
+
+			popup 		= $('.admin-popup'),
+			resText 	= popup.find('.admin-popup__text'),
+			resButton 	= popup.find('.admin-popup__button');
+
+		e.preventDefault();
+
+		var data = { 
+			Frontend: [
+				{ 
+					id: "html",
+					tech: "HTML5", 
+					sector: 282 - (htmlSkill * 2.82),
+					value: htmlSkill
+				}, 
+				{ 
+					id: "css",
+					tech: "CSS3", 
+					sector: 282 - (cssSkill * 2.82),
+					value: 	cssSkill
+				}, 
+				{ 
+					id: "js",
+					tech: "JavaScript & jQuery", 
+					sector: 282 - (jsSkill * 2.82),
+					value: jsSkill
+				}
+			],
+			Backend: [
+				{ 
+					id: "php",
+					tech: "PHP", 
+					sector: 282 - (phpSkill * 2.82),
+					value: phpSkill
+				}, 
+				{ 
+					id: "mysql",
+					tech: "MySQL", 
+					sector: 282 - (mysqlSkill * 2.82),
+					value: mysqlSkill
+				}, 
+				{ 
+					id: "node",
+					tech: "Node.js & npm", 
+					sector: 282 - (nodeSkill * 2.82),
+					value: nodeSkill
+				}, 
+				{ 
+					id: "mongo",
+					tech: "Mongo.db", 
+					sector: 282 - (mongoSkill * 2.82),
+					value: mongoSkill
+				}
+			], 
+			Workflow: [
+				{ 
+					id: "git",
+					tech: "Git", 
+					sector: 282 - (gitSkill * 2.82),
+					value: gitSkill
+				}, 
+				{ 
+					id: "gulp",
+					tech: "Gulp", 
+					sector: 282 - (gulpSkill * 2.82),
+					value: gulpSkill
+				}, 
+				{ 	
+					id: "bower",
+					tech: "Bower", 
+					sector: 282 - (bowerSkill * 2.82),
+					value: bowerSkill
+				}
+			] 
+		}
+			
+			
+		
+		
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/saveSkill');
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8')
+		xhr.send(JSON.stringify(data));
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+
+			if(xhr.status != 200) {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.status + ': ' + xhr.statusText);
+			} else {
+				tabContent.fadeOut(300);
+				tabMenu.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.responseText);
+			}
+
+		}
+		
+		resButton.on('click', function() {
+			tabContent.fadeIn(300);
+			tabMenu.fadeIn(300);
+			popup.fadeOut(300)
+		})
 	})
 
 })
 
 
-
+ 
 

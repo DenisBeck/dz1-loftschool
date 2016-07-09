@@ -1043,6 +1043,8 @@
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       width: 60px; }
+    .aboutMe-skills__percent {
+      font-size: 0; }
 
 .g-circles {
   -webkit-transform: rotate(-90deg);
@@ -1056,36 +1058,6 @@
   -webkit-transition: all 1s;
   transition: all 1s;
   stroke-dasharray: 282; }
-
-.s-html {
-  stroke-dashoffset: 201; }
-
-.s-css {
-  stroke-dashoffset: 221; }
-
-.s-js {
-  stroke-dashoffset: 241; }
-
-.s-php {
-  stroke-dashoffset: 261; }
-
-.s-mysql {
-  stroke-dashoffset: 271; }
-
-.s-node {
-  stroke-dashoffset: 271; }
-
-.s-mongo {
-  stroke-dashoffset: 282; }
-
-.s-git {
-  stroke-dashoffset: 221; }
-
-.s-gulp {
-  stroke-dashoffset: 241; }
-
-.s-bower {
-  stroke-dashoffset: 221; }
 
 .about-contacts {
   height: 980px;
@@ -1235,7 +1207,6 @@ html {
 
 .admin-body {
   background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   background-image: url("../img/bg-forest.jpg"); }
 
@@ -1262,8 +1233,8 @@ html {
     border-bottom: 1px solid #FFFFFF; }
 
 .admin-main {
-  min-height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100%; }
 
 .main-tabs {
   min-height: 60px; }
@@ -1384,6 +1355,30 @@ html {
       background-image: url("../img/upload.png");
       background-repeat: no-repeat;
       left: 0; }
+
+.admin-popup {
+  display: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  width: 280px;
+  margin: auto;
+  text-align: center;
+  min-height: 112px;
+  background-color: #FFFFFF; }
+  .admin-popup__text {
+    text-align: center;
+    color: #373E42;
+    margin: 15px 0; }
+  .admin-popup__button {
+    display: inline-block;
+    margin-bottom: 20px; }
 
 body, html {
   height: 100%;

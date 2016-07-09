@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('jade', function() {
-	return gulp.src(['app/jade/*.jade'])
+	return gulp.src(['app/views/main/*.jade'])
 		.pipe(plumber())
 		.pipe(jade({
 			pretty: true

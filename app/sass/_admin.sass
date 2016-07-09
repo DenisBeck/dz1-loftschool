@@ -3,10 +3,8 @@ html
 
 .admin-body
 	background-repeat: no-repeat
-	background-size: cover
 	height: 100%
 	background-image: url("../img/bg-forest.jpg")
-
 		
 
 .admin-header 
@@ -29,8 +27,8 @@ html
 		color: #FFFFFF
 		border-bottom: 1px solid #FFFFFF
 .admin-main
-	min-height: 100%
 	background-color: rgba(#FFFFFF, 0.8)
+	min-height: 100%
 .main-tabs
 	min-height: 60px
 	&__list
@@ -96,7 +94,7 @@ html
 		cursor: pointer
 		border-radius: 5px
 		padding: 15px 20px
-		color: #FFFFFF
+		color: #FFFFFF 
 		font-family: robotomedium
 
 	&__add
@@ -150,6 +148,24 @@ html
 			background-repeat: no-repeat
 			left: 0
 
+.admin-popup
+	display: none
+	border-radius: 5px
+	+centering
+	position: fixed
+	width: 280px
+	margin: auto
+	text-align: center
+	min-height: 112px
+	background-color: #FFFFFF
+	&__text
+		text-align: center
+		color: $textColor
+		margin: 15px 0
+	&__button
+		display: inline-block
+		margin-bottom: 20px
+	
 
 
 
