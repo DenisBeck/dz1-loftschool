@@ -1,5 +1,6 @@
 var express = require('express');
 var fs = require('fs');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -25,8 +26,13 @@ var Skill = new Schema({
 		}
 	}
 })
+var User = new Schema ({
+	login: String,
+	password: String
+})
 
-mongoose.model('skill', Skill)
+mongoose.model('skill', Skill);
+mongoose.model('user', User);
 mongoose.connect('mongodb://localhost/portfolio');
 
 var app = express();
@@ -45,14 +51,26 @@ var Work = mongoose.model('Work', {
 
 });
 
+var User = mongoose.model('user');
 
-
-
+var user = new User({
+	login: 'Denis',
+	password: '1234'
+});
+user.save();
 
 app.set('views', './app/views')
 app.set('view engine', 'jade');
 app.use(express.static('./app'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+var MongoStore = require('connect-mongo')(session);
+app.use(session({
+	key: 'sid',
+	secret: 'fvfdg',
+	cookie: {  httpOnly: true, maxAge:  null },
+	store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
 
 app.get('/blog.html', function(req, res) {
 	Post.find({}).then(function(posts) {
@@ -69,6 +87,7 @@ app.get('/works.html', function(req, res) {
 })
 
 app.get('/about.html', function(req, res) {
+
 	var Skill = mongoose.model('skill');
 	Skill.find({}).then(function (skills) {
 		res.render('about', {skills: skills});
@@ -79,8 +98,36 @@ app.get('/about.html', function(req, res) {
 app.get('/admin.html', function(req, res) {
 	var Skill = mongoose.model('skill');
 	Skill.find({}).then(function(skills) {
-		res.render('admin', {skills: skills});
+		res.render('admin', {skills: skills})
+		
 	})
+	
+})
+
+app.get('/logout', function(req, res) {
+	
+	res.write('Пока, ' + req.session.name);
+	req.session.destroy();
+	res.end();
+})
+
+app.get(['/', '/index.html'], function(req, res) {
+	if(req.session.name === 'Denis') {
+		res.render('index', {
+			authText: 'Редактировать',
+			authLog: 'Выйти',
+			include: 'admin-part',
+			log: 'out'
+		})
+	} else {
+		res.render('index', {
+			authText: 'Авторизоваться',
+			authLog: 'Войти',
+			include: 'form-part',
+			log: 'in'
+		})
+	}
+	res.end()
 })
 
 app.get('/*', function(req, res) {
@@ -88,6 +135,7 @@ app.get('/*', function(req, res) {
 	if(req.url == '/') req.url = '/index.html'; 
 
 	console.log('Получен запрос на страницу', req.url);
+	sess = req.session;
 	var path = './app' + req.url;
 	if(fs.existsSync(path)) {
 		var content = fs.readFileSync(path, {encoding: 'utf8'});
@@ -96,9 +144,26 @@ app.get('/*', function(req, res) {
 		var content = fs.readFileSync('./app/404.html', {encoding: 'utf8'});
 		res.status(404)
 		res.write(content);
-		console.log(Skill.find({}))
 	}
 	res.end();
+})
+
+
+
+app.post('/auth', function(req, res) {
+
+	User.findOne({login: 'Denis'}, function(err, user) {
+		if(req.body.login === user.login && req.body.password === user.password) {
+			req.session.name = req.body.login;
+			res.write('Привет, ' + req.body.login);
+			res.end();
+		} else {
+			res.write('Не получилось войти');
+			res.end();
+		}
+	})
+
+	
 })
 
 app.post('/savePost', function(req, res) {

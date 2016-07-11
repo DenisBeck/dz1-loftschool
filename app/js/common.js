@@ -452,25 +452,91 @@ $(document).ready(function() {
 	})
 
 	
-	
-	/*$('.autorize-block__form').find('input[type="submit"]').on('click', function(e) {
+	//авторизация
+	$('.autorize-block__form').find('input[name="in"]').on('click', function(e) {
 		e.preventDefault();
 
+		var $this 		= $(this),
+			container	= $this.closest('.main-welcome'),
+			authBlock 	= $this.closest('.autorize-block'),
+			authButton	= authBlock.closest('.welcome-content').siblings('.autorize-wrap').find('.autorize'),
+			login 		= authBlock.find('[name="login"]'),
+			password 	= authBlock.find('[name="password"]'),
+			isHuman 	= authBlock.find('[name="checking"]'),
+			human 		= authBlock.find('[name="robot"]:checked'),
+
+			popup 		= $('.admin-popup'),
+			resText 	= popup.find('.admin-popup__text'),
+			resButton 	= popup.find('.admin-popup__button');
+
 		var data = {
-			login: $('input[name="login"]').val(),
-			password: $('input[name="password"]').val(),
-			isHuman: $('input[name="checking"]').is(':checked'),
-			human: $('input[name="robot"]').has(':checked').val()
+			login: login.val(),
+			password: password.val(),
+			isHuman: isHuman.is(':checked'),
+			human: human.val()
 		}
 
-		$.ajax({
-			url: '/auth.js',
-			data: data,
-			dataType: 'json',
-			type: 'POST'
-		});
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/auth');
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8')
+		xhr.send(JSON.stringify(data));
 
-	})*/
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+
+			if(xhr.status != 200) {
+				container.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.status + ': ' + xhr.statusText);
+			} else {
+				container.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.responseText);
+			}
+
+		}
+
+		resButton.on('click', function() {
+			$(location).attr('href',"index.html")
+		})
+	})
+
+	//деавторизация
+	$('.autorize-block').find('input[name="out"]').on('click', function(e) {
+		e.preventDefault();
+
+		var $this 		= $(this),
+			container	= $this.closest('.main-welcome'),
+			
+			popup 		= $('.admin-popup'),
+			resText 	= popup.find('.admin-popup__text'),
+			resButton 	= popup.find('.admin-popup__button');
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '/logout');
+		xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8')
+		xhr.send();
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+
+			if(xhr.status != 200) {
+				container.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.status + ': ' + xhr.statusText);
+			} else {
+				container.fadeOut(300);
+				popup.fadeIn(300);
+				resText.text(xhr.responseText);
+			}
+
+		}
+
+		resButton.on('click', function() {
+			$(location).attr('href',"index.html")
+		})
+
+	})
 
 	//Добавление записей в блог
 	$('.form-blog').find('.tab-content-form__button').on('click', function(e) {
@@ -725,4 +791,9 @@ $(document).ready(function() {
 
 
  
+
+
+
+
+
 
