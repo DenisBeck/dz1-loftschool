@@ -27,36 +27,39 @@
 
 +formStyle(".autorize-block")
 
-.autorize-block__login,
-.autorize-block__password
-	&:before
-		content: ""
-		display: block
-		position: absolute
-		width: 44px
-		height: 55px
-		left: 0
-		top: 0
-		background-color: #F0EFE9 
-	&:after
-		position: absolute
-		content: ""
-		width: 20px
-		height: 20px
-		left: 16px
-		top: 15px
-		background-repeat: no-repeat
-.autorize-block__login
-	&:after
-		background-image: url('../img/icons/login.svg')
-.autorize-block__password
-	&:after
-		background-image: url('../img/icons/password.svg')
-.autorize-block__input-text
-	padding-left: 60px		
-
 .autorize-block
 	position: relative
+	&__login,
+	&__password
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			width: 44px
+			height: 55px
+			left: 0
+			top: 0
+			background-color: #F0EFE9 
+		&:after
+			position: absolute
+			content: ""
+			width: 20px
+			height: 20px
+			left: 16px
+			top: 15px
+			background-repeat: no-repeat
+	&__login
+		&:after
+			background-image: url('../img/icons/login.svg')
+	&__password
+		&:after
+			background-image: url('../img/icons/password.svg')
+	&__input-text
+		padding-left: 60px		
+	&__form
+		padding-top: 40px
+
+
 
 
 

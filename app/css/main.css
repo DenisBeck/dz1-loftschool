@@ -295,38 +295,33 @@
 .check-show:after {
   visibility: hidden; }
 
-.autorize-block__login:before,
-.autorize-block__password:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 44px;
-  height: 55px;
-  left: 0;
-  top: 0;
-  background-color: #F0EFE9; }
-
-.autorize-block__login:after,
-.autorize-block__password:after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  left: 16px;
-  top: 15px;
-  background-repeat: no-repeat; }
-
-.autorize-block__login:after {
-  background-image: url("../img/icons/login.svg"); }
-
-.autorize-block__password:after {
-  background-image: url("../img/icons/password.svg"); }
-
-.autorize-block__input-text {
-  padding-left: 60px; }
-
 .autorize-block {
   position: relative; }
+  .autorize-block__login:before, .autorize-block__password:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background-color: #F0EFE9; }
+  .autorize-block__login:after, .autorize-block__password:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 15px;
+    background-repeat: no-repeat; }
+  .autorize-block__login:after {
+    background-image: url("../img/icons/login.svg"); }
+  .autorize-block__password:after {
+    background-image: url("../img/icons/password.svg"); }
+  .autorize-block__input-text {
+    padding-left: 60px; }
+  .autorize-block__form {
+    padding-top: 40px; }
 
 .background {
   background-image: url("../img/bg-ground.jpg");
