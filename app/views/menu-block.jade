@@ -1,0 +1,10 @@
+.welcome-block-wrap
+	.welcome-block
+		.welcome-block__photo-wrap
+			img.welcome-block__photo(src="img/avatar2.svg", alt="web developer photo")
+		h2.welcome-block__head Денис Бекленищев
+		.welcome-block__description
+			span.welcome-block__text Личный сайт веб-разработчика
+		include socials-items
+		nav.welcome-block-nav-menu Навигация по сайту
+			+list("welcome-block-nav-menu", [navMain[0], navMain[1], navMain[2]])

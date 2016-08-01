@@ -1,0 +1,97 @@
+include ./mixins
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		block title 
+			title Document
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		link(href="favicon.ico" rel="shortcut icon" type="image/x-icon")
+		
+		link(rel="stylesheet", href="css/stylesheet.css")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/main.css")
+
+	body.admin-body
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		
+		+preloader
+		.admin-main
+			header.admin-header.clearfix
+				h1.header__title Панель администрирования
+				.header__wrap-link
+					a(href="index.html").header__link Вернуться на сайт
+	
+			nav.main-tabs
+				ul.main-tabs__list
+					each item, index in ['#admin-about', '#admin-blog', '#admin-works']
+						if index == 0
+							li.main-tabs__item.main-tabs__item
+								a.main-tabs__link.main-tabs__link_active(href="#{item}") tab #{index + 1}
+						else
+							li.main-tabs__item
+								a.main-tabs__link(href="#{item}") tab #{index + 1}
+
+			.tab-content
+				ul.tab-content__list
+					li.tab-content__item.tab-content__item_active#admin-about
+						h2.tab-content__head Страница "Обо мне"
+						form.tab-content-form.form-about
+							ul.tab-content-skills__list
+								each outerItem in skills
+									li.tab-content-skills__item #{outerItem.section}
+										ul.tab-content-techs__list
+											each innerItem in outerItem.items
+												li.tab-content-techs__item
+													label(for="#{innerItem.id}").tab-content-techs__text #{innerItem.tech} 
+													input(type="text" name="#{innerItem.id}" id="##{innerItem.id}" value="#{innerItem.value}")
+													span %
+							input(type="submit" value="Сохранить").tab-content-form__button
+
+
+					li.tab-content__item#admin-blog
+						h2.tab-content__head Страница "Блог"
+						.tab-content__add Добавить запись
+						form.tab-content-form(action="").form-blog
+							.tab-content-form__item.tab-content-form__text
+								input(type="text" name="title" placeholder="Название")
+							.tab-content-form__item.tab-content-form__text
+								input(type="text" name="date" placeholder="Дата")
+							.tab-content-form__item.tab-content-form__content
+								textarea(name="note" placeholder="Содержание")
+							.tab-content-form__item
+								input(type="submit" value="Добавить" ).tab-content-form__button
+
+					li.tab-content__item#admin-works
+						h2.tab-content__head Страница "Мои работы"
+						.tab-content__add Добавить работу
+						form.tab-content-form(action="").form-works
+							.tab-content-form__item.tab-content-form__text
+								input(type="text" name="project" placeholder="Название проекта")
+							.tab-content-form__item.tab-content-form__text
+								input(type="text" name="tech" placeholder="Технологии")
+							.tab-content-form__item.tab-content-form__text
+								input(type="text" name="url" placeholder="Сайт проекта")
+							.tab-content-form__item.tab-content-form__file
+								label
+									input(type="file" name="file")
+									span загрузить картинку
+							.tab-content-form__item
+								input(type="submit" value="Добавить").tab-content-form__button
+		
+		.admin-popup
+			.admin-popup__text 
+			button.tab-content-form__button.admin-popup__button Закрыть
+
+		script(src="js/libs.min.js")
+		script(src="js/common.js")
+
+
+
+

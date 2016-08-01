@@ -1,0 +1,119 @@
+extends ./template.jade
+
+
+
+block title
+	title Works
+
+block arrow
+	a(href="#myWorks").arrow__link.arrow__link_relative Перейти к моим работам
+
+block content
+	section.myWorks.clearfix
+		header#myWorks.section-header.myWorks__header
+			.myWorks__wrap
+				h2.myWorks__head Мои работы
+		.vision-part  
+			.vision-part__wrap
+				.vision-part__container
+					ul.vision-part__list
+						each val, index in item
+							if index == 0
+								li.vision-part__item.vision-part__item_active
+									.vision-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.vision-part__number= index + 1
+							else
+								li.vision-part__item
+									.vision-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.vision-part__number= index + 1
+		.description-part
+			.description-part__wrap
+				.description-part__block
+					ul.description-part__list
+						each val, index in item
+							if index == 0
+								li.description-part__item.description-part__item_active
+									h3.description-part__head #{val.project}
+									.description-part-tech
+										ul.description-part-tech__list
+											each value, index in val.tech
+												- var comma = ","
+												if (index == val.tech.length - 1)
+													- var comma = ""
+												li.description-part-tech__item #{value}#{comma}
+									a.description-part__visit(href="#{val.url}" target="_blank") Посмотреть сайт
+							else
+								li.description-part__item
+									h3.description-part__head #{val.project}
+									.description-part-tech
+										ul.description-part-tech__list
+											each value, index in val.tech
+												- var comma = ","
+												if (index == val.tech.length - 1)
+													- var comma = ""
+												li.description-part-tech__item #{value}#{comma}
+									a.description-part__visit(href="#{val.url}" target="_blank") Посмотреть сайт
+		.navigation-part
+			.navigation-part__block.navigation-part__prev
+				.navigation-part__wrap
+					ul.navigation-part__list
+						each val, index in item
+							if index == item.length - 1
+								li.navigation-part__item.navigation-part__item_active
+									.navigation-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.navigation-part__number= index + 1
+							else
+								li.navigation-part__item
+									.navigation-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.navigation-part__number= index + 1
+				.navigation-part__arrow
+			.navigation-part__block.navigation-part__next
+				.navigation-part__wrap
+					ul.navigation-part__list
+						each val, index in item
+							if index == 1
+								li.navigation-part__item.navigation-part__item_active
+									.navigation-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.navigation-part__number= index + 1
+							else
+								li.navigation-part__item
+									.navigation-part__img
+										img(src="#{val.file}", alt="Моя работа")
+									.navigation-part__number= index + 1
+				.navigation-part__arrow.navigation-part__arrow_up
+	.background
+		section.reviews
+			header.section-header.reviews__header
+				h2.reviews__head Что обо мне говорят
+			.reviews__block
+				ul.reviews__list
+					for item in reviews
+						+review(item)
+
+		section.contact
+			.contact-block-wrap
+				.contact-block
+					h1.contact-block__head Связаться со мной
+					form.contact-block__form
+						.contact-block__data.contact-block__login
+							input(type="text" placeholder="Имя").contact-block__input-text
+						.contact-block__data.contact-block__email
+							input(type="email" placeholder="Email").contact-block__input-text
+						.contact-block__data.contact-block__textarea
+							textarea(placeholder="Ваше сообщение").contact-block__input-text.contact-block__input-text_textarea
+						.contact-block-enter Отправить или очистить?
+							ul.contact-block-enter__list
+								li.contact-block-enter__item.contact-block-enter__item_first
+									input(type="submit" value="Отправить").contact-block-enter__link 
+								li.contact-block-enter__item
+									input(type="reset" value="Очистить").contact-block-enter__link 
+		
+		.arrow__block.arrow__block_up
+			a(href="#main-header").arrow__link.arrow__link_up Перейти в начало
+			
+	

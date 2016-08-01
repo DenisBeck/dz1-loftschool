@@ -1,0 +1,14 @@
+.autorize-block-wrap
+	.autorize-block#login.flipped
+		form.autorize-block__form
+			if include == 'form-part'
+				include ./form-part
+			if include == 'admin-part'
+				include ./admin-part
+			.autorize-block-enter Вернуться или войти?
+				ul.autorize-block-enter__list
+					li.autorize-block-enter__item.autorize-block-enter__item_first
+						input(type="reset" value="На главную").autorize-block-enter__link.welcome-page 
+					li.autorize-block-enter__item
+						input(type="submit" name="#{log}" value="#{authLog}").autorize-block-enter__link
+			

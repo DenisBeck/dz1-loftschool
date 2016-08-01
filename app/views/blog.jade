@@ -1,0 +1,33 @@
+extends ./template.jade
+
+block title
+	title Blog
+
+block arrow
+	a(href="#blog").arrow__link.arrow__link_relative Перейти к блогу
+
+block content
+	section.green-folder
+		a(href="#content-table").green-folder__link Перейти к оглавлению блогов
+					
+				
+	section.blogs
+		.content__wrap.clearfix
+			aside#content-table.sidebar
+				ul.sidebar__list
+					each val, index in item
+						if index == 0 
+							li.sidebar__item.sidebar__item_active
+								a.sidebar__link(href="#article-#{item.length-index}") #{val.title}
+						else
+							li.sidebar__item
+								a.sidebar__link(href="#article-#{item.length-index}") #{val.title}
+
+			.content
+				h2#blog.content__head Последние опубликованные статьи
+				each val, index in item
+					article(id="article-#{item.length-index}").article
+						h3.article__head #{val.title}
+						p.article__date
+							time(datetime="#{val.date}" pubdate) #{val.date}
+						p #{val.note}
