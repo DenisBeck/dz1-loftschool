@@ -3,6 +3,7 @@ var fs = require('fs');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/portfolio');
 var Schema = mongoose.Schema;
 var Skill = new Schema({
 	section: {
@@ -33,7 +34,6 @@ var User = new Schema ({
 
 mongoose.model('skill', Skill);
 mongoose.model('user', User);
-mongoose.connect('mongodb://localhost/portfolio');
 
 var app = express();
 
@@ -231,4 +231,4 @@ app.post('/saveSkill', function(req, res) {
 	})
 })
 
-app.listen(9999);
+app.listen(3000);
