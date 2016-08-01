@@ -3,7 +3,7 @@ var fs = require('fs');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/portfolio');
+mongoose.connect('mongodb://0.0.0.0/portfolio');
 var Schema = mongoose.Schema;
 var Skill = new Schema({
 	section: {
