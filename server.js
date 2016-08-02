@@ -90,7 +90,7 @@ app.get('/about.html', function(req, res) {
 
 	var Skill = mongoose.model('skill');
 	Skill.find({}).then(function (skills) {
-		res.render('about', {skills: skills});
+		res.render('about', {skills: skills || ''});
 	})
 })
 
@@ -98,7 +98,7 @@ app.get('/about.html', function(req, res) {
 app.get('/admin.html', function(req, res) {
 	var Skill = mongoose.model('skill');
 	Skill.find({}).then(function(skills) {
-		res.render('admin', {skills: skills})
+		res.render('admin', {skills: skills || ''})
 		
 	})
 	
@@ -231,4 +231,4 @@ app.post('/saveSkill', function(req, res) {
 	})
 })
 
-app.listen(3000);
+app.listen(80);
